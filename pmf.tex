@@ -18,6 +18,7 @@
 \newcommand{\clpp}{\ensuremath{C_{L}^{\phi\phi}}}
 \newcommand{\cpmf}{\ensuremath{C_{\ell}^{\rm pmf}}}
 \newcommand{\apmf}{\ensuremath{A_{\rm pmf}}}
+\newcommand{\bpmf}{\ensuremath{B_{\rm 1\,Mpc}}}
 \newcommand{\alens}{\ensuremath{A_{\rm lens}}}
 \newcommand{\lcdm}{\ensuremath{\Lambda}CDM}
 
@@ -82,7 +83,8 @@ In this section, we first describe the CMB temperature and polarization anisotro
 
 We use a compendium of current measurements of the CMB temperature and polarization anisotropies from ground-based and satellite experiments. 
 We use \planck{} data from the 2015 release to constrain the TT, TE, EE and lensing power spectra. 
-These include the \tbd{insert modules}. 
+Specifically, these are the ``plik\_dx11dr21\_HM\_v18\_TT", ``lowTEB" and ``lensing" \planck{} likelihood modules. 
+
 
 In addition to the \planck{} data, we use all recent CMB polarization measurements that are publicly available. 
 First, we include TE and EE spectrum measurements\citep{crites15} for $\ell \in [500,3000]$ and BB bandpowers covering $\ell \in [500,2000]$ \citep{keisler15} from SPTpol. 
@@ -109,14 +111,46 @@ Note that no other effect of the PMF is considered; this is one reason we only c
 
 Unless noted, we assume the six parameter spatially flat \lcdm{} model with a single massive neutrino of 60\,meV and a seventh parameter \apmf{} describing the power due to the PMF. 
 We adopt flat priors on all parameters. 
-In most chains, we also add \alens{} as a simple way of marginalizing over uncertainty in the predicted lensed BB power spectrum for any extension to the \lcdm{} model. 
+In particular, note that this is a flat prior on the observed PMF power, $\apmf$, not the rms magnetic field strength, \bpmf, that has often been used in the literature. 
+In many chains, we also add \alens{} as a simple way of marginalizing over uncertainty in the predicted lensed BB power spectrum for any extension to the \lcdm{} model. 
 Finally, in some cases, we allow non-zero tensors, parameterized as is normal, by the tensor-to-scalar ratio, r. 
 
+\subsection{Primordial Magnetic Field Template}
+
+\tbd{Chang to describe the template calculation and template parameters}
+
+We can translate the amplitude constraint on this template to a constraint rms magnetic field strength on 1\,Mpc scales , \bpmf, using the expected scaling:
+\be
+\apmf \propto \bpmf^4.
+\ee
+An unfortunate consequence of this steep scaling is that substantial reductions in the observationally allowed power lead to only modestly better limits on the magnetic field strength. 
+However, if a PMF is detected, this same steep scaling would allow excellent constraints on its properties. 
  
 \section{Results}
 \label{sec:results}
 
-\begin{table}[htb]
+We find the addition of ground-based CMB polarization data to \planck{} data substantially improves the upper limits on the allowed power due to a PMF, leading to a factor of two improvement. 
+With Planck alone, the 95\% confidence upper limit is $\apmf <  0.68$ when $\alens$ is allowed to vary; with the ground-based experiments, this limit drops to $\apmf <  0.33$. 
+We test which datasets are important by adding single datasets to the \planck{} set, and find that the majority of this improvement is due to the \bicepkeck{} ($\apmf <  0.36$) and \sptpol{} ($\apmf <  0.42$) B-mode power spectrum measurements. 
+The other datasets do not have a large impact on the observed limits. 
+
+We propagate these limits on the observed PMF power into limits on the magnetic field strength, \bpmf. 
+Due to the scaling with the fourth power, an upper limit with a flat prior on \apmf{} would lead to an apparent `detection' of \bpmf. 
+We therefor importance sample the chains to generate a flat prior on \bpmf. 
+We find a 95\% limit of $\bpmf < XX$\,nG for \planck{} alone, consistent with \citep{planckpmf} with $n$ held fixed as we've done. 
+This is reduced to $\bpmf < XX$\,nG for the combined dataset. 
+
+
+
+
+
+
+
+
+
+
+
+\begin{table*}[htb]
 \begin{center}
 \caption{\label{tab:param_all} All parameter constraints}
 \tiny
@@ -139,7 +173,7 @@ lcdm\_r\_alens\_all & $ 0.02240\pm  0.00025$ & $ 0.1178\pm  0.0020$ & $ 1.04107\
 Summary of results (will be trimmed for paper). 
 } \normalsize
 \end{center}
-\end{table}
+\end{table*}
 
 \section{Forecasts}
 \label{sec:forecasts}
