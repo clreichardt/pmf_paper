@@ -21,7 +21,7 @@
 \newcommand{\bpmf}{\ensuremath{B_{\rm 1\,Mpc}}}
 \newcommand{\alens}{\ensuremath{A_{\rm lens}}}
 \newcommand{\lcdm}{\ensuremath{\Lambda}CDM}
-
+\newcommand{\fermilat}{\textit{Fermi}-LAT}
 
 \newcommand{\be}{\begin{equation}}
 \newcommand{\ee}{\end{equation}}
@@ -77,9 +77,19 @@ We will therefor simply quote effective limits on a PMF.
 
 Magnetic fields are ubiquitous in astronomy and are found almost universally in collapsed objects from galaxies and galaxy clusters \citep[for review, see][]{ryu12, widrow12}. 
 There is even some evidence for magnetic fields in intergalactic space from \fermilat{} data \citep{neronov10}, although alternative explanations \citep{broderick12} have been proposed. 
-High energy $\gamma$-rays can interact with IR-optical photons and produce electron-positron pairs. 
+High energy $\gamma$-rays from blazars should  produce electron-positron pairs when the $\gamma$-rays collide with IR or optical photons. 
 These pairs should later annihilate in at GeV energies, but the expected GeV flux is missing in the \fermilat{} observations. 
-Intergalactic magnetic fields could explain this by deflecting the particles. 
+Intergalactic magnetic fields could explain the missing flux by deflecting the particles. 
+If due to intergalactic magnetic fields, the GeV results set lower limits on the magnetic field strength of $10^{-9} - 10^{-6}$.\,nG \citep{tavecchio10,taylor11,dermer11,vovk12}. 
+
+The mechanism to create large-scale magnetic fields, especially in intergalactic space, remains unclear. 
+One popular proposal is that the observed fields are the product of primordial magnetic fields, which are predicted by several theories of the early Universe \citep[e.g.,][]{turner88, grasso98,ichiki06}. 
+Adiabatic compression and turbulent shocks during later structure formation amplify these initial seed fields into the stronger fields observed today. 
+Of course, this amplification process may have a different initial seed; other ideas include AGN or galactic dynamos \citep[for a review, see][]{giovannini04}. 
+However, this possibility opens up the intriguing idea that observations of large-scale magnetic fields may offer insights into the physics of the very early Universe. 
+
+
+
 
 
 recent results
@@ -165,7 +175,7 @@ The other datasets do not have a large impact on the observed limits.
 We propagate these limits on the observed PMF power into limits on the magnetic field strength, \bpmf. 
 Due to the scaling with the fourth power, an upper limit with a flat prior on \apmf{} would lead to an apparent `detection' of \bpmf. 
 We therefor importance sample the chains to generate a flat prior on \bpmf. 
-We find a 95\% limit of $\bpmf < XX$\,nG for \planck{} alone, consistent with \citep{planckpmf} with $n$ held fixed as we've done. 
+We find a 95\% limit of $\bpmf < XX$\,nG for \planck{} alone, consistent with \citep{planck15-19} with $n$ held fixed as we've done. 
 This is reduced to $\bpmf < XX$\,nG for the combined dataset. 
 
 
