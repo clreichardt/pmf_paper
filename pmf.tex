@@ -24,7 +24,9 @@
 \newcommand{\nrun}{\ensuremath{n_{\rm run}}}
 \newcommand{\neff}{\ensuremath{N_{\rm eff}}}
 \newcommand{\ho}{H\ensuremath{_0}}
-\newcommand{\mnu}{\ensuremath{\sum m|\nu}}
+\newcommand{\mnu}{\ensuremath{\sum m_\nu}}
+\newcommand{\ukarcmin}{\ensuremath{\mu}K-arcmin}
+\newcommand{\lknee}{\ensuremath{\ell_{\rm knee}}}
 \newcommand{\fermilat}{\textit{Fermi}-LAT}
 
 \newcommand{\be}{\begin{equation}}
@@ -348,20 +350,24 @@ Larger telescopes will allow CMB polarization to be measured on smaller angular 
 However, larger telescopes are also more expensive to build which means at fixed cost, they would necessitate less ambitious focal planes and lower instantaneous mapping speed. 
 We find the gains due to resolution at fixed mapping speed to be negligible: a beam size of FWHM=1$^\prime$ yields only a 1\% better limit than a FWHM of 10$^\prime$. 
 This illustrates how important the large angular scales are to the PMF limits. 
-We very crudely approximated a cost-neutral setup with a noise level of 1.3 \ukarcmin for a FWHM of 4$^\prime$; a noise level of 2.9 \ukarcmin for a FWHM of 2$^\prime$; and a noise level of 4.1 \ukarcmin for a FWHM of 1$^\prime$. 
+We very crudely approximated a cost-neutral setup with a noise level of 1.3 \ukarcmin{} for a FWHM of 4$^\prime$; a noise level of 2.9 \ukarcmin{} for a FWHM of 2$^\prime$; and a noise level of 4.1 \ukarcmin{} for a FWHM of 1$^\prime$. 
 In this quasi-cost-neutral setup, there is a strong preference to go for more detectors over better angular resolution: the uncertainty was a factor of 2.5 times smaller in the coarse case over the FWHM=1$^\prime$ case. 
 Raw sensitivity is more important than angular resolution to an experiment's ability to study PMFs.
 
+Next we turn to the recovery of large angular scales, and the noise performance at low frequencies. 
+We measure the importance by shifting the 1/f knee of the map-space noise in the range $\ell = [50,400]$. 
+Effectively, we are multiplying the noise power, $N_\ell$, which is a constant for white noise,  by a function of angular multipole:
+\be
+f(\ell) = 1 + \left(\frac{\ell_{\rm knee}}{\ell}\right)^{8/3}. 
+\ee 
+The exponent, 8/3, was selected based on a Kolmogorov spectrum of turbulence within a thin plane \citep{lay00}. %lay & halverson 2000. 
+Note that this knob  serves as a placeholder for several effects, including a signal-to-noise hit due to galactic foregrounds or the methods used to clean these foregrounds, atmospheric noise, or actual instrumental 1/f noise. 
+We find that increasing \lknee{} from 50 to 100, 200 or 400 expands the uncertainty on \apmf{} by factors of 1.2, 2.1 and 6.3 respectively. 
+Recovering large angular scales is clearly very important to PMF searches. 
+This is consistent with the study of telescope size in the last paragraph - which found extending to smaller angular scales only helped slightly. 
+It is also consistent with the current upper limits, which are dominated by the BICEP2/Keck Array data at low-$\ell$. 
+Fortunately, these large angular scales are also crucial to searches for inflationary gravitational waves, so the needs of the PMF search are well-aligned with one of the key science drivers for CMB-S4.
 
-
-However, adding more detectors does 
-Of course, 
-
-If you don't require cost-
-
-We assume the beam i
-
- the beam FWHM (i.e. telescope diameter), 
 
 
 
