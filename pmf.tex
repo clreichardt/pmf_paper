@@ -2,7 +2,8 @@
 %\documentclass[apj]{emulateapj}
 \documentclass[preprint]{emulateapj}
 %\documentclass[12pt,preprint]{aastex}
-
+\graphicspath{{figures/}}
+\DeclareGraphicsExtensions{.jpg,.pdf,.png,.eps,.ps}
 
 \usepackage[table,usenames,dvipsnames]{xcolor}
 \usepackage{amsmath}
@@ -101,7 +102,7 @@ There have been two recent results of note.
 \citet{planck15-19} have used the \planck{} 2015 release of temperature and polarization data to set limits on a variety of PMF models. 
 With the CMB power spectrum data that will be the focus of this paper, \citet{planck15-19} find 95\% CL upper limits ranging from $\bpmf < 5.6$\,nG to $<0.7$\,nG depending on the exact model. 
 The \pb{} collaboration also recently announced limits on PMFs from the \pb{} data using either a 4-point estimator or B-mode power spectrum measurement in \citep{pb}. 
-The strongest constraints were from the B-mode spectrum; the observed upper limit was $\bpmf < \tbd{4.0}$\,nG. 
+The strongest constraints were from the B-mode spectrum; the observed upper limit was $\bpmf < 3.9$\,nG. 
 Two other experiments, \sptpol{} and \bicepkeck{}, have reported B-mode power spectrum measurements recently \citep{}.
 In this paper, we will combine the data from all four experiments to determine simple limits on the PMF, and then examine Fisher matrix forecasts on PMF models from the stage-III and stage-IV CMB experiments being built or designed right now. 
 
@@ -129,12 +130,14 @@ We use \planck{} data from the 2015 release to constrain the TT, TE, EE and lens
 Specifically, these are the ``plik\_dx11dr21\_HM\_v18\_TT", ``lowTEB" and ``lensing" \planck{} likelihood modules. 
 
 
-In addition to the \planck{} data, we use all recent CMB polarization measurements that are publicly available. 
+In addition to the \planck{} data, we use a number of recent CMB polarization measurements. 
 First, we include TE and EE spectrum measurements\citep{crites15} for $\ell \in [500,3000]$ and BB bandpowers covering $\ell \in [500,2000]$ \citep{keisler15} from SPTpol. 
 We also add the BB bandpowers from \pb{} that cover the multipoles from 500 to 2500 \citep{polarbear14b}. 
 Both the \sptpol{} and \pb{} bandpowers primary constrain the vector mode of the PMF given the angular scales measured. 
 Finally, we include the latest BICEP2 and Keck Array  joint analysis \citep{bicepkeck15}. 
 This latter dataset also places limits on the tensor mode of the PMF due to its coverage of lower multipoles. 
+During the writing of this work, ACTpol polarization power spectra became available \citep{actpol}. 
+We have not included the ACTPol bandpowers; we do not expect adding them to significantly change the PMF limits based on a visual comparison of the current BB bandpowers from different experiments.
 In all chains, we marginalize over the recommended foreground models for each data set. 
 We do not however require these consistency between these foreground models since the data don't have identical flux cuts and so on. 
 In the case of an upper limit this treatment is conservative since wider foreground priors should only weaken the limit on the PMF strength. 
@@ -172,6 +175,7 @@ The timing is typically parametrized by the ratio of the scale factors at neutri
 
 Given that we are still in the era of upper limits,  we do not explore the full 3-dimensional PMF parameter space in this work. 
 Instead, we use CMBACT to calculate a PMF template for the CMB TT, TE, EE and BB power spectra at fixed parameters: $B_{\rm{1Mpc}}$=2.5 \rm{nG}, $n_b$=-2.9 and $a_{\nu}/a_{\rm{PMF}}=10^9$. 
+This template is plotted against the current measurements of the CMB B-mode power spectrum in Fig.~\ref{fig:pmf-bb}. 
 We fit for a new scaling parameter, $A_{pmf}$, that rescales the PMF power spectrum template. 
 We can translate the amplitude constraint on this template to a constraint rms magnetic field strength on 1\,Mpc scales , \bpmf, using the expected scaling:
 \be
@@ -180,7 +184,14 @@ We can translate the amplitude constraint on this template to a constraint rms m
 An unfortunate consequence of this steep scaling is that substantial reductions in the observationally allowed power lead to only modestly better limits on the magnetic field strength. 
 However, if a PMF is detected, this same steep scaling would allow excellent constraints on its properties. 
 
-
+\begin{figure*}[htb]\centering
+\includegraphics[width=0.9\textwidth,clip,trim={1.5cm 12.5cm 11cm 7.5cm}]{pmf_knee.pdf}
+  \caption[CMB polarization from PMFs]{
+  Currently dummy plot.
+  Will be plot of BB bandpowers and PMF template.
+      \label{fig:pmf-bb}
+  }
+\end{figure*}
  
 \section{Results}
 \label{sec:results}
@@ -234,7 +245,7 @@ Summary of results (will be trimmed for paper).
 
 \begin{table*}[h]
 \begin{center}
-\caption{\label{tab:param_all} All parameter constraints}
+\caption{\label{tab:param_all2} All parameter constraints2}
 \tiny
 \begin{tabular}{l || c c c c c c c | c}
 Chain & $\Omega_b h^2$  & $\Omega_c h^2$  & $\theta$  & $\tau$  & logA  & $n_s$  & $A_{lens}$  & $A_{pmf}$ \\
@@ -366,36 +377,71 @@ We very crudely approximated a cost-neutral setup with a noise level of 1.3 \uka
 In this quasi-cost-neutral setup, there is a strong preference to go for more detectors over better angular resolution: the uncertainty was a factor of 2.5 times smaller in the coarse case over the FWHM=1$^\prime$ case. 
 Raw sensitivity is more important than angular resolution to an experiment's ability to study PMFs.
 
+\begin{figure}[htb]\centering
+\includegraphics[width=0.45\textwidth,clip,trim={1.5cm 12.5cm 11cm 7.5cm}]{pmf_knee.pdf}
+  \caption[Map knee dependence]{
+  The forecasted uncertainty on the PMF power, \apmf{}, falls as expected as the low-frequency map noise decreases.  
+  In particular, achieving a map 1/f knee frequency at or below $\ell = 200$ substantially improves the potential power of CMB-S4 PMF searches. 
+  The black solid line shows the forecast uncertainty as a function of area in the 11-parameter cosmological model.
+  The purple dot-dash line shows the same, except in the restricted \lcdm{}+\apmf{} 7-parameter model. 
+  The x-axis is the map noise knee (see eqn.~\ref{eqn:knee}) in angular multipoles $\ell$. 
+  As we expect, reducing low-frequency noise would lead to better PMF constraints. 
+    \label{fig:knee}
+  }
+\end{figure}
+
 Next we turn to the recovery of large angular scales, and the noise performance at low frequencies. 
 We measure the importance by shifting the 1/f knee of the map-space noise in the range $\ell = [50,400]$. 
 Effectively, we are multiplying the noise power, $N_\ell$, which is a constant for white noise,  by a function of angular multipole:
-\be
-f(\ell) = 1 + \left(\frac{\ell_{\rm knee}}{\ell}\right)^{8/3}. 
+\be \label{eqn:knee}
+f(\ell) = 1 + \left(\frac{\ell_{\rm knee}}{\ell}\right)^{8/3}.
 \ee 
 The exponent, 8/3, was selected based on a Kolmogorov spectrum of turbulence within a thin plane \citep{lay00}. %lay & halverson 2000. 
 Note that this knob  serves as a placeholder for several effects, including a signal-to-noise hit due to galactic foregrounds or the methods used to clean these foregrounds, atmospheric noise, or actual instrumental 1/f noise. 
-We find that increasing \lknee{} from 50 to 100, 200 or 400 expands the uncertainty on \apmf{} by factors of 1.2, 2.1 and 6.3 respectively. 
-Recovering large angular scales is clearly very important to PMF searches. 
+We find the results to be somewhat more sensitive to the 1/f knee in the simple \lcdm{}+\apmf{} model, where dropping \lknee{} from 400 to 50 reduces the uncertainty by a factor of 6.3.
+However, the knee frequency is still important in the more conservative 11-parameter model, where the same shift reduces the uncertainties by a factor of 2.7. 
+In both cases, as can be seen in Fig.~\ref{fig:knee}, the information loss really accelerates when the 1/f knee goes above $\ell \simeq 200$. 
+For the same 11-parameter model, bringing \lknee{} to 200 from 400 yields a factor of 2 (only modestly worse than the 2.7x improvement for \lknee=50). 
+Recovering large angular scales is clearly important to PMF searches. 
 This is consistent with the study of telescope size in the last paragraph - which found extending to smaller angular scales only helped slightly. 
 It is also consistent with the current upper limits, which are dominated by the BICEP2/Keck Array data at low-$\ell$. 
 Fortunately, these large angular scales are also crucial to searches for inflationary gravitational waves, so the needs of the PMF search are well-aligned with one of the key science drivers for CMB-S4.
 
-
+\begin{figure}[htb]\centering
+\includegraphics[width=0.45\textwidth,clip,trim={1.5cm 12.5cm 11cm 7.5cm}]{pmf_area.pdf}
+  \caption[Area dependence]{
+  The forecasted uncertainty on the PMF power, \apmf{}, falls as the survey area increases. 
+  In particular, observing more than $\sim$\,15\% of the sky is strongly preferred for PMF searches. 
+  The black solid line shows the forecast uncertainty as a function of area in the 11-parameter cosmological model.
+  The purple dot-dash line shows the same, except in the restricted \lcdm{}+\apmf{} 7-parameter model. 
+  In both cases, better limits on PMFs will be achieved with wider surveys.
+    \label{fig:area}
+  }
+\end{figure}
 A third question is whether it is better to integrate deeply on a small patch of sky or observe a wide area. 
 As shown in  Fig.~\ref{fig:area}, it is better to go as wide as possible. 
 A caveat to this analysis is that it is likely easier to remove galactic foregrounds to a specified level on targeted, `clean' patches as opposed to a substantial fraction of the sky, and we would expect galactic foregrounds to be important for the large angular scales. 
-With that said, the PMF constraints improve rapidly with sky area up to XX \sqdeg, and improve by another XX\% up to the 70\% of the sky (the widest area likely to be possible after galactic cuts).
+With that said, the PMF constraints improve by a factor of 1.4-1.5 (depending on the cosmological model) going from 10\% to 25\% of the full sky, and improve by another factor of 1.4-1.5 by going to the 70\% of the sky (the widest area likely to be possible after galactic cuts).
 
 
 Finally, we consider if searches for PMFs introduce new requirements on the knowledge to which the instrumental beam or overall calibration of the experiments must be known. 
-We parametrize the beam uncertainty as a fractional uncertainty on the FWHM of the Gaussian beam, and calibration uncertainty as an overall power uncertainty. 
-We find negligible ($<$\,1\%) shifts in the forecasted uncertainty for calibration uncertainties from 0.2 to 5\% and beam FWHM uncertainties from 2 to 12.5\%. 
+We parameterize the beam uncertainty as a fractional uncertainty on the FWHM of the Gaussian beam, and calibration uncertainty as an overall power uncertainty. 
+We find negligible, sub-percent shifts in the forecasted uncertainty for calibration uncertainties from 0.2 to 5\% and beam FWHM uncertainties from 2 to 12.5\%. 
 The PMF constraints are insensitive to beam and calibration uncertainty. 
 
 \section{Conclusions}
 \label{sec:conclusions}
 
+In this work, we have improved the current upper limits on the strength of any primordial magnetic fields by including more CMB polarization data. 
+By adding \bicepkeck{}, \pb, and \sptpol to \planck{} we find the 95\% CL upper limit on the PMF power falls from $\apmf < 0.68$ to $\apmf < 0.33$. 
+The biggest contributor to this improvement is the low-$\ell$ data from \bicepkeck{}. 
 
+We have also shown that the next generation of experiments have the potential power to dramatically reduce these limits, and potentially detect PMFs for the first time. 
+The so-called stage III experiments, which should begin taking data in 2017, expect to set upper limits at the level of $\apmf < 0.0062$ even after marginalizing over a five-parameter extension to \lcdm.
+
+The potential for detection increases even further with planned experiments like the Simons Observatory or CMB-S4. 
+We show that an ideal version of CMB-S4 might decrease the 95\% CL upper limits eight-fold, to $\apmf < 0.0008$, and even non-ideal versions can easily set upper limits on order of $\apmf < 0.001$, i.e.~ a six-fold improvement over the forecasts for the stage III experiments and a 330-fold improvement over the current limits. 
+These experiments will be very exciting probes of PMFs and other sources of cosmic birefringence. 
 
 \bibliography{pmf}
 
