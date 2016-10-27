@@ -72,9 +72,9 @@ The constraints from a stage IV experiment have the potential to rule out much o
 \label{sec:intro}
 
 Measurements of the cosmic microwave background (CMB) temperature anisotropy have provided some of the most powerful tests of cosmology. 
-We are now entering a new era as experiments begin to measure  polarized ``B-modes" in the CMB for the first time \citep{XXXX}. 
+We are now entering a new era as experiments begin to measure  polarized ``B-modes" in the CMB for the first time \citep{hanson13,polarbear14b,bicep2014a,naess14,keisler15,bicepkeck15,louis16}. 
 Precision measurements of CMB polarization promise new tests of the standard cosmological model. 
-The best known of these tests are the searches for inflationary gravitational waves in B-modes at large angular scales \citep{XXX} and plans to measure the sum of the neutrino masses through the lensing B-modes on small angular scales \citep{XXX}. 
+The best known of these tests are the searches for inflationary gravitational waves in B-modes at large angular scales and plans to measure the sum of the neutrino masses through the lensing B-modes on small angular scales \citep[for a recent review see,][]{abazajian16}. 
 
 CMB B-mode measurements can also be used to constrain more exotic models, such as the possible existence of cosmic birefringence \citep{carroll98,lue99} or a primordial magnetic field (PMF) \citep{kosowsky96, seshadri01}.  
 Both effects lead to cosmic birefringence and the rotation of E-modes into B-modes. 
@@ -96,14 +96,14 @@ Of course, this amplification process may have a different initial seed; other i
 However, the possibility of PMFs opens up the intriguing idea that observations of large-scale magnetic fields may offer insights into the physics of the very early Universe. 
 
 
-Primordial magnetic fields would have observational consequences for Big Bang nucleosynthesis \citep[e..,][]{kahniashvili10}, large scale structure \citep[e.g.,][]{battaner97}, the black body spectrum of the CMB \citep[e.g.,][]{kunze14}, as well as the CMB anisotropy. 
+Primordial magnetic fields would have observational consequences for Big Bang nucleosynthesis \citep[e.g.,][]{kahniashvili10}, large scale structure \citep[e.g.,][]{battaner97}, ionization history of the Universe \citep{kunze15}, and the black body spectrum of the CMB \citep[e.g.,][]{kunze14},  as well as the CMB anisotropy. 
 The CMB anisotropies have yielded some of the strongest constraints on PMFs and are the focus of this work.
 There have been two recent results of note. 
 \citet{planck15-19} have used the \planck{} 2015 release of temperature and polarization data to set limits on a variety of PMF models. 
 With the CMB power spectrum data that will be the focus of this paper, \citet{planck15-19} find 95\% CL upper limits ranging from $\bpmf < 5.6$\,nG to $<0.7$\,nG depending on the exact model. 
-The \pb{} collaboration also recently announced limits on PMFs from the \pb{} data using either a 4-point estimator or B-mode power spectrum measurement in \citep{pb}. 
+The \pb{} collaboration also recently announced limits on PMFs from the \pb{} data using either a 4-point estimator or B-mode power spectrum measurement in \citep{polarbear14b}. 
 The strongest constraints were from the B-mode spectrum; the observed upper limit was $\bpmf < 3.9$\,nG. 
-Two other experiments, \sptpol{} and \bicepkeck{}, have reported B-mode power spectrum measurements recently \citep{}.
+Two other experiments, \sptpol{} and \bicepkeck{}, have reported B-mode power spectrum measurements recently \citep{keisler15,bicepkeck15}.
 In this paper, we will combine the data from all four experiments to determine simple limits on the PMF, and then examine Fisher matrix forecasts on PMF models from the stage-III and stage-IV CMB experiments being built or designed right now. 
 
 
@@ -136,8 +136,8 @@ We also add the BB bandpowers from \pb{} that cover the multipoles from 500 to 2
 Both the \sptpol{} and \pb{} bandpowers primary constrain the vector mode of the PMF given the angular scales measured. 
 Finally, we include the latest BICEP2 and Keck Array  joint analysis \citep{bicepkeck15}. 
 This latter dataset also places limits on the tensor mode of the PMF due to its coverage of lower multipoles. 
-During the writing of this work, ACTpol polarization power spectra became available \citep{actpol}. 
-We have not included the ACTPol bandpowers; we do not expect adding them to significantly change the PMF limits based on a visual comparison of the current BB bandpowers from different experiments.
+During the writing of this work, ACTpol polarization power spectra became available \citep{naess14,louis16}. 
+We have not included them as the public likelihoods do not include the B-mode power spectrum; we do not expect adding the ACTpol bandpowers to significantly change the PMF limits based on a visual comparison of the current BB bandpowers from different experiments.
 In all chains, we marginalize over the recommended foreground models for each data set. 
 We do not however require these consistency between these foreground models since the data don't have identical flux cuts and so on. 
 In the case of an upper limit this treatment is conservative since wider foreground priors should only weaken the limit on the PMF strength. 
@@ -190,7 +190,7 @@ However, if a PMF is detected, this same steep scaling would allow excellent con
   Current measurements of CMB B-modes. 
     The black line shows the expected B-mode power in the \planck{} best-fit \lcdm{} cosmology (with the tensor-to-scalar ratio, r set to 0.01). 
     The B-mode measurements used for the limits in this work are denoted with filled circles; data not used has an open circle. 
-    The data sets are from POLARBEAR (black; \citet{polarbear}); ACTpol (dark green; \citet{actpol});  BICEP2/Keck Array (red; \citet{bicepkeck}); and SPTpol (purple; \citet{sptpol}). 
+    The data sets are from POLARBEAR (black; \citet{polarbear14b}); ACTpol (dark green; \citet{naess14});  BICEP2/Keck Array (red; \citet{bicepkeck15}); and SPTpol (purple; \citet{keisler15}). 
       Current B-mode measurements are noise-limited at all angular multipoles; the next generation of experiments is expected to significantly increase the signal-to-noise on the B-mode power spectrum. 
            \label{fig:pmf-experiments}
   }
@@ -288,9 +288,9 @@ Summary of results (will be trimmed for paper).
 \label{sec:forecasts}
 
 The sensitivity of CMB experiments is increasing rapidly due to the exponential growth in detector counts
-\citet{s4sciencebook} thus defines four stages of CMB experiments. 
+\citet{abazajian16} thus defines four stages of CMB experiments. 
 The current experiments (i.e.~the ones used for PMF constraints in the last section) are classified as Stage II experiments. 
-Stage III experiments such as SPT-3G, the Simons Array, or AdvACTPol \citep{spt3g,simonsarray,advactpol} have approximately ten times more detectors, and generically will start collecting data in 2017 and finish in 2020-21.
+Stage III experiments such as SPT-3G, the Simons Array, or AdvACTPol \citep{benson14,suzuki16,henderson16} have approximately ten times more detectors, and generically will start collecting data in 2017 and finish in 2020-21.
 In this section, we forecast the expected constraints from the Stage III experiments by combining forecasts for SPT-3G and the Simons Array. 
 There is also a proposal to build a stage IV experiment, CMB-S4,  that would increase the detector counts by another order of magnitude and hopefully begin taking data in the early 2020s.
 We examine the likely PMF constraints from CMB-S4, and consider which aspects of experimental or survey design are important to maximize the recovered information on PMFs.
@@ -301,15 +301,16 @@ We examine the likely PMF constraints from CMB-S4, and consider which aspects of
 \subsection{Methods and Experimental Parameters}
 
 We use Fisher matrices to forecast the constraints on PMFs possible from each generation of experiment. 
-Fisher matrices make it easy to combine different experiments and forecast the final parameter constraints \citep{fisher}. 
-According to the Cramer-Rao bound, the Fisher information provides a lower bound on the uncertainty. 
+Fisher matrices make it easy to combine different experiments and forecast the final parameter constraints. 
+However, for non-Gaussian likelihoods, there is the potential for Fisher matrix forecasts to significantly underestimate the true uncertainties \citep[see e.g.,][]{wolz12}. 
+
 
 We include two external datasets in all forecasts. 
 The first dataset is the expected measurements of the  TT, TE and EE spectra from the \planck{} satellite. 
 We include \planck{} TT information in the multipole range $2\le \ell \le 3000$. 
 Due to the importance of galactic foreground removal at large scales in polarization, we only use TE and EE information starting from $\ell = 30$. 
 A prior on the optical depth of 0.005 is added to account for the expected optical depth constraint from the missing multipoles. 
-Second, we include a 1\% external measurement of the Hubble constant, such as would be expected from the Taipan experiment \citep{taipan}. 
+Second, we include a 1\% external measurement of the Hubble constant, such as would be expected from the Taipan experiment \citep{kuehn14}. 
 
 One concern with combining Fisher matrices from different experiments is double-counting modes due to overlapping sky coverage. 
 We sidestep this issue for the TT or TE spectra, by only using the \planck{} measurements. 
