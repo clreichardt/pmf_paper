@@ -1,17 +1,19 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\documentclass[apj]{emulateapj}
-\documentclass[preprint]{emulateapj}
+\documentclass[apj]{emulateapj}·
+%\documentclass[preprint2]{aastex61}
 %\documentclass[12pt,preprint]{aastex}
 \graphicspath{{figures/}}
 \DeclareGraphicsExtensions{.jpg,.pdf,.png,.eps,.ps}
 
-\usepackage[table,usenames,dvipsnames]{xcolor}
-\usepackage{amsmath}
-\usepackage{subfigure}
+%\usepackage[table,usenames,dvipsnames]{xcolor}
+%\usepackage{amsmath}
+%\usepackage{subfigure}
 \usepackage[backref,breaklinks,colorlinks,citecolor=blue]{hyperref}
 \usepackage{natbib}
-\usepackage{graphicx}
-\usepackage{multirow}
+%\usepackage{natbib}
+\bibliographystyle{fapj}
+%\usepackage{graphicx}
+%\usepackage{multirow}
 
 \newcommand{\sqdeg}{deg$^2$ }
 \newcommand{\omb}{\ensuremath{\Omega_b h^2}}
@@ -44,9 +46,11 @@
 \newcommand{\tbd}[1]{\textcolor{Red}{{\bf TBD}: #1}}
 \newcommand{\gab}[1]{\textcolor{Orchid}{[{\bf GS}: #1]}}
 
-\bibliographystyle{fapj}
+%
 
 % ref to section \S\ref{sec:label}
+
+%\submitjournal{ApJ}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
@@ -101,7 +105,7 @@ The CMB anisotropies have yielded some of the strongest constraints on PMFs and 
 There have been two recent results of note. 
 \citet{planck15-19} have used the \planck{} 2015 release of temperature and polarization data to set limits on a variety of PMF models. 
 With the CMB power spectrum data that will be the focus of this paper, \citet{planck15-19} find 95\% CL upper limits ranging from $\bpmf < 5.6$\,nG to $<0.7$\,nG depending on the exact model. 
-Here \bpmf{} is the rms field strength on a length scale of 1\,Mpc. 
+Here \bpmf{} is the rms field strength on a 1\,Mpc length scale. 
 The \pb{} collaboration also recently announced limits on PMFs from the \pb{} data using either a 4-point estimator or B-mode power spectrum measurement in \citep{polarbear14b}. 
 The strongest constraints were from the B-mode spectrum; the observed upper limit was $\bpmf < 3.9$\,nG. 
 Two other experiments, \sptpol{} and \bicepkeck{}, have reported B-mode power spectrum measurements recently \citep{keisler15,bicepkeck15}.
@@ -143,6 +147,7 @@ We have not included them as the public likelihoods do not include the B-mode po
 In all chains, we marginalize over the recommended foreground models for each data set. 
 We do not however require these consistency between these foreground models since the data don't have identical flux cuts for extragalactic sources and so on. 
 In the case of an upper limit this treatment is conservative since wider foreground priors should only weaken the limit on the PMF strength. 
+These data are plotted against the expected B-mode power spectrum for the standard cosmological model in Fig.~\ref{fig:pmf-experiments}. 
 
 \subsection{Methods}
 
@@ -177,7 +182,7 @@ The timing is typically parametrized by the ratio of the scale factors at neutri
 
 Given that we are still in the era of upper limits,  we do not explore the full 3-dimensional PMF parameter space in this work. 
 Instead, we use CMBACT to calculate a PMF template for the CMB TT, TE, EE and BB power spectra at fixed parameters: $B_{\rm{1Mpc}}$=2.5 \rm{nG}, $n_b$=-2.9 and $a_{\nu}/a_{\rm{PMF}}=10^9$. 
-This template is plotted against the current measurements of the CMB B-mode power spectrum in Fig.~\ref{fig:pmf-bb}. 
+This template is plotted against other signals in the CMB B-mode power spectrum in Fig.~\ref{fig:pmf-bb}. 
 We fit for a new scaling parameter, $A_{pmf}$, that rescales the PMF power spectrum template. 
 We can translate the amplitude constraint on this template to a constraint rms magnetic field strength on 1\,Mpc scales , \bpmf, using the expected scaling:
 \be
@@ -216,17 +221,22 @@ However, if a PMF is detected, this same steep scaling would allow excellent con
 
 We find the addition of ground-based CMB polarization data to \planck{} data substantially improves the upper limits on the allowed power due to a PMF, leading to a factor of two improvement. 
 With Planck alone, the 95\% confidence upper limit is $\apmf <  0.73$ for \lcdm{}+\apmf{}; with the ground-based experiments, this limit drops to $\apmf <  0.35$. 
+We list the limits for the combined dataset  with different parameter sets in Table~\ref{tab:param_all}. 
 Somewhat counterintuitively, the limits are slightly better with \alens{} allowed to vary (this is due to a preference for \alens{} above unity). 
 In this case for  Planck alone, the 95\% confidence upper limit is $\apmf <  0.68$, dropping to $\apmf <  0.27$ with the ground-based experiments. 
 We test which datasets are important by adding single datasets to the \planck{} set while allowing \alens{} to float, and find that the majority of this improvement is due to the \bicepkeck{} ($\apmf <  0.28$) and \sptpol{} ($\apmf <  0.42$) B-mode power spectrum measurements. 
 The other datasets do not have a large impact on the observed limits. 
+In short, the reduction in the allowed upper limit on \apmf{} is primarily due to a more accurate measurement of the B-mode power spectrum at large angular scales. 
+
+
 
 We propagate these limits on the observed PMF power into limits on the magnetic field strength, \bpmf. 
 Due to the scaling with the fourth power, an upper limit with a flat prior on \apmf{} would lead to an apparent `detection' of \bpmf. 
-We thereforee importance sample the chains to generate a flat prior on \bpmf. 
+We therefore importance sample the chains to generate a flat prior on \bpmf. 
 We find a 95\% limit of $\bpmf < 1.97$\,nG for \planck{} alone, completely consistent with \citep{planck15-19} who found $\bpmf < 2.0$\,nG with $n_B=-2.9$ held fixed as we've done. 
 This is slightly reduced to $\bpmf < 1.85$\,nG for the combined dataset. 
 The improvement from adding more data is somewhat less than one might predict because the combined likelihood peaks somewhat above zero, whereas the \planck{}-only constraints peaks at zero. 
+
 
 
 
@@ -339,8 +349,11 @@ In both cases, we also marginalize over unknown Poisson EE and BB  terms due to 
 
 In this work, we only forecast the uncertainties due to power spectrum (i.e.~2-point estimators) searches for PMFs. 
 Currently the power spectrum limits from \planck{} or \pb{} are better than the 4-point upper limits. 
-Although outside the scope of this work, it would be interesting to extend this analysis to 4-point estimators for two reasons. 
-First, the 4-point limits should improve faster as the noise level falls, and second, in the case of a detection, the 4-point estimators might discriminate between inflationary gravitational waves and tensor PMFs. 
+Although outside the scope of this work, it would be interesting to extend this analysis to 4-point estimators for several reasons. 
+First, the 4-point limits should improve faster as the noise level falls. 
+Second, in the case of a detection, the 4-point estimators might discriminate between inflationary gravitational waves and tensor PMFs. 
+Finally, a lensing estimator might be used to `de-lense' the B-mode power spectrum, thereby suppressing the lensed B-mode signal and allowing better limits on PMFs. 
+Such de-lensing techniques have long been proposed for inflationary gravitational wave searches \citep[e.g.][]{knox02,kesden02,seljak04a,simard15} and more recently been demonstrated on real \planck{} data \citep{larsen16}. 
 
 %As a sanity check, we look at the Fisher matrix forecasts for Planck alone as well in both of these cases. 
 %For both chains,  we look at the sigma in MCMC with \apmf{} allowed to go negative. 
