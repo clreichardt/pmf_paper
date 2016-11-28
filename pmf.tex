@@ -83,7 +83,7 @@ Precision measurements of CMB polarization promise new tests of the standard cos
 The best known of these tests are the searches for inflationary gravitational waves in B-modes at large angular scales and plans to measure the sum of the neutrino masses through the lensing B-modes on small angular scales \citep[for a recent review see,][]{abazajian16}. 
 
 CMB B-mode measurements can also be used to constrain more exotic models, such as the possible existence of cosmic birefringence \citep{carroll98,lue99} or a primordial magnetic field (PMF) \citep{kosowsky96, seshadri01}.  
-Both effects lead to cosmic birefringence and the rotation of E-modes into B-modes. 
+Both effects lead to the rotation of E-modes into B-modes. 
 By equating the magnitude of the resulting B-modes, parity-violating processes can be translated into an equivalent PMF strength. 
 We will therefore simply quote effective limits on a PMF. 
 In this work, we present new upper limits from current CMB polarization data on the possibility of a PMF or parity-violating physics. 
@@ -108,7 +108,7 @@ There have been two recent results of note.
 \citet{planck15-19} have used the \planck{} 2015 release of temperature and polarization data to set limits on a variety of PMF models. 
 With the CMB power spectrum data that will be the focus of this paper, \citet{planck15-19} find 95\% CL upper limits ranging from $\bpmf < 5.6$\,nG to $<0.7$\,nG depending on the exact model. 
 Here \bpmf{} is the rms field strength on a 1\,Mpc length scale. 
-The \pb{} collaboration also recently announced limits on PMFs from the \pb{} data using either a 4-point estimator or B-mode power spectrum measurement in \citep{polarbear14b}. 
+The \pb{} collaboration also recently announced limits on PMFs from the \pb{} data using either a 4-point estimator or B-mode power spectrum measurement in \citep{polarbear15}. 
 The strongest constraints were from the B-mode spectrum; the observed upper limit was $\bpmf < 3.9$\,nG. 
 Two other experiments, \sptpol{} and \bicepkeck{}, have reported B-mode power spectrum measurements recently \citep{keisler15,bicepkeck15}.
 In this paper, we will combine the data from all four experiments to determine simple limits on the PMF, and then examine Fisher matrix forecasts on PMF models from the stage-III and stage-IV CMB experiments being built or designed right now. 
@@ -140,14 +140,14 @@ Specifically, these are the ``plik\_dx11dr21\_HM\_v18\_TT", ``lowTEB" and ``lens
 In addition to the \planck{} data, we use a number of recent CMB B-mode polarization measurements. 
 First, we include measurements of the TE, EE and BB power spectra from the \sptpol{} experiment \citep{crites15,keisler15}. 
 The BB bandpowers cover the angular multipoles $\ell \in [500,2000]$. 
-We also add the BB bandpowers from \pb{} that cover the multipoles from 500 to 2500 \citep{polarbear14b}. 
-At these angular scales, both the \sptpol{} and \pb{} bandpowers primary constrain the vector modes of a PMF. 
+We also add the BB bandpowers from \pb{} that cover the multipoles from 500 to 2500 \citep{polarbear15}. 
+At these angular scales, both the \sptpol{} and \pb{} bandpowers primarily constrain the vector modes of a PMF. 
 Finally, we include the latest BICEP2 and Keck Array  joint analysis \citep{bicepkeck15}. 
 This latter dataset also places limits on the tensor modes of a PMF due to its coverage of lower multipoles. 
 During the writing of this work, ACTpol polarization power spectra became available \citep{naess14,louis16}. 
-We have not included them as the public likelihoods do not include the B-mode power spectrum; we do not expect adding the ACTpol bandpowers to significantly change the PMF limits based on a visual comparison of the current BB bandpowers from different experiments.
+We have not included them as the public likelihoods do not include the B-mode power spectrum; we do not expect adding the ACTpol bandpowers to significantly change the PMF limits based on a visual comparison of the current BB bandpowers from different experiments (see Fig.~\ref{fig:pmf-experiments}).
 In all chains, we marginalize over the recommended foreground models for each data set. 
-We do not however require these consistency between these foreground models since the data don't have identical flux cuts for extragalactic sources and so on. 
+We do not however require consistency between these foreground models since the data don't have identical flux cuts for extragalactic sources and so on. 
 In the case of an upper limit this treatment is conservative since wider foreground priors should only weaken the limit on the PMF strength. 
 These data are plotted against the expected B-mode power spectrum for the standard cosmological model in Fig.~\ref{fig:pmf-experiments}. 
 
@@ -189,13 +189,13 @@ We expect the missing scalar power to degrade the \planck-only results in this w
 However the missing scalar power should be  unimportant for the EE and BB spectra that are driving the tightest constraints. 
 This template is plotted against other signals in the CMB B-mode power spectrum in Fig.~\ref{fig:pmf-bb}. 
 We fit for a new scaling parameter, $A_{pmf}$, that rescales the PMF power spectrum template. 
-For vector modes, we can translate the amplitude constraint on this template to a constraint rms magnetic field strength on 1\,Mpc scales , \bpmf, using the expected scaling:
+For vector modes, we can translate the amplitude constraint on this template to a constraint on the rms magnetic field strength on 1\,Mpc scales, \bpmf, using the expected scaling:
 \be
 \apmf \propto \bpmf^4.
 \ee
 Note that the situation is more complicated for the tensor PMF modes where this power law scaling has not been demonstrated. 
 An unfortunate consequence of this steep scaling is that substantial reductions in the observationally allowed vector-mode power lead to only modestly better limits on the magnetic field strength. 
-However, if a PMF is detected, this same steep scaling would allow excellent constraints on its properties. 
+However, if a PMF is detected, this same steep scaling would allow excellent constraints on its properties.
 
 \begin{figure*}[htb]\centering
 \includegraphics[width=0.9\textwidth,clip,trim={1.5cm 12.5cm 5cm 3.8cm}]{pmf_experiments.pdf}
@@ -404,7 +404,7 @@ We begin by making forecasts for the fiducial CMB-S4 configuration as laid out i
 
 Given that CMB-S4 is still being designed, it is worthwhile to consider how design decisions will affect the final PMF constraints. 
 We look at four aspects of the experiment design: the telescope size or beam FWHM, the low-$\ell$ noise performance (1/f knee),  the choice of survey area, and how well the beam size and calibration must be known. 
-Of these four, we find that the low-$\ell$ noise performance and survey area are important to searches for PMFs 
+Of these four, we find that the low-$\ell$ noise performance and survey area are important to searches for PMFs.
 
 Larger telescopes will allow CMB polarization to be measured on smaller angular scales, and should therefore always improve the PMF constraints. 
 However, larger telescopes are also more expensive to build which means at fixed cost, they would necessitate less ambitious focal planes and lower instantaneous mapping speed. 

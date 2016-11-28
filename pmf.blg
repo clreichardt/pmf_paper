@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: pmf.aux
+The style file: fapj.bst
+Database file #1: pmfNotes.bib
+Database file #2: pmf.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+"ArXiv e-prints" is a string literal, `journal' is a missing field
+---they aren't the same literal types for entry benson14
+while executing---line 3369 of file fapj.bst
+Warning--no book title in kuehn14
+`booktitle' is a missing field, not a string, for entry kuehn14
+while executing---line 3369 of file fapj.bst
+You've used 45 entries,
+            3013 wiz_defined-function locations,
+            942 strings with 29470 characters,
+and the built_in function-call counts, 48816 in all, are:
+= -- 3654
+> -- 5722
+< -- 16
++ -- 2233
+- -- 2188
+* -- 5325
+:= -- 9178
+add.period$ -- 45
+call.type$ -- 45
+change.case$ -- 1229
+chr.to.int$ -- 45
+cite$ -- 46
+duplicate$ -- 909
+empty$ -- 1358
+format.name$ -- 2343
+if$ -- 8712
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 43
+newline$ -- 139
+num.names$ -- 180
+pop$ -- 1282
+preamble$ -- 1
+purify$ -- 1228
+quote$ -- 0
+skip$ -- 772
+stack$ -- 0
+substring$ -- 1068
+swap$ -- 29
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 405
+warning$ -- 1
+while$ -- 162
+width$ -- 0
+write$ -- 454
+(There were 2 error messages)

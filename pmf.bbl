@@ -1,0 +1,302 @@
+\begin{thebibliography}{45}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{{Abazajian} {et~al.}(2016){Abazajian}, {Adshead}, {Ahmed}, {Allen},
+  {Alonso}, {Arnold}, {Baccigalupi}, {Bartlett}, {Battaglia}, {Benson},
+  {Bischoff}, {Borrill}, {Buza}, {Calabrese}, {Caldwell}, {Carlstrom}, {Chang},
+  {Crawford}, {Cyr-Racine}, {De Bernardis}, {de Haan}, {di Serego Alighieri},
+  {Dunkley}, {Dvorkin}, {Errard}, {Fabbian}, {Feeney}, {Ferraro}, {Filippini},
+  {Flauger}, {Fuller}, {Gluscevic}, {Green}, {Grin}, {Grohs}, {Henning},
+  {Hill}, {Hlozek}, {Holder}, {Holzapfel}, {Hu}, {Huffenberger}, {Keskitalo},
+  {Knox}, {Kosowsky}, {Kovac}, {Kovetz}, {Kuo}, {Kusaka}, {Le Jeune}, {Lee},
+  {Lilley}, {Loverde}, {Madhavacheril}, {Mantz}, {Marsh}, {McMahon},
+  {Meerburg}, {Meyers}, {Miller}, {Munoz}, {Nguyen}, {Niemack}, {Peloso},
+  {Peloton}, {Pogosian}, {Pryke}, {Raveri}, {Reichardt}, {Rocha}, {Rotti},
+  {Schaan}, {Schmittfull}, {Scott}, {Sehgal}, {Shandera}, {Sherwin}, {Smith},
+  {Sorbo}, {Starkman}, {Story}, {van Engelen}, {Vieira}, {Watson}, {Whitehorn},
+  \& {Kimmy Wu}}]{abazajian16}
+{Abazajian}, K.~N., {et~al.} 2016, ArXiv e-prints, 1610.02743
+
+\bibitem[{{Ade} {et~al.}(2014){Ade}, {Aikin}, {Barkats}, {Benton}, {Bischoff},
+  {Bock}, {Brevik}, {Buder}, {Bullock}, {Dowell}, {Duband}, {Filippini},
+  {Fliescher}, {Golwala}, {Halpern}, {Hasselfield}, {Hildebrandt}, {Hilton},
+  {Hristov}, {Irwin}, {Karkare}, {Kaufman}, {Keating}, {Kernasovskiy}, {Kovac},
+  {Kuo}, {Leitch}, {Lueker}, {Mason}, {Netterfield}, {Nguyen}, {O'Brient},
+  {Ogburn}, {Orlando}, {Pryke}, {Reintsema}, {Richter}, {Schwarz}, {Sheehy},
+  {Staniszewski}, {Sudiwala}, {Teply}, {Tolan}, {Turner}, {Vieregg}, {Wong},
+  {Yoon}, \& {Bicep2 Collaboration}}]{bicep14a}
+{Ade}, P.~A.~R., {et~al.} 2014, Physical Review Letters, 112, 241101
+
+\bibitem[{Ade {et~al.}(2015)Ade, Arnold, Atlas, Baccigalupi, Barron, Boettger,
+  Borrill, Chapman, Chinone, Cukierman, Dobbs, Ducout, Dunner, Elleflot,
+  Errard, Fabbian, Feeney, Feng, Gilbert, Goeckner-Wald, Groh, Hall, Halverson,
+  Hasegawa, Hattori, Hazumi, Hill, Holzapfel, Hori, Howe, Inoue, Jaehnig,
+  Jaffe, Jeong, Katayama, Kaufman, Keating, Kermish, Keskitalo, Kisner, Kusaka,
+  Le~Jeune, Lee, Leitch, Leon, Li, Linder, Lowry, Matsuda, Matsumura, Miller,
+  Montgomery, Myers, Navaroli, Nishino, Okamura, Paar, Peloton, Pogosian,
+  Poletti, Puglisi, Raum, Rebeiz, Reichardt, Richards, Ross, Rotermund,
+  Schenck, Sherwin, Shimon, Shirley, Siritanasak, Smecher, Stebor, Steinbach,
+  Suzuki, Suzuki, Tajima, Takakura, Tikhomirov, Tomaru, Whitehorn, Wilson,
+  Yadav, Zahn, \& Zahn}]{polarbear15}
+Ade, P. A.~R., {et~al.} 2015, Phys. Rev. D, 92, 123509
+
+\bibitem[{{Battaner} {et~al.}(1997){Battaner}, {Florido}, \&
+  {Jimenez-Vicente}}]{battaner97}
+{Battaner}, E., {Florido}, E., \& {Jimenez-Vicente}, J. 1997, \aap, 326, 13
+
+\bibitem[{{Benson} {et~al.}(2014){Benson}, {Ade}, {Ahmed}, {Allen}, {Arnold},
+  {Austermann}, {Bender}, {Bleem}, {Carlstrom}, {Chang}, {Cho}, {Cliche},
+  {Crawford}, {Cukierman}, {de Haan}, {Dobbs}, {Dutcher}, {Everett}, {Gilbert},
+  {Halverson}, {Hanson}, {Harrington}, {Hattori}, {Henning}, {Hilton},
+  {Holder}, {Holzapfel}, {Irwin}, {Keisler}, {Knox}, {Kubik}, {Kuo}, {Lee},
+  {Leitch}, {Li}, {McDonald}, {Meyer}, {Montgomery}, {Myers}, {Natoli},
+  {Nguyen}, {Novosad}, {Padin}, {Pan}, {Pearson}, {Reichardt}, {Ruhl},
+  {Saliwanchik}, {Simard}, {Smecher}, {Sayre}, {Shirokoff}, {Stark}, {Story},
+  {Suzuki}, {Thompson}, {Tucker}, {Vanderlinde}, {Vieira}, {Vikhlinin}, {Wang},
+  {Yefremenko}, \& {Yoon}}]{benson14}
+{Benson}, B.~A., {et~al.} 2014, in \procspie, Vol. 9153, Millimeter,
+  Submillimeter, and Far-Infrared Detectors and Instrumentation for Astronomy
+  VII, 91531P
+
+\bibitem[{{Broderick} {et~al.}(2012){Broderick}, {Chang}, \&
+  {Pfrommer}}]{broderick12}
+{Broderick}, A.~E., {Chang}, P., \& {Pfrommer}, C. 2012, \apj, 752, 22
+
+\bibitem[{Carroll(1998)}]{carroll98}
+Carroll, S.~M. 1998, Phys. Rev. Lett., 81, 3067
+
+\bibitem[{{Crites} {et~al.}(2015){Crites}, {Henning}, {Ade}, {Aird},
+  {Austermann}, {Beall}, {Bender}, {Benson}, {Bleem}, {Carlstrom}, {Chang},
+  {Chiang}, {Cho}, {Citron}, {Crawford}, {de Haan}, {Dobbs}, {Everett},
+  {Gallicchio}, {Gao}, {George}, {Gilbert}, {Halverson}, {Hanson},
+  {Harrington}, {Hilton}, {Holder}, {Holzapfel}, {Hoover}, {Hou}, {Hrubes},
+  {Huang}, {Hubmayr}, {Irwin}, {Keisler}, {Knox}, {Lee}, {Leitch}, {Li},
+  {Liang}, {Luong-Van}, {McMahon}, {Mehl}, {Meyer}, {Mocanu}, {Montroy},
+  {Natoli}, {Nibarger}, {Novosad}, {Padin}, {Pryke}, {Reichardt}, {Ruhl},
+  {Saliwanchik}, {Sayre}, {Schaffer}, {Smecher}, {Stark}, {Story}, {Tucker},
+  {Vanderlinde}, {Vieira}, {Wang}, {Whitehorn}, {Yefremenko}, \&
+  {Zahn}}]{crites15}
+{Crites}, A.~T., {et~al.} 2015, \apj, 805, 36
+
+\bibitem[{{Dermer} {et~al.}(2011){Dermer}, {Cavadini}, {Razzaque}, {Finke},
+  {Chiang}, \& {Lott}}]{dermer11}
+{Dermer}, C.~D., {Cavadini}, M., {Razzaque}, S., {Finke}, J.~D., {Chiang}, J.,
+  \& {Lott}, B. 2011, \apjl, 733, L21
+
+\bibitem[{{Giovannini}(2004)}]{giovannini04}
+{Giovannini}, M. 2004, International Journal of Modern Physics D, 13, 391
+
+\bibitem[{{Grasso} \& {Riotto}(1998)}]{grasso98}
+{Grasso}, D., \& {Riotto}, A. 1998, Physics Letters B, 418, 258
+
+\bibitem[{{Hanson} {et~al.}(2013){Hanson}, {Hoover}, {Crites}, {Ade}, {Aird},
+  {Austermann}, {Beall}, {Bender}, {Benson}, {Bleem}, {Bock}, {Carlstrom},
+  {Chang}, {Chiang}, {Cho}, {Conley}, {Crawford}, {de Haan}, {Dobbs},
+  {Everett}, {Gallicchio}, {Gao}, {George}, {Halverson}, {Harrington},
+  {Henning}, {Hilton}, {Holder}, {Holzapfel}, {Hrubes}, {Huang}, {Hubmayr},
+  {Irwin}, {Keisler}, {Knox}, {Lee}, {Leitch}, {Li}, {Liang}, {Luong-Van},
+  {Marsden}, {McMahon}, {Mehl}, {Meyer}, {Mocanu}, {Montroy}, {Natoli},
+  {Nibarger}, {Novosad}, {Padin}, {Pryke}, {Reichardt}, {Ruhl}, {Saliwanchik},
+  {Sayre}, {Schaffer}, {Schulz}, {Smecher}, {Stark}, {Story}, {Tucker},
+  {Vanderlinde}, {Vieira}, {Viero}, {Wang}, {Yefremenko}, {Zahn}, \&
+  {Zemcov}}]{hanson13}
+{Hanson}, D., {et~al.} 2013, Physical Review Letters, 111, 141301
+
+\bibitem[{{Henderson} {et~al.}(2016){Henderson}, {Allison}, {Austermann},
+  {Baildon}, {Battaglia}, {Beall}, {Becker}, {De Bernardis}, {Bond},
+  {Calabrese}, {Choi}, {Coughlin}, {Crowley}, {Datta}, {Devlin}, {Duff},
+  {Dunkley}, {D{\"u}nner}, {van Engelen}, {Gallardo}, {Grace}, {Hasselfield},
+  {Hills}, {Hilton}, {Hincks}, {Hlo{\^z}ek}, {Ho}, {Hubmayr}, {Huffenberger},
+  {Hughes}, {Irwin}, {Koopman}, {Kosowsky}, {Li}, {McMahon}, {Munson}, {Nati},
+  {Newburgh}, {Niemack}, {Niraula}, {Page}, {Pappas}, {Salatino}, {Schillaci},
+  {Schmitt}, {Sehgal}, {Sherwin}, {Sievers}, {Simon}, {Spergel}, {Staggs},
+  {Stevens}, {Thornton}, {Van Lanen}, {Vavagiakis}, {Ward}, \&
+  {Wollack}}]{henderson16}
+{Henderson}, S.~W., {et~al.} 2016, Journal of Low Temperature Physics, 184, 772
+
+\bibitem[{{Ichiki} {et~al.}(2006){Ichiki}, {Takahashi}, {Ohno}, {Hanayama}, \&
+  {Sugiyama}}]{ichiki06}
+{Ichiki}, K., {Takahashi}, K., {Ohno}, H., {Hanayama}, H., \& {Sugiyama}, N.
+  2006, Science, 311, 827
+
+\bibitem[{Kahniashvili {et~al.}(2010)Kahniashvili, Tevzadze, Sethi, Pandey, \&
+  Ratra}]{kahniashvili10}
+Kahniashvili, T., Tevzadze, A.~G., Sethi, S.~K., Pandey, K., \& Ratra, B. 2010,
+  Phys. Rev. D, 82, 083005
+
+\bibitem[{{Keck Array and BICEP2 Collaborations: Ade} {et~al.}(2015){Keck Array
+  and BICEP2 Collaborations: Ade}, {Ahmed}, {Aikin}, {Alexander}, {Barkats},
+  {Benton}, {Bischoff}, {Bock}, {Bowens-Rubin}, {Brevik}, {Buder}, {Bullock},
+  {Buza}, {Connors}, {Crill}, {Duband}, {Dvorkin}, {Filippini}, {Fliescher},
+  {Grayson}, {Halpern}, {Harrison}, {Hilton}, {Hui}, {Irwin}, {Karkare},
+  {Karpel}, {Kaufman}, {Keating}, {Kefeli}, {Kernasovskiy}, {Kovac}, {Kuo},
+  {Leitch}, {Lueker}, {Megerian}, {Netterfield}, {Nguyen}, {O'Brient},
+  {Ogburn}, {Orlando}, {Pryke}, {Richter}, {Schwarz}, {Sheehy}, {Staniszewski},
+  {Steinbach}, {Sudiwala}, {Teply}, {Thompson}, {Tolan}, {Tucker}, {Turner},
+  {Vieregg}, {Weber}, {Wiebe}, {Willmert}, {Wong}, {Wu}, \&
+  {Yoon}}]{bicepkeck15}
+{Keck Array and BICEP2 Collaborations: Ade}, P.~A.~R., {et~al.} 2015, ArXiv
+  e-prints, 1510.09217
+
+\bibitem[{Keisler {et~al.}(2015)Keisler, Hoover, Harrington, Henning, Ade,
+  Aird, Austermann, Beall, Bender, Benson, Bleem, Carlstrom, Chang, Chiang,
+  Cho, Citron, Crawford, Crites, de~Haan, Dobbs, Everett, Gallicchio, Gao,
+  George, Gilbert, Halverson, Hanson, Hilton, Holder, Holzapfel, Hou, Hrubes,
+  Huang, Hubmayr, Irwin, Knox, Lee, Leitch, Li, Luong-Van, Marrone, McMahon,
+  Mehl, Meyer, Mocanu, Natoli, Nibarger, Novosad, Padin, Pryke, Reichardt,
+  Ruhl, Saliwanchik, Sayre, Schaffer, Shirokoff, Smecher, Stark, Story, Tucker,
+  Vanderlinde, Vieira, Wang, Whitehorn, Yefremenko, \& Zahn}]{keisler15}
+Keisler, R., {et~al.} 2015, \apj, 807, 151
+
+\bibitem[{{Kesden} {et~al.}(2002){Kesden}, {Cooray}, \&
+  {Kamionkowski}}]{kesden02}
+{Kesden}, M., {Cooray}, A., \& {Kamionkowski}, M. 2002, Physical Review
+  Letters, 89, 011304 (4 pages)
+
+\bibitem[{{Knox} \& {Song}(2002)}]{knox02}
+{Knox}, L., \& {Song}, Y. 2002, Physical Review Letters, 89, 011303
+
+\bibitem[{{Kosowsky} \& {Loeb}(1996)}]{kosowsky96}
+{Kosowsky}, A., \& {Loeb}, A. 1996, \apj, 469, 1+
+
+\bibitem[{Kuehn {et~al.}(2014)Kuehn, Lawrence, Brown, Case, Colless, Content,
+  Gers, Gilbert, Goodwin, Hopkins, Ireland, Lorente, Muller, Nichani, Rakman,
+  Richards, Saunders, Staszak, Tims, \& Waller}]{kuehn14}
+Kuehn, K., {et~al.} 2014, in , 914710--914710--8
+
+\bibitem[{Kunze \& Komatsu(2014)}]{kunze14}
+Kunze, K.~E., \& Komatsu, E. 2014, Journal of Cosmology and Astroparticle
+  Physics, 2014, 009
+
+\bibitem[{{Kunze} \& {Komatsu}(2015)}]{kunze15}
+{Kunze}, K.~E., \& {Komatsu}, E. 2015, \jcap, 6, 027
+
+\bibitem[{{Larsen} {et~al.}(2016){Larsen}, {Challinor}, {Sherwin}, \&
+  {Mak}}]{larsen16}
+{Larsen}, P., {Challinor}, A., {Sherwin}, B.~D., \& {Mak}, D. 2016, Physical
+  Review Letters, 117, 151102
+
+\bibitem[{{Lay} \& {Halverson}(2000)}]{lay00}
+{Lay}, O.~P., \& {Halverson}, N.~W. 2000, \apj, 543, 787, astro-ph/9905369
+
+\bibitem[{{Lewis} \& {Bridle}(2002)}]{lewis02b}
+{Lewis}, A., \& {Bridle}, S. 2002, \prd, 66, 103511
+
+\bibitem[{{Lewis} {et~al.}(2000){Lewis}, {Challinor}, \& {Lasenby}}]{lewis00}
+{Lewis}, A., {Challinor}, A., \& {Lasenby}, A. 2000, \apj, 538, 473
+
+\bibitem[{{Louis} {et~al.}(2016){Louis}, {Grace}, {Hasselfield}, {Lungu},
+  {Maurin}, {Addison}, {Ade}, {Aiola}, {Allison}, {Amiri}, {Angile},
+  {Battaglia}, {Beall}, {de Bernardis}, {Bond}, {Britton}, {Calabrese}, {Cho},
+  {Choi}, {Coughlin}, {Crichton}, {Crowley}, {Datta}, {Devlin}, {Dicker},
+  {Dunkley}, {D{\"u}nner}, {Ferraro}, {Fox}, {Gallardo}, {Gralla}, {Halpern},
+  {Henderson}, {Hill}, {Hilton}, {Hilton}, {Hincks}, {Hlozek}, {Ho}, {Huang},
+  {Hubmayr}, {Huffenberger}, {Hughes}, {Infante}, {Irwin}, {Muya Kasanda},
+  {Klein}, {Koopman}, {Kosowsky}, {Li}, {Madhavacheril}, {Marriage}, {McMahon},
+  {Menanteau}, {Moodley}, {Munson}, {Naess}, {Nati}, {Newburgh}, {Nibarger},
+  {Niemack}, {Nolta}, {Nu{\~n}ez}, {Page}, {Pappas}, {Partridge}, {Rojas},
+  {Schaan}, {Schmitt}, {Sehgal}, {Sherwin}, {Sievers}, {Simon}, {Spergel},
+  {Staggs}, {Switzer}, {Thornton}, {Trac}, {Treu}, {Tucker}, {Van Engelen},
+  {Ward}, \& {Wollack}}]{louis16}
+{Louis}, T., {et~al.} 2016, ArXiv e-prints, 1610.02360
+
+\bibitem[{{Lue} {et~al.}(1999){Lue}, {Wang}, \& {Kamionkowski}}]{lue99}
+{Lue}, A., {Wang}, L., \& {Kamionkowski}, M. 1999, Physical Review Letters, 83,
+  1506
+
+\bibitem[{{Naess} {et~al.}(2014){Naess}, {Hasselfield}, {McMahon}, {Niemack},
+  {Addison}, {Ade}, {Allison}, {Amiri}, {Battaglia}, {Beall}, {de Bernardis},
+  {Bond}, {Britton}, {Calabrese}, {Cho}, {Coughlin}, {Crichton}, {Das},
+  {Datta}, {Devlin}, {Dicker}, {Dunkley}, {D{\"u}nner}, {Fowler}, {Fox},
+  {Gallardo}, {Grace}, {Gralla}, {Hajian}, {Halpern}, {Henderson}, {Hill},
+  {Hilton}, {Hilton}, {Hincks}, {Hlozek}, {Ho}, {Hubmayr}, {Huffenberger},
+  {Hughes}, {Infante}, {Irwin}, {Jackson}, {Muya Kasanda}, {Klein}, {Koopman},
+  {Kosowsky}, {Li}, {Louis}, {Lungu}, {Madhavacheril}, {Marriage}, {Maurin},
+  {Menanteau}, {Moodley}, {Munson}, {Newburgh}, {Nibarger}, {Nolta}, {Page},
+  {Pappas}, {Partridge}, {Rojas}, {Schmitt}, {Sehgal}, {Sherwin}, {Sievers},
+  {Simon}, {Spergel}, {Staggs}, {Switzer}, {Thornton}, {Trac}, {Tucker},
+  {Uehara}, {Van Engelen}, {Ward}, \& {Wollack}}]{naess14}
+{Naess}, S., {et~al.} 2014, \jcap, 10, 7
+
+\bibitem[{{Neronov} \& {Vovk}(2010)}]{neronov10}
+{Neronov}, A., \& {Vovk}, I. 2010, Science, 328, 73
+
+\bibitem[{{Planck Collaboration} {et~al.}(2015){Planck Collaboration}, {Ade},
+  {Aghanim}, {Arnaud}, {Arroja}, {Ashdown}, {Aumont}, {Baccigalupi},
+  {Ballardini}, {Banday}, \& et~al.}]{planck15-19}
+{Planck Collaboration}, {et~al.} 2015, ArXiv e-prints, 1502.01594
+
+\bibitem[{{Pogosian} \& {Vachaspati}(1999)}]{pogosian99}
+{Pogosian}, L., \& {Vachaspati}, T. 1999, \prd, 60, 083504
+
+\bibitem[{{Ryu} {et~al.}(2012){Ryu}, {Schleicher}, {Treumann}, {Tsagas}, \&
+  {Widrow}}]{ryu12}
+{Ryu}, D., {Schleicher}, D.~R.~G., {Treumann}, R.~A., {Tsagas}, C.~G., \&
+  {Widrow}, L.~M. 2012, \ssr, 166, 1
+
+\bibitem[{{Seljak} \& {Hirata}(2004)}]{seljak04a}
+{Seljak}, U., \& {Hirata}, C.~M. 2004, \prd, 69, 043005
+
+\bibitem[{Seshadri \& Subramanian(2001)}]{seshadri01}
+Seshadri, T.~R., \& Subramanian, K. 2001, Phys. Rev. Lett., 87, 101301
+
+\bibitem[{Simard {et~al.}(2015)Simard, Hanson, \& Holder}]{simard15}
+Simard, G., Hanson, D., \& Holder, G. 2015, The Astrophysical Journal, 807, 166
+
+\bibitem[{{Suzuki} {et~al.}(2016){Suzuki}, {Ade}, {Akiba}, {Aleman}, {Arnold},
+  {Baccigalupi}, {Barch}, {Barron}, {Bender}, {Boettger}, {Borrill}, {Chapman},
+  {Chinone}, {Cukierman}, {Dobbs}, {Ducout}, {Dunner}, {Elleflot}, {Errard},
+  {Fabbian}, {Feeney}, {Feng}, {Fujino}, {Fuller}, {Gilbert}, {Goeckner-Wald},
+  {Groh}, {Haan}, {Hall}, {Halverson}, {Hamada}, {Hasegawa}, {Hattori},
+  {Hazumi}, {Hill}, {Holzapfel}, {Hori}, {Howe}, {Inoue}, {Irie}, {Jaehnig},
+  {Jaffe}, {Jeong}, {Katayama}, {Kaufman}, {Kazemzadeh}, {Keating}, {Kermish},
+  {Keskitalo}, {Kisner}, {Kusaka}, {Jeune}, {Lee}, {Leon}, {Linder}, {Lowry},
+  {Matsuda}, {Matsumura}, {Miller}, {Mizukami}, {Montgomery}, {Navaroli},
+  {Nishino}, {Peloton}, {Poletti}, {Puglisi}, {Rebeiz}, {Raum}, {Reichardt},
+  {Richards}, {Ross}, {Rotermund}, {Segawa}, {Sherwin}, {Shirley},
+  {Siritanasak}, {Stebor}, {Stompor}, {Suzuki}, {Tajima}, {Takada}, {Takakura},
+  {Takatori}, {Tikhomirov}, {Tomaru}, {Westbrook}, {Whitehorn}, {Yamashita},
+  {Zahn}, \& {Zahn}}]{suzuki16}
+{Suzuki}, A., {et~al.} 2016, Journal of Low Temperature Physics, 184, 805
+
+\bibitem[{{Tavecchio} {et~al.}(2010){Tavecchio}, {Ghisellini}, {Foschini},
+  {Bonnoli}, {Ghirlanda}, \& {Coppi}}]{tavecchio10}
+{Tavecchio}, F., {Ghisellini}, G., {Foschini}, L., {Bonnoli}, G., {Ghirlanda},
+  G., \& {Coppi}, P. 2010, \mnras, 406, L70
+
+\bibitem[{{Taylor} {et~al.}(2011){Taylor}, {Vovk}, \& {Neronov}}]{taylor11}
+{Taylor}, A.~M., {Vovk}, I., \& {Neronov}, A. 2011, \aap, 529, A144
+
+\bibitem[{{The Polarbear Collaboration: Ade} {et~al.}(2014){The Polarbear
+  Collaboration: Ade}, {Akiba}, {Anthony}, {Arnold}, {Atlas}, {Barron},
+  {Boettger}, {Borrill}, {Chapman}, {Chinone}, {Dobbs}, {Elleflot}, {Errard},
+  {Fabbian}, {Feng}, {Flanigan}, {Gilbert}, {Grainger}, {Halverson},
+  {Hasegawa}, {Hattori}, {Hazumi}, {Holzapfel}, {Hori}, {Howard}, {Hyland},
+  {Inoue}, {Jaehnig}, {Jaffe}, {Keating}, {Kermish}, {Keskitalo}, {Kisner}, {Le
+  Jeune}, {Lee}, {Leitch}, {Linder}, {Lungu}, {Matsuda}, {Matsumura}, {Meng},
+  {Miller}, {Morii}, {Moyerman}, {Myers}, {Navaroli}, {Nishino}, {Orlando},
+  {Paar}, {Peloton}, {Poletti}, {Quealy}, {Rebeiz}, {Reichardt}, {Richards},
+  {Ross}, {Schanning}, {Schenck}, {Sherwin}, {Shimizu}, {Shimmin}, {Shimon},
+  {Siritanasak}, {Smecher}, {Spieler}, {Stebor}, {Steinbach}, {Stompor},
+  {Suzuki}, {Takakura}, {Tomaru}, {Wilson}, {Yadav}, \& {Zahn}}]{polarbear14b}
+{The Polarbear Collaboration: Ade}, P.~A.~R., {et~al.} 2014, \apj, 794, 171
+
+\bibitem[{Turner \& Widrow(1988)}]{turner88}
+Turner, M.~S., \& Widrow, L.~M. 1988, Phys. Rev. D, 37, 2743
+
+\bibitem[{{Vovk} {et~al.}(2012){Vovk}, {Taylor}, {Semikoz}, \&
+  {Neronov}}]{vovk12}
+{Vovk}, I., {Taylor}, A.~M., {Semikoz}, D., \& {Neronov}, A. 2012, \apjl, 747,
+  L14
+
+\bibitem[{{Widrow} {et~al.}(2012){Widrow}, {Ryu}, {Schleicher}, {Subramanian},
+  {Tsagas}, \& {Treumann}}]{widrow12}
+{Widrow}, L.~M., {Ryu}, D., {Schleicher}, D.~R.~G., {Subramanian}, K.,
+  {Tsagas}, C.~G., \& {Treumann}, R.~A. 2012, \ssr, 166, 37
+
+\bibitem[{{Wolz} {et~al.}(2012){Wolz}, {Kilbinger}, {Weller}, \&
+  {Giannantonio}}]{wolz12}
+{Wolz}, L., {Kilbinger}, M., {Weller}, J., \& {Giannantonio}, T. 2012, \jcap,
+  9, 009
+
+\end{thebibliography}
