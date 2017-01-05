@@ -385,10 +385,10 @@ Such de-lensing techniques have long been proposed for inflationary gravitationa
 \subsection{Stage III forecasts}
 
 The experiments that will begin taking data in 2017 will dramatically improve constraints on the PMF power. 
-With the minimal cosmological model, the 1-sigma forecasts for \planck{}+\ho{} is $\sigma(\apmf)=0.47$ (this is consistent with, although slightly worse than, the upper limits from the real data).  
-Adding the EE and BB bandpowers from the two stage III experiments (\sptnew{} and \simons{}) reduces the uncertainty nearly 400-fold in this 7-parameter model to $\sigma(\apmf)=0.0012$. 
-Including all eleven parameters marginally weakens the \planck+\ho{} constraints on \apmf{} by 23\%, and the stage III constraint by a substantial factor of 2.5. 
-Even within the 11-parameter model however,  the addition of stage III CMB experiments improves the \apmf{} uncertainty by a factor of $\sim$\,180 to  $\sigma(\apmf)=0.0031$. 
+With the minimal cosmological model, the 1-sigma forecasts for \planck{}+\ho{} is $\sigma(\apmf)=0.15$ (\tbd{need to check how this compares}this is consistent with, although slightly worse than, the upper limits from the real data).  
+Adding the EE and BB bandpowers from the two stage III experiments (\sptnew{} and \simons{}) reduces the uncertainty by an order of magnitude in this 7-parameter model to $\sigma(\apmf)=0.015$. 
+Including all eleven parameters substantially weakens the \planck+\ho{} constraints on \apmf{} by a factor of five, and the stage III constraint by a more modest 40\%. 
+Thus within the 11-parameter model however,  the addition of stage III CMB experiments improves the \apmf{} uncertainty by a factor of $\sim$\,35 to  $\sigma(\apmf)=0.022$. 
 We can expect substantially tighter constraints on PMFs by the end of the decade. 
 
 \subsection{Stage IV forecasts}
@@ -417,12 +417,14 @@ Raw sensitivity is more important than angular resolution to an experiment's abi
 \begin{figure}[htb]\centering
 \includegraphics[width=0.45\textwidth,clip,trim={1.5cm 12.5cm 11cm 7.5cm}]{pmf_knee.pdf}
   \caption[Map knee dependence]{
-  The forecasted uncertainty on the PMF power, \apmf{}, falls as expected as the low-frequency map noise decreases.  
-  In particular, achieving a map 1/f knee frequency at or below $\ell = 200$ substantially improves the potential power of CMB-S4 PMF searches. 
-  The black solid line shows the forecast uncertainty as a function of area in the 11-parameter cosmological model.
+  The forecasted uncertainty on the PMF power, \apmf{}, falls as expected as the low-frequency map noise decreases for a nearly scale-invariant PMF ($n_b = -2.9$). 
+  In particular, achieving a map 1/f knee frequency at or below $\ell = 200$ substantially improves the potential power of CMB-S4 PMF searches for nearly scale-invariant PMFs. 
+  The black solid line shows the forecast uncertainty as a function of area in the 11-parameter cosmological model with $n_B = -2.9$. 
   The purple dot-dash line shows the same, except in the restricted \lcdm{}+\apmf{} 7-parameter model. 
   The x-axis is the map noise knee (see eqn.~\ref{eqn:knee}) in angular multipoles $\ell$. 
   As we expect, reducing low-frequency noise would lead to better PMF constraints. 
+      Note however, the dependence on the low-frequency noise quickly disappears as $n_b$ increases (not shown); the improvement across this range of knees is small for $n_B=-1$ and negligible for $n_B=2$. 
+
     \label{fig:knee}
   }
 \end{figure}
