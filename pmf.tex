@@ -337,7 +337,8 @@ We do the opposite for the EE and BB spectra.
 We do not include \planck{} BB information in any forecast, and  we throw away \planck{} EE data in the overlap region by appropriately increasing the \planck{} EE uncertainties. 
 %The exact increase depends on the assumed stage III or IV survey area.
 We ignore overlaps between the stage III  on the basis that the sky overlap between a Chilean experiment like the Simons Array and South Pole experiment like SPT-3G should be small. 
-The overlapping sky coverage will probably be substantial between stage III and IV experiments, thus we do not include the stage III experiments, except as a prior on the polarized Poisson power, in the CMB-S4 constraints. 
+This is also why we do not include both Simons Array and AdvACTpol as the two experiments are likely to have substantial sky overlap. 
+The overlapping sky coverage is expected to be substantial between stage III and IV experiments, thus we do not include the stage III experiments, except as a prior on the polarized Poisson power, in the CMB-S4 constraints. 
 This prior is only relevant in practice when the assumed CMB-S4 configuration has a larger beam size than SPT-3G. 
 With these measures, no modes should be double-counted in this analysis. 
 
@@ -373,11 +374,12 @@ We  assume a 5\% uncertainty on the beam FWHM and a 1\% power calibration uncert
 
 We consider the constraints on PMFs in two cosmologies. 
 The first is a 11-parameter model that extends \lcdm{} with 5 commonly considered extensions:  \lcdm{}  +r + \nrun{} + \neff{} + \mnu{}+ \apmf. 
-This 11-parameter model is our default cosmological model for forecasting PMF constraints. 
+This 11-parameter model is our default cosmological model for forecasting future PMF constraints. 
 We have examined the degree to which \apmf{} is degenerate with the other 10 parameters -- the only strong degeneracy is with the tensor-to-scalar ratio, r. 
 The reason for this degeneracy is illustrated in Fig.~\ref{fig:pmf-bb}, which shows that the tensor mode power due to inflationary gravitational waves and PMFs is nearly identical. 
 To illustrate the degree to which parameter degeneracies limit the inferred constraints,  we also quote constraints from a `minimal' 7-parameter model in which the PMF power is the only extension to \lcdm{}:  \lcdm{}  + \apmf. 
 In both cases, we also marginalize over unknown Poisson EE and BB  terms due to polarized extragalactic sources. 
+We assume the galactic foregrounds are removed by a judicious combination of data from multiple frequencies. 
 
 
 In this work, we only forecast the uncertainties due to power spectrum (i.e.~2-point estimators) searches for PMFs. 
@@ -399,10 +401,12 @@ Such de-lensing techniques have long been proposed for inflationary gravitationa
 \subsection{Stage III forecasts}
 
 The experiments that will begin taking data in 2017 will dramatically improve constraints on the PMF power. 
-With the minimal cosmological model, the 1-sigma forecasts for \planck{}+\ho{} is $\sigma(\apmf)=0.15$ (\tbd{need to check how this compares}this is consistent with, although slightly worse than, the upper limits from the real data).  
+With the minimal cosmological model, the 1-sigma forecasts for \planck{}+\ho{} is $\sigma(\apmf)=0.15$ for a nearly-scale invariant PMF spectrum (i.e.~$n_b=-2.9). (\tbd{need to check how this compares}This is consistent with, although slightly worse than, the upper limits from the real data).  
 Adding the EE and BB bandpowers from the two stage III experiments (\sptnew{} and \simons{}) reduces the uncertainty by an order of magnitude in this 7-parameter model to $\sigma(\apmf)=0.015$. 
-Including all eleven parameters substantially weakens the \planck+\ho{} constraints on \apmf{} by a factor of five, and the stage III constraint by a more modest 40\%. 
+The improvement is larger when including all eleven parameters, as the parameter degeneracies substantially weaken (by a factor of five) the \planck+\ho{} constraints on \apmf{}, while only weakening the stage III constraint by a  more modest 40\%. 
 Thus within the 11-parameter model however,  the addition of stage III CMB experiments improves the \apmf{} uncertainty by a factor of $\sim$\,35 to  $\sigma(\apmf)=0.022$. 
+The parameter degeneracies largely disappear for steeper PMF spectra (i.e. $n_b=-1$ or 2) as the PMF B-mode spectra then peaks at very small scales and this small-scale power can not be mimicked by any of the other 11-parameters. 
+The improvement for the CMB-S3 experiments over \planck{} remains impressive at a factor of 17 and 13 respectively. 
 We can expect substantially tighter constraints on PMFs by the end of the decade. 
 
 \subsection{Stage IV forecasts}
@@ -417,8 +421,11 @@ We begin by making forecasts for the fiducial CMB-S4 configuration as laid out i
 \subsection{Survey considerations for Stage IV}
 
 Given that CMB-S4 is still being designed, it is worthwhile to consider how design decisions will affect the final PMF constraints. 
-We look at four aspects of the experiment design: the telescope size or beam FWHM, the low-$\ell$ noise performance (1/f knee),  the choice of survey area, and how well the beam size and calibration must be known. 
-Of these four, we find that the low-$\ell$ noise performance and survey area are important to searches for PMFs.
+We look at four aspects of the experiment design: the telescope size or beam FWHM,  the low-$\ell$ noise performance (1/f knee), the choice of survey area,  and how well the beam size and calibration must be known. 
+Of these four, we find that the first three, the beam FWHM, low-$\ell$ noise performance and survey area, to be potentially important to searches for PMFs. 
+As should be expected, the preferred design depends on the shape of the PMF spectrum ($n_B$) which controls  the relative power between large and small angular scales. 
+
+\tbd{got to here}
 
 Larger telescopes will allow CMB polarization to be measured on smaller angular scales, and should therefore always improve the PMF constraints. 
 However, larger telescopes are also more expensive to build which means at fixed cost, they would necessitate less ambitious focal planes and lower instantaneous mapping speed. 
