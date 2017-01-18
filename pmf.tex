@@ -5,7 +5,7 @@
 \graphicspath{{figures/}}
 \DeclareGraphicsExtensions{.jpg,.pdf,.png,.eps,.ps}
 
-%\usepackage[table,usenames,dvipsnames]{xcolor}
+\usepackage[table,usenames,dvipsnames]{xcolor}
 %\usepackage{amsmath}
 %\usepackage{subfigure}
 \usepackage[backref,breaklinks,colorlinks,citecolor=blue]{hyperref}
@@ -82,43 +82,45 @@ We are now entering a new era as experiments begin to measure  polarized ``B-mod
 Precision measurements of CMB polarization promise new tests of the standard cosmological model. 
 The best known of these tests are the searches for inflationary gravitational waves in B-modes at large angular scales and plans to measure the sum of the neutrino masses through the lensing B-modes on small angular scales \citep[for a recent review see,][]{abazajian16}. 
 
-CMB B-mode measurements can also be used to constrain more exotic models, such as the possible existence of cosmic birefringence \citep{carroll98,lue99} or a primordial magnetic field (PMF) \citep{kosowsky96, seshadri01}.  
+CMB B-mode measurements can also be used to constrain more exotic models, such as the possible existence of cosmic birefringence \citep{carroll98,lue99} or primordial magnetic fields (PMFs) \citep{kosowsky96, seshadri01}.  
 Both effects lead to the rotation of E-modes into B-modes. 
 By equating the magnitude of the resulting B-modes, parity-violating processes can be translated into an equivalent PMF strength. 
-We will therefore simply quote effective limits on a PMF. 
+It is therefore common to simply quote effective limits on PMFs. 
 In this work, we present new upper limits from current CMB polarization data on the possibility of a PMF or parity-violating physics. 
 
-Magnetic fields are ubiquitous in astronomy and are found almost universally in collapsed objects from stars to galaxies and galaxy clusters \citep[for review, see][]{ryu12, widrow12}. 
-There is even some evidence for magnetic fields in intergalactic space from \fermilat{} data \citep{neronov10}, although alternative explanations \citep{broderick12} have been proposed. 
+Magnetic fields are ubiquitous in astronomy and are found almost universally in collapsed objects from stars to galaxies and galaxy clusters \citep[for a review, see][]{ryu12, widrow12}. 
+There is even some evidence for magnetic fields in intergalactic space from \fermilat{} data \citep{neronov10}, although there are alternative explanations \citep{broderick12}. 
 High energy $\gamma$-rays from blazars should  produce electron-positron pairs when the $\gamma$-rays collide with IR or optical photons. 
-These pairs should later annihilate in at GeV energies, but the expected GeV flux is missing in the \fermilat{} observations. 
+These pairs should later annihilate  at GeV energies, but the expected GeV flux is missing in the \fermilat{} observations. 
 Intergalactic magnetic fields could explain the missing flux by deflecting the particles. 
 If due to intergalactic magnetic fields, the GeV results set lower limits on the intergalactic magnetic field strength of $10^{-9} - 10^{-6}$\,nG \citep{tavecchio10,taylor11,dermer11,vovk12}. 
 
 The mechanism to create large-scale magnetic fields, especially in intergalactic space, remains unclear. 
-One popular proposal is that the observed fields are the product of primordial magnetic fields, which are predicted by several theories of the early Universe \citep[e.g.,][]{turner88, grasso98,ichiki06}. 
-Adiabatic compression and turbulent shocks during later structure formation amplify these initial seed fields into the stronger fields observed today. 
-Of course, this amplification process may have a different initial seed; other ideas include AGN or galactic dynamos \citep[for a review, see][]{giovannini04}. 
+One popular proposal is that the observed fields are the product of PMFs, which are predicted by several theories of the early Universe \citep[e.g.,][]{turner88, grasso98,ichiki06}. 
+Adiabatic compression and turbulent shocks during later structure formation amplify these initial seed PMFs into the stronger fields observed today. 
+Of course, this amplification process may be seeded through other means, such as AGN or galactic dynamos \citep[for a review, see][]{giovannini04}. 
 However, the possibility of PMFs opens up the intriguing idea that observations of large-scale magnetic fields may offer insights into the physics of the very early Universe. 
 
 
 PMFs would have observational consequences for Big Bang nucleosynthesis \citep[e.g.,][]{kahniashvili10}, large scale structure \citep[e.g.,][]{battaner97}, the ionization history of the Universe \citep{kunze15}, and the black body spectrum of the CMB \citep[e.g.,][]{kunze14},  as well as the CMB anisotropies. 
 The CMB anisotropies have yielded some of the strongest constraints on PMFs and are the focus of this work.
-There have been two recent results of note. 
+There have been three recent results of note. 
 \citet{planck15-19} have used the \planck{} 2015 release of temperature and polarization data to set limits on a variety of PMF models. 
 With the CMB power spectrum data that will be the focus of this paper, \citet{planck15-19} find 95\% CL upper limits ranging from $\bpmf < 5.6$\,nG to $<0.7$\,nG depending on the exact model. 
 Here \bpmf{} is the rms field strength on a 1\,Mpc length scale. 
 The \pb{} collaboration also recently announced limits on PMFs from the \pb{} data using either a 4-point estimator or B-mode power spectrum measurement in \citep{polarbear15}. 
 The strongest constraints were from the B-mode spectrum; the observed upper limit was $\bpmf < 3.9$\,nG. 
-Two other experiments, \sptpol{} and \bicepkeck{}, have reported B-mode power spectrum measurements recently \citep{keisler15,bicepkeck15}.
-In this paper, we will combine the data from all four experiments to determine simple limits on the PMF, and then examine Fisher matrix forecasts on PMF models from the stage-III and stage-IV CMB experiments being built or designed right now. 
+Two other experiments, \sptpol{} and \bicepkeck{}, have reported B-mode power spectrum measurements recently \citep{keisler15,bicepkeck15}, 
+and \citet{zucca16} reported constraints from the combination of the \planck{}  and \sptpol{} bandpowers. 
+In this paper, we will combine the data from all four experiments to determine upper limits on PMFs, and find that the \bicepkeck{} data in particular improves these upper limits. 
+We then present Fisher matrix forecasts on PMF models for the stage-III and stage-IV CMB experiments being built or designed right now. 
 
 
 
-The outline of the paper is as follows. 
-In \S\ref{sec:data}, we lay out the data used and the MCMC implementation used to constrain the PMF amplitude. 
+The outline of this paper is as follows. 
+In \S\ref{sec:data}, we lay out the data and how we use the data to put limits on PMFs. 
 We present the results of this analysis on current data in \S\ref{sec:results}. 
-The assumed parameters for future experiments and the resulting Fisher matrix forecasts are described in \S\ref{sec:forecasts}. 
+In \S\ref{sec:forecasts}, we forecast constraints from future experiments using a Fisher matrix formulism. 
 We conclude in \S\ref{sec:conclusions}. 
 
 \section{Data and Methods}
@@ -148,7 +150,7 @@ During the writing of this work, ACTpol polarization power spectra became availa
 We have not included them as the public likelihoods do not include the B-mode power spectrum; we do not expect adding the ACTpol bandpowers to significantly change the PMF limits based on a visual comparison of the current BB bandpowers from different experiments (see Fig.~\ref{fig:pmf-experiments}).
 In all chains, we marginalize over the recommended foreground models for each data set. 
 We do not however require consistency between these foreground models since the data don't have identical flux cuts for extragalactic sources and so on. 
-In the case of an upper limit this treatment is conservative since wider foreground priors should only weaken the limit on the PMF strength. 
+%In the case of an upper limit this treatment is conservative since wider foreground priors should only weaken the limit on the PMF strength. 
 These data are plotted against the expected B-mode power spectrum for the standard cosmological model in Fig.~\ref{fig:pmf-experiments}. 
 
 \subsection{Methods}
@@ -164,7 +166,7 @@ C_\ell = C_\ell (CAMB) + \apmf \cpmf
 The calculation of the PMF template, \cpmf, is described in \S\ref{sec:template}. 
 Note that no other effect of the PMF is considered; this is one reason we only consider CMB data.
 
-For the real data, unless noted, we assume the six parameter spatially flat \lcdm{} model with a single massive neutrino of 60\,meV and a seventh parameter \apmf{} describing the power due to the PMF. 
+For the real data, unless noted, we assume the six-parameter, spatially-flat \lcdm{} model with a single massive neutrino of 60\,meV and a seventh parameter \apmf{} describing the power due to the PMF. 
 We adopt flat priors on all parameters. 
 In particular, note that this is a flat prior on the observed PMF power, $\apmf$, not the rms magnetic field strength, \bpmf, that has often been used in the literature. 
 In many chains, we also add \alens{} as a simple way of marginalizing over uncertainty in the predicted lensed BB power spectrum for any extension to the \lcdm{} model. 
@@ -175,20 +177,21 @@ Finally, in some cases, we allow non-zero tensors, parameterized by the tensor-t
 
 The density and stress perturbations introduced by PMFs give rise to vorticity and gravitational waves in the early photon-baryon  plasma, i.e. vector and tensor modes, as well as scalar modes. 
 The exact amplitude of these modes can be calculated by modifying the normal Boltzmann equations to includes sources due to the PMFs. 
-We use the CMBACT code\footnote{\url{http://www.sfu.ca/~levon/cmbact.html}} \citep{pogosian99}  to do this calculation. 
-The PMF anisotropy is assumed to be drawn from a Gaussian distribution with a power law power spectrum, $A_b k^{n_b}$. 
-Here $n_b$ is the spectral index of PMF and $A_b$ is its amplitude. 
-We can translate the amplitude, $A_b$, into more physically-motivated units by calculating the rms of the PMF field strength over a length scale of 1\rm{Mpc}, thereby defining $B_{\rm{1Mpc}}$. 
+The PMF anisotropy is assumed to be drawn from a Gaussian distribution with a power law power spectrum, $A_b k^{n_b}$, with $n_b$ the spectral index and $A_b$ the PMF power. 
+We can translate the power, $A_b$, into more physically-motivated units by calculating the rms of the PMF field strength over a length scale of 1\rm{Mpc}, thereby defining $B_{\rm{1Mpc}}$. 
 Finally, the timing of when the PMFs are generated matters because the PMF-induced stress anisotropy can be compensated by decoupled or partially-decoupled neutrinos. 
 The timing is typically parametrized by the ratio of the scale factors at neutrino decoupling and PMF generation, $a_{\nu}/a_{\rm{PMF}}$. 
 
 Given that we are still in the era of upper limits,  we do not explore the full 3-dimensional PMF parameter space in this work. 
-Instead, we use CMBACT to calculate a PMF template for the CMB TT, TE, EE and BB power spectra at fixed parameters: $B_{\rm{1Mpc}}$=2.5 \rm{nG}, $n_b$=-2.9 and $a_{\nu}/a_{\rm{PMF}}=10^9$. 
-This template includes tensor and vector PMF contributions; scalar contributions are not implemented in the code. 
+Instead, we use publicly released modifications to CAMB from \citet{zucca16} to calculate a PMF template for the CMB TT, TE, EE and BB power spectra at fixed parameters: $B_{\rm{1Mpc}}$=2.5 \rm{nG}, $n_b$=-2.9 and $a_{\nu}/a_{\rm{PMF}}=10^9$. 
+We also look at $n_b=-1$ and $n_b=2$ in the forecasting section. 
+We have compared calculated templates to the outputs of the earlier CMBACT code\footnote{\url{http://www.sfu.ca/~levon/cmbact.html}} \citep{pogosian99}, and find excellent agreement as would be hoped. 
+The decision to use the  \citet{zucca16} code instead of CMBACT was based on the need to extend the calculation out to $\ell=10000$ for the Fisher matrix forecasts. 
+The calculated templates include tensor and vector PMF contributions; scalar contributions are not implemented in the code. 
 We expect the missing scalar power to degrade the \planck-only results in this work.
-However the missing scalar power should be  unimportant for the EE and BB spectra that are driving the tightest constraints. 
-This template is plotted against other signals in the CMB B-mode power spectrum in Fig.~\ref{fig:pmf-bb}. 
-We fit for a new scaling parameter, $A_{pmf}$, that rescales the PMF power spectrum template. 
+However the missing scalar power should be  unimportant for the EE and BB spectra that are driving the tightest constraints, particularly when looking at forecasts for the next generation of experiments. 
+The PMF template is plotted against other signals in the CMB B-mode power spectrum in Fig.~\ref{fig:pmf-bb}. 
+In the MCMC, we add a new scaling parameter, $A_{pmf}$, that rescales the PMF power spectrum template. 
 We can translate the amplitude constraint on this template to a constraint on the rms magnetic field strength on 1\,Mpc scales, \bpmf, using the expected scaling:
 \be
 \apmf \propto \bpmf^4.
@@ -215,12 +218,21 @@ However, if a PMF is detected, this same steep scaling would allow excellent con
   The expected contributions to CMB B-modes. 
   The red line shows the expected lensing B-mode power in the \planck{} best-fit \lcdm{} cosmology. 
   The dark green line corresponds to the contribution from inflationary gravitational waves for $r=0.05$; the solid black line is the sum of the inflationary gravitational wave and lensing B-modes. 
-  The dashed purple line shows the PMF template used in this work, scaled to \apmf{} = 0.2 to match the gravitational wave signal. 
+  The dashed purple line shows the nearly-scale invariant ($n_b=-2.9$) PMF template used in this work, scaled to \apmf{} = 0.2 (i.e.~\bpmf{}=1.7\,nG) to match the gravitational wave signal. 
   As can be seen, the tensor contribution from PMFs at large angular scales (low $\ell$) closely resembles the expected inflationary gravitational wave signal, and the two signals are effectively degenerate in a power spectrum (2-point) analysis.
   %However, if excess power on these scales is detected, higher order moments of the map (i.e.~4-point estimators) might be used to discriminate between   the inflationary and PMF explanations. 
       \label{fig:pmf-bb}
   }
 \end{figure*}
+
+\begin{figure}[htb]\centering
+\includegraphics[width=0.9\textwidth,clip,trim={1.5cm 12.cm 5cm 4cm}]{pmf_templates.pdf}
+  \caption[CMB polarization from PMFs with different spectral indices]{ \label{fig:pmf-nb}
+  How the expected PMF changes with the spectral index, $n_B$. 
+  The PMF B-modes are plotted against the lensing B-modes for $n_B = [-2.9, -1, 2]$. 
+  The PMF power shifts to smaller angular scales as $n_B$ increases. \tbd{placeholder}
+  }
+\end{figure}
  
 \section{Results}
 \label{sec:results}
@@ -228,11 +240,11 @@ However, if a PMF is detected, this same steep scaling would allow excellent con
 We find the addition of ground-based CMB polarization data to \planck{} data substantially improves the upper limits on the allowed power due to a PMF, leading to a factor of two improvement. 
 With Planck alone, the 95\% confidence upper limit is $\apmf <  0.73$ for \lcdm{}+\apmf{}; with the ground-based experiments, this limit drops to $\apmf <  0.35$. 
 We list the limits for the combined dataset  with different parameter sets in Table~\ref{tab:param_all}. 
-Somewhat counterintuitively, the limits are slightly better with \alens{} allowed to vary (this is due to a preference for \alens{} above unity). 
+Somewhat counterintuitively, the limits are slightly better with \alens{} allowed to vary (this is due to a mild preference for \alens{} above unity). 
 In this case for  Planck alone, the 95\% confidence upper limit is $\apmf <  0.68$, dropping to $\apmf <  0.27$ with the ground-based experiments. 
 We test which datasets are important by adding single datasets to the \planck{} set while allowing \alens{} to float, and find that the majority of this improvement is due to the \bicepkeck{} ($\apmf <  0.28$) and \sptpol{} ($\apmf <  0.42$) B-mode power spectrum measurements. 
 The other datasets do not have a large impact on the observed limits. 
-In short, the reduction in the allowed upper limit on \apmf{} is primarily due to a more accurate measurement of the B-mode power spectrum at large angular scales. 
+In short, the reduction in the allowed upper limit on \apmf{} for a nearly-scale-invariant PMF spectrum ($n_b=-2.9$) is primarily due to a more accurate measurement of the B-mode power spectrum at large angular scales. 
 
 
 
@@ -243,9 +255,9 @@ We therefore importance sample the chains to generate a flat prior on \bpmf.
 We find a 95\% limit of $\bpmf < 2.0$\,nG for \planck{} alone, completely consistent with \citep{planck15-19} who found $\bpmf < 2.0$\,nG with $n_B=-2.9$ held fixed as we've done. 
 This is only slightly reduced to $\bpmf < 1.9$\,nG for the combined dataset. 
 The improvement from adding more data is somewhat less than one might predict because the combined likelihood peaks somewhat above zero, whereas the \planck{}-only constraints peaks at zero. 
-We also stress that this should not be treated as a robust limit as the tensor PMF modes are crucial to the improvement, and the assumed scaling has not been tested for the tensor PMF. 
-We quote it nonetheless to illustrate that with a steep power law scaling, the relative improvement to \bpmf{} will be slower than the improvement to \apmf{} as more data is added.
-
+%We also stress that this should not be treated as a robust limit as the tensor PMF modes are crucial to the improvement, and the assumed scaling has not been tested for the tensor PMF. 
+%We quote it nonetheless to illustrate that with a steep power law scaling, the relative improvement to \bpmf{} will be slower than the improvement to \apmf{} as more data is added.
+These results are inconsistent (being higher) with the equivalent \planck{} + \sptpol{} upper limit quoted by \citet{zucca16}; we were unable to reproduce their listed upper limit for \planck{} + \sptpol{}. 
 
 
 
@@ -284,12 +296,13 @@ Recall that the the PMF template is normalized to unity for \bpmf{} = 2.5\,nG.
 \section{Forecasts}
 \label{sec:forecasts}
 
-The sensitivity of CMB experiments is increasing rapidly due to the exponential growth in detector counts. 
+The sensitivity of CMB experiments is increasing rapidly due to the continuing growth in the number of detectors. 
 \citet{abazajian16} thus defines four stages of CMB experiments. 
 The current experiments (i.e.~the ones used for PMF constraints in the last section) are classified as Stage II experiments. 
-Stage III experiments such as SPT-3G, the Simons Array, or AdvACTPol \citep{benson14,suzuki16,henderson16} have approximately ten times more detectors, and generically will start collecting data in 2017 and finish in 2020-21.
-In this section, we forecast the expected constraints from EE and BB power spectrum measurements  of the Stage III experiments by combining forecasts for SPT-3G and the Simons Array. 
+Stage III experiments such as SPT-3G, the Simons Array, or AdvACTPol \citep{benson14,suzuki16,henderson16} have approximately ten times more detectors, and generically will start collecting data around 2017 and finish three to four years later.
+In this section, we forecast the expected constraints from the EE and BB power spectrum measurements  of the Stage III experiments by combining forecasts for SPT-3G and the Simons Array. 
 There is also a proposal to build a stage IV experiment, CMB-S4,  that would increase the detector counts by another order of magnitude and hopefully begin taking data in the early 2020s.
+A pathfinder to CMB-S4, the Simons Observatory, was funded in 2016. 
 We examine the likely PMF constraints from the EE and BB power spectrum measurements with CMB-S4, and consider which aspects of experimental or survey design are important to maximize the recovered information on PMFs.
 
 
@@ -321,10 +334,11 @@ We avoid this problem in different ways in each of the CMB power spectra.
 For the TT and TE spectra, we avoid double-counting by only using the \planck{} measurements. 
 We do not expect the future experiments to substantially improve upon \planck{} in these spectra which are already cosmic variance limited out to fairly high multipoles. 
 We do the opposite for the EE and BB spectra. 
-We do not include \planck{} BB information in any forecast, and  we throw away \planck{} EE data in the overlap region by appropriately increasing the forecasted \planck{} EE uncertainties. 
+We do not include \planck{} BB information in any forecast, and  we throw away \planck{} EE data in the overlap region by appropriately increasing the \planck{} EE uncertainties. 
 %The exact increase depends on the assumed stage III or IV survey area.
-We ignore overlaps between the stage III  with the note that the sky overlap between a Chilean experiment like the Simons Array and South Pole experiment like SPT-3G should be small. 
+We ignore overlaps between the stage III  on the basis that the sky overlap between a Chilean experiment like the Simons Array and South Pole experiment like SPT-3G should be small. 
 The overlapping sky coverage will probably be substantial between stage III and IV experiments, thus we do not include the stage III experiments, except as a prior on the polarized Poisson power, in the CMB-S4 constraints. 
+This prior is only relevant in practice when the assumed CMB-S4 configuration has a larger beam size than SPT-3G. 
 With these measures, no modes should be double-counted in this analysis. 
 
 \begin{table*}[tbh]
