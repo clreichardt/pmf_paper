@@ -46,6 +46,8 @@
 \newcommand{\tbd}[1]{\textcolor{Red}{{\bf TBD}: #1}}
 \newcommand{\gab}[1]{\textcolor{Orchid}{[{\bf GS}: #1]}}
 
+\include{number_list}
+
 %
 
 % ref to section \S\ref{sec:label}
@@ -65,7 +67,7 @@
 \begin{abstract}
 
 We present new limits on the amplitude of potential primordial magnetic fields (PMFs) using temperature and polarization measurements of the cosmic microwave background (CMB)  from \planck{}, \bicepkeck{}, \pb, and \sptpol. 
-We reduce twofold the upper limit on the CMB anisotropy power due to a PMF, from $\apmf < 0.73$ from Planck alone to $\apmf < 0.35$ for the combined dataset at 95\% CL. 
+We reduce twofold the upper limit on the CMB anisotropy power due to a PMF, from $\apmf < \upperAplk$ from Planck alone to $\apmf < \upperAall$ for the combined dataset at 95\% CL. 
 %Most of the improvement is due to the addition of the \bicepkeck{} data; without these bandpowers, the combined limit weakens to $\apmf < 0.\tbd{XX}$. 
 We also forecast the expected future limits from soon-to-deploy CMB experiments (like \sptnew{},  \advactpol, or the \simons) and the proposed CMB-S4 experiment. 
 Future CMB experiments should dramatically reduce the current uncertainties, by two orders of magnitude for the near-term experiments and three orders of magnitude for the CMB-S4 experiment. 
@@ -238,11 +240,11 @@ However, if a PMF is detected, this same steep scaling would allow excellent con
 \label{sec:results}
 
 We find the addition of ground-based CMB polarization data to \planck{} data substantially improves the upper limits on the allowed power due to a PMF, leading to a factor of two improvement. 
-With Planck alone, the 95\% confidence upper limit is $\apmf <  0.73$ for \lcdm{}+\apmf{}; with the ground-based experiments, this limit drops to $\apmf <  0.35$. 
+With Planck alone, the 95\% confidence upper limit is $\apmf <  \upperAplk$ for \lcdm{}+\apmf{}; with the ground-based experiments, this limit drops to $\apmf <  \upperAall$. 
 We list the limits for the combined dataset  with different parameter sets in Table~\ref{tab:param_all}. 
 Somewhat counterintuitively, the limits are slightly better with \alens{} allowed to vary (this is due to a mild preference for \alens{} above unity). 
-In this case for  Planck alone, the 95\% confidence upper limit is $\apmf <  0.68$, dropping to $\apmf <  0.27$ with the ground-based experiments. 
-We test which datasets are important by adding single datasets to the \planck{} set while allowing \alens{} to float, and find that the majority of this improvement is due to the \bicepkeck{} ($\apmf <  0.28$) and \sptpol{} ($\apmf <  0.42$) B-mode power spectrum measurements. 
+In this case for  Planck alone, the 95\% confidence upper limit is $\apmf <  \upperAplkalens$, dropping to $\apmf <  \upperAallalens$ with the ground-based experiments. 
+We test which datasets are important by adding single datasets to the \planck{} set while allowing \alens{} to float, and find that the majority of this improvement is due to the \bicepkeck{} ($\apmf <  \upperAbicepalens$) and \sptpol{} ($\apmf <  \upperAsptpolalens$) B-mode power spectrum measurements. 
 The other datasets do not have a large impact on the observed limits. 
 In short, the reduction in the allowed upper limit on \apmf{} for a nearly-scale-invariant PMF spectrum ($n_b=-2.9$) is primarily due to a more accurate measurement of the B-mode power spectrum at large angular scales. 
 
@@ -252,8 +254,11 @@ We propagate these limits on the observed PMF power into limits on the magnetic 
 We assume the scaling appropriate to the vector modes, i.e. $\apmf \propto \bpmf^4$,  applies to both vector and tensor modes. 
 Given this assumed scaling, the observed upper limits with a flat prior on \apmf{} would lead to an apparent `detection' of \bpmf. 
 We therefore importance sample the chains to generate a flat prior on \bpmf. 
-We find a 95\% limit of $\bpmf < 2.0$\,nG for \planck{} alone, completely consistent with \citep{planck15-19} who found $\bpmf < 2.0$\,nG with $n_B=-2.9$ held fixed as we've done. 
-This is only slightly reduced to $\bpmf < 1.9$\,nG for the combined dataset. 
+We find a 95\% limit of $\bpmf < \upperBplk$\,nG for \planck{} alone,
+This is somewhat better then the limit found by \citet{planck15-19} of $\bpmf < 2.0$\,nG with $n_B=-2.9$ held fixed as we've done. 
+The difference is due to a difference in the calculated tensor PMF power (for the same parameters) between the XXX and YYY codes. 
+Using the YYY code that \citet{planck15-19} used, we find a completely consistent upper limit of $\bpmf < 1.9$\,nG. 
+Returning to the XXX code, the upper limit is only slightly reduced to $\bpmf < \upperBall$\,nG for the combined dataset. 
 The improvement from adding more data is somewhat less than one might predict because the combined likelihood peaks somewhat above zero, whereas the \planck{}-only constraints peaks at zero. 
 %We also stress that this should not be treated as a robust limit as the tensor PMF modes are crucial to the improvement, and the assumed scaling has not been tested for the tensor PMF. 
 %We quote it nonetheless to illustrate that with a steep power law scaling, the relative improvement to \bpmf{} will be slower than the improvement to \apmf{} as more data is added.
@@ -278,12 +283,12 @@ These results are inconsistent (being higher) with the equivalent \planck{} + \s
 \begin{tabular}{l | c c c }
 Model   & $A_{pmf}$ &$A_{lens}$&$r$\\
 \hline
-\lcdm{} + \apmf{} &  $< 0.35$ & - & - \\
-~~~+\alens{} & $< 0.27$ &$ 1.131 \pm  0.061$ &  -\\
-~~~+\alens{}+r&  $< 0.24$&$ 1.133 \pm  0.062$ & $<0.056$\\ 
+\lcdm{} + \apmf{} &  $< \upperAall$ & - & - \\
+~~~+\alens{} & $< \upperAallalens$ &$ \medAlensall \pm  \sigmaAlensall$ &  -\\
+~~~+\alens{}+r&  $< \upperAallalensr$&$ \medAlensRall \pm  \sigmaAlensRall$ & $<\upperRall$\\ 
 \end{tabular}
 \tablecomments{ 
-In the minimal model, \lcdm{} + \apmf{}, current CMB power spectra data from \planck, POLARBEAR, SPTpol, and \bicepkeck{} place a 95\% CL upper limit on the PMF power of $\apmf < 0.35$. 
+In the minimal model, \lcdm{} + \apmf{}, current CMB power spectra data from \planck, POLARBEAR, SPTpol, and \bicepkeck{} place a 95\% CL upper limit on the PMF power of $\apmf < \upperAall$. 
 This limit tightens slightly if tensor modes are allowed (r), or the amount of lensing is allowed to vary. 
 In the case of r, the tightening is because the observed power at large angular scales is now split between PMFs or inflationary gravitational waves. 
 In the case of \alens, it is because the preferred value for \alens{} is modestly above the predicted value of unity. 
@@ -401,7 +406,7 @@ Such de-lensing techniques have long been proposed for inflationary gravitationa
 \subsection{Stage III forecasts}
 
 The experiments that will begin taking data in 2017 will dramatically improve constraints on the PMF power. 
-With the minimal cosmological model, the 1-sigma forecasts for \planck{}+\ho{} is $\sigma(\apmf)=0.15$ for a nearly-scale invariant PMF spectrum (i.e.~$n_b=-2.9). (\tbd{need to check how this compares}This is consistent with, although slightly worse than, the upper limits from the real data).  
+With the minimal cosmological model, the 1-sigma forecasts for \planck{}+\ho{} is $\sigma(\apmf)=\fisherAplk$ for a nearly-scale invariant PMF spectrum (i.e.~$n_b=-2.9$). (\tbd{need to check how this compares}This is consistent with, although slightly worse than, the upper limits from the real data).  
 Adding the EE and BB bandpowers from the two stage III experiments (\sptnew{} and \simons{}) reduces the uncertainty by an order of magnitude in this 7-parameter model to $\sigma(\apmf)=0.015$. 
 The improvement is larger when including all eleven parameters, as the parameter degeneracies substantially weaken (by a factor of five) the \planck+\ho{} constraints on \apmf{}, while only weakening the stage III constraint by a  more modest 40\%. 
 Thus within the 11-parameter model however,  the addition of stage III CMB experiments improves the \apmf{} uncertainty by a factor of $\sim$\,35 to  $\sigma(\apmf)=0.022$. 
@@ -494,7 +499,7 @@ The PMF constraints are insensitive to the beam and calibration uncertainties.
 \label{sec:conclusions}
 
 In this work, we have improved the current upper limits on the strength of any primordial magnetic fields by including more CMB B-mode polarization data. 
-By adding \bicepkeck{}, \pb, and \sptpol{} to \planck{} we find the 95\% CL upper limit on the PMF power falls from $\apmf < 0.73$ to $\apmf < 0.35$. 
+By adding \bicepkeck{}, \pb, and \sptpol{} to \planck{} we find the 95\% CL upper limit on the PMF power falls from $\apmf < \upperAplk$ to $\apmf < \upperAall$. 
 The biggest contributor to this improvement is the low-$\ell$ data from \bicepkeck{}. 
 
 We have also shown that the next generation of experiments should dramatically reduce these limits, and potentially detect PMFs for the first time. 
