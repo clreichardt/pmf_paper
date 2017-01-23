@@ -478,14 +478,11 @@ The optimal survey area for a PMF survey will depend on the targeted PMF models.
 \begin{figure}[htb]\centering
 \includegraphics[width=0.45\textwidth,clip,trim={1.5cm 12.5cm 11cm 7.5cm}]{pmf_knee.pdf}
   \caption[Map knee dependence]{
-  The forecasted uncertainty on the PMF power, \apmf{}, falls as expected as the low-frequency map noise decreases for a nearly scale-invariant PMF ($n_b = -2.9$). 
-  In particular, achieving a map 1/f knee frequency at or below $\ell = 200$ substantially improves the potential power of CMB-S4 PMF searches for nearly scale-invariant PMFs. 
-  The black solid line shows the forecast uncertainty as a function of area in the 11-parameter cosmological model with $n_B = -2.9$. 
-  The purple dot-dash line shows the same, except in the restricted \lcdm{}+\apmf{} 7-parameter model. 
-  The x-axis is the map noise knee (see eqn.~\ref{eqn:knee}) in angular multipoles $\ell$. 
-  As we expect, reducing low-frequency noise would lead to better PMF constraints. 
-      Note however, the dependence on the low-frequency noise quickly disappears as $n_b$ increases (not shown); the improvement across this range of knees is small for $n_B=-1$ and negligible for $n_B=2$. 
-
+  The forecasted uncertainty on the PMF power, \apmf{}, falls as expected with decreasing low-frequency map noise for a nearly scale-invariant PMF ($n_b = -2.9$) in the restricted \lcdm{}+\apmf{} 7-parameter model (solid, purple line). 
+  However,  the achieved map 1/f knee frequency makes no difference to the potential power of CMB-S4 PMF searches in the 11-parameter model (solid, black line). 
+  The change in behavior happens because the 11-parameter model introduces a degeneracy with r that shifts the angular scale of the PMF constraint to sub-degree scales. 
+  The 1/f knee frequency also makes no difference for the bluer PMF templates in either the restricted or full 11-parameter model space (dashed and dash-dotted black lines). 
+   for any value of $n_B$ (black lines). 
     \label{fig:knee}
   }
 \end{figure}
@@ -502,7 +499,7 @@ Note that this knob  serves as a placeholder for several effects, including a si
 We generally find the forecasts to be insensitive to the 1/f knee or galactic foreground removal at the default beam size of 4$^\prime$. 
 It appears that even in the nearly scale-invariant case, the PMF constraint is being driven by smaller angular scales due to the the degeneracy with the tensor-to-scalar ratio at large angular scales. 
 Without this degeneracy, i.e. in the simple \lcdm{}+\apmf{} model, dropping \lknee{} from 400 to 50 reduces the uncertainty by a factor of 3.2 for a nearly scale-invariant PMF. 
-In this case, the degradation accelerates once the 1/f knee goes above $\ell \simeq 200$. 
+In this case, the degradation accelerates once the 1/f knee goes above $\ell \simeq 70$. 
 This is consistent with the statement for the same simple model that the current upper limits are dominated by the BICEP2/Keck Array data at low-$\ell$. 
 For the bluer PMF spectra ($n_b=-1$ or 2), the forecasts have nearly zero dependence on the knee frequency. 
 These results are consistent with the study of telescope size in the last section - which found that recovering smaller angular scales with larger telescopes helped (if one didn't consider cost).
