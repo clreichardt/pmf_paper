@@ -228,7 +228,7 @@ However, if a PMF is detected, this same steep scaling would allow excellent con
 \end{figure*}
 
 \begin{figure}[htb]\centering
-\includegraphics[width=0.9\textwidth,clip,trim={1.5cm 12.cm 5cm 4cm}]{pmf_templates.pdf}
+\includegraphics[width=0.4\textwidth,clip,trim={1.5cm 12.cm 5cm 4cm}]{pmf_templates.pdf}
   \caption[CMB polarization from PMFs with different spectral indices]{ \label{fig:pmf-nb}
   How the expected PMF changes with the spectral index, $n_B$. 
   The PMF B-modes are plotted against the lensing B-modes for $n_B = [-2.9, -1, 2]$. 
@@ -406,7 +406,8 @@ Such de-lensing techniques have long been proposed for inflationary gravitationa
 \subsection{Stage III forecasts}
 
 The experiments that will begin taking data in 2017 will dramatically improve constraints on the PMF power. 
-With the minimal cosmological model, the 1-sigma forecasts for \planck{}+\ho{} is $\sigma(\apmf)=\fisherAplk$ for a nearly-scale invariant PMF spectrum (i.e.~$n_b=-2.9$). (\tbd{need to check how this compares}This is consistent with, although slightly worse than, the upper limits from the real data).  
+With the minimal cosmological model, the 1-sigma forecasts for \planck{}+\ho{} is $\sigma(\apmf)=\fisherAplk$ for a nearly-scale invariant PMF spectrum (i.e.~$n_b=-2.9$). 
+This is consistent with, although somewhat better than, the upper limits from the real data).  
 Adding the EE and BB bandpowers from the two stage III experiments (\sptnew{} and \simons{}) reduces the uncertainty by an order of magnitude in this 7-parameter model to $\sigma(\apmf)=0.015$. 
 The improvement is larger when including all eleven parameters, as the parameter degeneracies substantially weaken (by a factor of five) the \planck+\ho{} constraints on \apmf{}, while only weakening the stage III constraint by a  more modest 40\%. 
 Thus within the 11-parameter model however,  the addition of stage III CMB experiments improves the \apmf{} uncertainty by a factor of $\sim$\,35 to  $\sigma(\apmf)=0.022$. 
@@ -430,15 +431,38 @@ We look at four aspects of the experiment design: the telescope size or beam FWH
 Of these four, we find that the first three, the beam FWHM, low-$\ell$ noise performance and survey area, to be potentially important to searches for PMFs. 
 As should be expected, the preferred design depends on the shape of the PMF spectrum ($n_B$) which controls  the relative power between large and small angular scales. 
 
-\tbd{got to here}
+
 
 Larger telescopes will allow CMB polarization to be measured on smaller angular scales, and should therefore always improve the PMF constraints. 
-However, larger telescopes are also more expensive to build which means at fixed cost, they would necessitate less ambitious focal planes and lower instantaneous mapping speed. 
-We find the gains due to resolution at fixed mapping speed to be negligible: a beam size of FWHM=1$^\prime$ yields only a 1\% better limit than a FWHM of 10$^\prime$. 
-This illustrates how important the large angular scales are to the PMF limits. 
+We find the gains due to resolution at fixed mapping speed to be substantial for all three power law indices considered: a beam size of FWHM=1$^\prime$ instead of 10$^\prime$ reduces the expected upper limit five-fold for $n_b=-2.9$ and 30- to 35-fold for the steeper PMF indices which are more heavily weighted towards small angular scales. 
+
+However, larger telescopes are also more expensive to build which means for a fixed experimental budget, they would necessitate less ambitious focal planes and lower instantaneous mapping speed. 
 We very crudely approximated a cost-neutral setup with a noise level of 1.3 \ukarcmin{} for a FWHM of 4$^\prime$; a noise level of 2.9 \ukarcmin{} for a FWHM of 2$^\prime$; and a noise level of 4.1 \ukarcmin{} for a FWHM of 1$^\prime$. 
-In this quasi-cost-neutral setup, there is a strong preference to go for more detectors over better angular resolution: the uncertainty was a factor of 2.5 times smaller in the coarse case over the FWHM=1$^\prime$ case. 
-Raw sensitivity is more important than angular resolution to an experiment's ability to study PMFs.
+We find 
+Improving the mapping speed rather than telescope size leads to somewhat better potential limits for these experimental configurations, by a factor of 1.6, 1.2 or 1.1 for $n_b = -2.9, -1, +2$ respectively. 
+However the results are close enough that the crudeness of the cost-neutral estimates used here could be a factor, and the preference might flip for more accurately costed setups. 
+In short,  the tradeoff between larger telescopes or more detectors is largely a wash, although one would lean towards adding more detectors. 
+Raw sensitivity is important to an experiment's ability to study PMFs.
+
+
+\begin{figure}[htb]\centering
+\includegraphics[width=0.45\textwidth,clip,trim={1.5cm 12.5cm 11cm 7.5cm}]{pmf_area.pdf}
+  \caption[Area dependence]{
+  The forecasted uncertainty on the PMF power, \apmf{}, falls as the survey area increases. 
+  In particular, observing more than $\sim$\,15\% of the sky is strongly preferred for PMF searches. 
+  Fortunately, the CMB-S4 survey concepts being discussed cover even larger areas of sky. 
+  The black solid line shows the forecast uncertainty as a function of area in the 11-parameter cosmological model.
+  The purple dot-dash line shows the same, except in the restricted \lcdm{}+\apmf{} 7-parameter model. 
+  In both cases, better limits on PMFs will be achieved with wider surveys.
+    \label{fig:area}
+  }
+\end{figure}
+A second question is whether it is better to integrate deeply on a small patch of sky or observe a wide area. 
+As shown in  Fig.~\ref{fig:area}, observing at least 15\% of the sky is very important to a PMF search, and it is best  to cover as much sky as possible. 
+A caveat to this analysis is that it is likely easier to remove galactic foregrounds to a specified level on targeted, `clean' patches as opposed to a substantial fraction of the sky, and we would expect galactic foregrounds to be important for the large angular scales. 
+With that said, the PMF constraints improve by a factor of 1.4-1.5 (depending on the cosmological model) going from 10\% to 25\% of the full sky, and improve by another factor of 1.4-1.5 by going to the 70\% of the sky (the widest area likely to be possible after galactic cuts).
+
+\tbd{got to here}
 
 \begin{figure}[htb]\centering
 \includegraphics[width=0.45\textwidth,clip,trim={1.5cm 12.5cm 11cm 7.5cm}]{pmf_knee.pdf}
@@ -472,28 +496,13 @@ It is also consistent with the current upper limits, which are dominated by the 
 As  these large angular scales are also crucial to searches for inflationary gravitational waves, hitting this target should not place new requirements on CMB-S4. 
 The needs of the PMF search are well-aligned with the search for inflationary gravitational waves.
 
-\begin{figure}[htb]\centering
-\includegraphics[width=0.45\textwidth,clip,trim={1.5cm 12.5cm 11cm 7.5cm}]{pmf_area.pdf}
-  \caption[Area dependence]{
-  The forecasted uncertainty on the PMF power, \apmf{}, falls as the survey area increases. 
-  In particular, observing more than $\sim$\,15\% of the sky is strongly preferred for PMF searches. 
-  Fortunately, the CMB-S4 survey concepts being discussed cover even larger areas of sky. 
-  The black solid line shows the forecast uncertainty as a function of area in the 11-parameter cosmological model.
-  The purple dot-dash line shows the same, except in the restricted \lcdm{}+\apmf{} 7-parameter model. 
-  In both cases, better limits on PMFs will be achieved with wider surveys.
-    \label{fig:area}
-  }
-\end{figure}
-A third question is whether it is better to integrate deeply on a small patch of sky or observe a wide area. 
-As shown in  Fig.~\ref{fig:area}, observing at least 15\% of the sky is very important to a PMF search, and it is best  to cover as much sky as possible. 
-A caveat to this analysis is that it is likely easier to remove galactic foregrounds to a specified level on targeted, `clean' patches as opposed to a substantial fraction of the sky, and we would expect galactic foregrounds to be important for the large angular scales. 
-With that said, the PMF constraints improve by a factor of 1.4-1.5 (depending on the cosmological model) going from 10\% to 25\% of the full sky, and improve by another factor of 1.4-1.5 by going to the 70\% of the sky (the widest area likely to be possible after galactic cuts).
 
 
 Finally, we consider if searches for PMFs introduce new requirements on the accuracy to which the instrumental beam or overall calibration of an experiment must be known. 
+We find they do not. 
 We parameterize the beam uncertainty as a fractional uncertainty on the FWHM of the Gaussian beam, and calibration uncertainty as an overall power uncertainty. 
 We find negligible, sub-percent shifts in the forecasted uncertainty for calibration uncertainties from 0.2 to 5\% and beam FWHM uncertainties from 2 to 12.5\%. 
-The PMF constraints are insensitive to the beam and calibration uncertainties. 
+The PMF constraints  for all three power law indices considered are insensitive to the beam and calibration uncertainties. 
 
 \section{Conclusions}
 \label{sec:conclusions}
