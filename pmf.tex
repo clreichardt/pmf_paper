@@ -432,6 +432,7 @@ Of these four, we find that the first three, the beam FWHM, low-$\ell$ noise per
 As should be expected, the preferred design depends on the shape of the PMF spectrum ($n_B$) which controls  the relative power between large and small angular scales. 
 
 
+\subsubsection{Telescope size}
 
 Larger telescopes will allow CMB polarization to be measured on smaller angular scales, and should therefore always improve the PMF constraints. 
 We find the gains due to resolution at fixed mapping speed to be substantial for all three power law indices considered: a beam size of FWHM=1$^\prime$ instead of 10$^\prime$ reduces the expected upper limit five-fold for $n_b=-2.9$ and 30- to 35-fold for the steeper PMF indices which are more heavily weighted towards small angular scales. 
@@ -444,6 +445,7 @@ However the results are close enough that the crudeness of the cost-neutral esti
 In short,  the tradeoff between larger telescopes or more detectors is largely a wash, although one would lean towards adding more detectors. 
 Raw sensitivity is important to an experiment's ability to study PMFs.
 
+\subsubsection{Survey Area}
 
 \begin{figure}[htb]\centering
 \includegraphics[width=0.45\textwidth,clip,trim={1.5cm 12.5cm 11cm 7.5cm}]{pmf_area.pdf}
@@ -454,15 +456,24 @@ Raw sensitivity is important to an experiment's ability to study PMFs.
   The black solid line shows the forecast uncertainty as a function of area in the 11-parameter cosmological model.
   The purple dot-dash line shows the same, except in the restricted \lcdm{}+\apmf{} 7-parameter model. 
   In both cases, better limits on PMFs will be achieved with wider surveys.
+  \tbd{may change strength of statements; haven't updated figure or caption}
     \label{fig:area}
   }
 \end{figure}
-A second question is whether it is better to integrate deeply on a small patch of sky or observe a wide area. 
-As shown in  Fig.~\ref{fig:area}, observing at least 15\% of the sky is very important to a PMF search, and it is best  to cover as much sky as possible. 
-A caveat to this analysis is that it is likely easier to remove galactic foregrounds to a specified level on targeted, `clean' patches as opposed to a substantial fraction of the sky, and we would expect galactic foregrounds to be important for the large angular scales. 
-With that said, the PMF constraints improve by a factor of 1.4-1.5 (depending on the cosmological model) going from 10\% to 25\% of the full sky, and improve by another factor of 1.4-1.5 by going to the 70\% of the sky (the widest area likely to be possible after galactic cuts).
 
-\tbd{got to here}
+\tbd{may change strength of statements}
+A second question is whether it is better to integrate deeply on a small patch of sky or observe a wide area. 
+Unsurprisingly, we find opposing preferences for the scale-invariant $n_b=-2.9$ (which peaks at large scales) and very blue $n_b=2$ spectrum peaking at small scales. 
+We find very little dependence on area for the intermediate case of $n_b=-1$. 
+As shown in  Fig.~\ref{fig:area}, for $n_b=-2.9$, observing at least 15\% of the sky is very important to a PMF search, and it is best  to cover as much sky as possible. 
+A caveat to this analysis is that it is likely easier to remove galactic foregrounds to a specified level on targeted, `clean' patches as opposed to a substantial fraction of the sky, and we would expect galactic foregrounds to be important for the large angular scales. 
+With that said, the PMF constraints improve by a factor of 1.4-1.5 (depending on the cosmological model) going from 10\% to 25\% of the full sky, and are nearly flat (a 6\% improvement) from 25\% to 70\% of the sky (the widest area likely to be possible after galactic cuts).
+Conversely, $n_b=+2$, the optimal survey area is as small as possible. 
+Note however that the minimum is extremely broad with only a 10\% worsening of the expected uncertainty as the survey area is increased from 10\% to 70\% of the  full sky. 
+The optimal survey area for a PMF survey will depend on the targeted PMF models. 
+
+
+\subsubsection{Fidelity at large angular scales}
 
 \begin{figure}[htb]\centering
 \includegraphics[width=0.45\textwidth,clip,trim={1.5cm 12.5cm 11cm 7.5cm}]{pmf_knee.pdf}
@@ -487,16 +498,19 @@ f(\ell) = 1 + \left(\frac{\ell_{\rm knee}}{\ell}\right)^{8/3}.
 \ee 
 The exponent, 8/3, was selected based on a Kolmogorov spectrum of turbulence within a thin plane \citep{lay00}. %lay & halverson 2000. 
 Note that this knob  serves as a placeholder for several effects, including a signal-to-noise hit due to galactic foregrounds or the methods used to clean these foregrounds, atmospheric noise, or actual instrumental 1/f noise. 
-We find the results to be somewhat more sensitive to the 1/f knee in the simple \lcdm{}+\apmf{} model, where dropping \lknee{} from 400 to 50 reduces the uncertainty by a factor of 6.3.
-However, the knee frequency is still important in the more conservative 11-parameter model, where the same shift reduces the uncertainties by a factor of 2.7. 
-In both cases, as can be seen in Fig.~\ref{fig:knee}, the information loss accelerates once the 1/f knee goes above $\ell \simeq 200$. 
-Recovering large angular scales is clearly important to PMF searches. 
-This is consistent with the study of telescope size in the last paragraph - which found extending to smaller angular scales only helped slightly. 
-It is also consistent with the current upper limits, which are dominated by the BICEP2/Keck Array data at low-$\ell$. 
-As  these large angular scales are also crucial to searches for inflationary gravitational waves, hitting this target should not place new requirements on CMB-S4. 
-The needs of the PMF search are well-aligned with the search for inflationary gravitational waves.
+
+We generally find the forecasts to be insensitive to the 1/f knee or galactic foreground removal at the default beam size of 4$^\prime$. 
+It appears that even in the nearly scale-invariant case, the PMF constraint is being driven by smaller angular scales due to the the degeneracy with the tensor-to-scalar ratio at large angular scales. 
+Without this degeneracy, i.e. in the simple \lcdm{}+\apmf{} model, dropping \lknee{} from 400 to 50 reduces the uncertainty by a factor of 3.2 for a nearly scale-invariant PMF. 
+In this case, the degradation accelerates once the 1/f knee goes above $\ell \simeq 200$. 
+This is consistent with the statement for the same simple model that the current upper limits are dominated by the BICEP2/Keck Array data at low-$\ell$. 
+For the bluer PMF spectra ($n_b=-1$ or 2), the forecasts have nearly zero dependence on the knee frequency. 
+These results are consistent with the study of telescope size in the last section - which found that recovering smaller angular scales with larger telescopes helped (if one didn't consider cost).
+For a conservative 11-parameter model, our ability to separate a PMF from other physics is coming from sub-degree angular scales. 
+An instrument built to precisely measure gravitational lensing of the CMB should do very well at searching for PMFs. 
 
 
+\subsubsection{Beam and calibration uncertainties}
 
 Finally, we consider if searches for PMFs introduce new requirements on the accuracy to which the instrumental beam or overall calibration of an experiment must be known. 
 We find they do not. 
