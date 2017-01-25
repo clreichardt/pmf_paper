@@ -93,9 +93,10 @@ In this work, we present new upper limits from current CMB polarization data on 
 Magnetic fields are ubiquitous in astronomy and are found almost universally in collapsed objects from stars to galaxies and galaxy clusters \citep[for a review, see][]{ryu12, widrow12}. 
 There is even some evidence for magnetic fields in intergalactic space from \fermilat{} data \citep{neronov10}, although there are alternative explanations \citep{broderick12}. 
 High energy $\gamma$-rays from blazars should  produce electron-positron pairs when the $\gamma$-rays collide with IR or optical photons. 
-These pairs should later annihilate  at GeV energies, but the expected GeV flux is missing in the \fermilat{} observations. 
-Intergalactic magnetic fields could explain the missing flux by deflecting the particles. 
-If due to intergalactic magnetic fields, the GeV results set lower limits on the intergalactic magnetic field strength of $10^{-9} - 10^{-6}$\,nG \citep{tavecchio10,taylor11,dermer11,vovk12}. 
+These pairs should later annihilate in at GeV energies, but the expected GeV flux is missing in the \fermilat{} observations. 
+The missing flux could be explained by the deflection of particles due to intergalactic magnetic fields. 
+If this is indeed the case then the GeV results set lower limits on the intergalactic magnetic field strength of $10^{-9} - 10^{-6}$\,nG \citep{tavecchio10,taylor11,dermer11,vovk12}. 
+
 
 The mechanism to create large-scale magnetic fields, especially in intergalactic space, remains unclear. 
 One popular proposal is that the observed fields are the product of PMFs, which are predicted by several theories of the early Universe \citep[e.g.,][]{turner88, grasso98,ichiki06}. 
@@ -431,6 +432,16 @@ We look at four aspects of the experiment design: the telescope size or beam FWH
 Of these four, we find that the first three, the beam FWHM, low-$\ell$ noise performance and survey area, to be potentially important to searches for PMFs. 
 As should be expected, the preferred design depends on the shape of the PMF spectrum ($n_B$) which controls  the relative power between large and small angular scales. 
 
+\subsubsection{Number of detectors}
+
+\begin{figure}[htb]\centering
+\includegraphics[width=0.4\textwidth,clip,trim={1.5cm 12.cm 5cm 4cm}]{pmf_area.pdf}
+  \caption[Insert plot of error on $A_{PMF}$ vs number of detectors]{ \label{fig:ndetector}
+  How the expected PMF changes with the spectral index, $n_B$. 
+  The PMF B-modes are plotted against the lensing B-modes for $n_B = [-2.9, -1, 2]$. 
+  The PMF power shifts to smaller angular scales as $n_B$ increases. \tbd{placeholder}
+  }
+\end{figure}
 
 \subsubsection{Telescope size}
 
@@ -450,12 +461,16 @@ Raw sensitivity is important to an experiment's ability to study PMFs.
 \begin{figure}[htb]\centering
 \includegraphics[width=0.45\textwidth,clip,trim={1.5cm 12.5cm 11cm 7.5cm}]{pmf_area.pdf}
   \caption[Area dependence]{
-  The forecasted uncertainty on the PMF power, \apmf{}, falls as the survey area increases. 
-  In particular, observing more than $\sim$\,15\% of the sky is strongly preferred for PMF searches. 
+  The forecasted uncertainty on the PMF power depends on the assumed PMF model.
+  In the scale-invariant $n_b = -2.9$ case, we find that observing more than $\sim$\,15\% of the sky is strongly preferred for PMF searches.
+  In contrast, for the cases where $n_b = -1, +2$, we find that observing at least $\sim$\,10\% of the sky produces the best results for PMF searches. %However inreasing the survey area from this minimum area gradually reduces precision, but these effects may be negligible.
+%  The forecasted uncertainty on the PMF power, \apmf{}, falls as the survey area increases. 
+%  In particular, observing more than $\sim$\,15\% of the sky is strongly preferred for PMF searches.
   Fortunately, the CMB-S4 survey concepts being discussed cover even larger areas of sky. 
   The black solid line shows the forecast uncertainty as a function of area in the 11-parameter cosmological model.
   The purple dot-dash line shows the same, except in the restricted \lcdm{}+\apmf{} 7-parameter model. 
-  In both cases, better limits on PMFs will be achieved with wider surveys.
+  At best, better limits on PMFs will be achieved with widers surveys and at worst wider surveys will have negligible impact on the precision.
+%  In both cases, better limits on PMFs will be achieved with wider surveys.
   \tbd{may change strength of statements; haven't updated figure or caption}
     \label{fig:area}
   }
