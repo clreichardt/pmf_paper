@@ -70,7 +70,7 @@ We present new limits on the amplitude of potential primordial magnetic fields (
 We reduce twofold the upper limit on the CMB anisotropy power due to a PMF, from $\apmf < \upperAplk$ from Planck alone to $\apmf < \upperAall$ for the combined dataset at 95\% CL. 
 %Most of the improvement is due to the addition of the \bicepkeck{} data; without these bandpowers, the combined limit weakens to $\apmf < 0.\tbd{XX}$. 
 We also forecast the expected future limits from soon-to-deploy CMB experiments (like \sptnew{},  \advactpol, or the \simons) and the proposed CMB-S4 experiment. 
-Future CMB experiments should dramatically reduce the current uncertainties, by two orders of magnitude for the near-term experiments and three orders of magnitude for the CMB-S4 experiment. 
+Future CMB experiments should dramatically reduce the current uncertainties, by one order of magnitude for the near-term experiments and two orders of magnitude for the CMB-S4 experiment. 
 The constraints from CMB-S4 have the potential to rule out much of the parameter space for PMFs.
 
 \end{abstract}
@@ -100,7 +100,7 @@ If this is indeed the case then the GeV results set lower limits on the intergal
 
 The mechanism to create large-scale magnetic fields, especially in intergalactic space, remains unclear. 
 One popular proposal is that the observed fields are the product of PMFs, which are predicted by several theories of the early Universe \citep[e.g.,][]{turner88, grasso98,ichiki06}. 
-Adiabatic compression and turbulent shocks during later structure formation amplify these initial seed PMFs into the stronger fields observed today. 
+Adiabatic compression and turbulent shocks during later structure formation amplify these initial seed PMFs into the stronger magnetic fields observed today. 
 Of course, this amplification process may be seeded through other means, such as AGN or galactic dynamos \citep[for a review, see][]{giovannini04}. 
 However, the possibility of PMFs opens up the intriguing idea that observations of large-scale magnetic fields may offer insights into the physics of the very early Universe. 
 
@@ -180,19 +180,20 @@ Finally, in some cases, we allow non-zero tensors, parameterized by the tensor-t
 
 The density and stress perturbations introduced by PMFs give rise to vorticity and gravitational waves in the early photon-baryon  plasma, i.e. vector and tensor modes, as well as scalar modes. 
 The exact amplitude of these modes can be calculated by modifying the normal Boltzmann equations to includes sources due to the PMFs. 
-The PMF anisotropy is assumed to be drawn from a Gaussian distribution with a power law power spectrum, $A_b k^{n_b}$, with $n_b$ the spectral index and $A_b$ the PMF power. 
-We can translate the power, $A_b$, into more physically-motivated units by calculating the rms of the PMF field strength over a length scale of 1\rm{Mpc}, thereby defining $B_{\rm{1Mpc}}$. 
+The PMF anisotropy is assumed to be drawn from a Gaussian distribution with a power law power spectrum, $A_B k^{n_B}$, with $n_B$ the spectral index and $A_B$ the PMF power normalization. 
+We can translate the power, $A_B$, into more physically-motivated units by calculating the rms of the PMF field strength over a length scale of 1\rm{Mpc}, thereby defining $B_{\rm{1Mpc}}$. 
 Finally, the timing of when the PMFs are generated matters because the PMF-induced stress anisotropy can be compensated by decoupled or partially-decoupled neutrinos. 
 The timing is typically parametrized by the ratio of the scale factors at neutrino decoupling and PMF generation, $a_{\nu}/a_{\rm{PMF}}$. 
 
 Given that we are still in the era of upper limits,  we do not explore the full 3-dimensional PMF parameter space in this work. 
-Instead, we use publicly released modifications to CAMB from \citet{zucca16} to calculate a PMF template for the CMB TT, TE, EE and BB power spectra at fixed parameters: $B_{\rm{1Mpc}}$=2.5 \rm{nG}, $n_b$=-2.9 and $a_{\nu}/a_{\rm{PMF}}=10^9$. 
-We also look at $n_b=-1$ and $n_b=2$ in the forecasting section. 
-We have compared calculated templates to the outputs of the earlier CMBACT code\footnote{\url{http://www.sfu.ca/~levon/cmbact.html}} \citep{pogosian99}, and find excellent agreement as would be hoped. 
-The decision to use the  \citet{zucca16} code instead of CMBACT was based on the need to extend the calculation out to $\ell=10000$ for the Fisher matrix forecasts. 
+Instead, we use publicly released modifications to CAMB from \citet{zucca16} to calculate a PMF template for the CMB TT, TE, EE and BB power spectra at fixed parameters: $B_{\rm{1Mpc}}$=2.5 \rm{nG}, $n_B$=-2.9 and $a_{\nu}/a_{\rm{PMF}}=10^9$. 
+We also look at $n_B=-1$ and $n_B=2$ in the forecasting section. 
+We have compared calculated templates to the outputs of the earlier CMBACT code\footnote{\url{http://www.sfu.ca/~levon/cmbact.html}} \citep{pogosian99}. 
+We find excellent agreement  for the vector modes as would be hoped, however a roughly factor of two difference on the tensor mode power. 
+The decision to use the  \citet{zucca16} code instead of CMBACT is based on the need to extend the calculation out to $\ell=10000$ for the Fisher matrix forecasts. 
 The calculated templates include tensor and vector PMF contributions; scalar contributions are not implemented in the code. 
-We expect the missing scalar power to degrade the \planck-only results in this work.
-However the missing scalar power should be  unimportant for the EE and BB spectra that are driving the tightest constraints, particularly when looking at forecasts for the next generation of experiments. 
+The lack of scalar terms should only matter for constraints primarily from the temperature spectrum, i.e. the \planck-only results. 
+These temperature results are not the main focus of this work, and we find our results consistent with the \planck{} results from \citet{planck15-19} suggesting the impact is minor. 
 The PMF template is plotted against other signals in the CMB B-mode power spectrum in Fig.~\ref{fig:pmf-bb}. 
 In the MCMC, we add a new scaling parameter, $A_{pmf}$, that rescales the PMF power spectrum template. 
 We can translate the amplitude constraint on this template to a constraint on the rms magnetic field strength on 1\,Mpc scales, \bpmf, using the expected scaling:
@@ -210,7 +211,7 @@ However, if a PMF is detected, this same steep scaling would allow excellent con
     The black line shows the expected B-mode power in the \planck{} best-fit \lcdm{} cosmology (with the tensor-to-scalar ratio, r set to 0.01). 
     The B-mode measurements used for the limits in this work are denoted with filled circles; data not used has an open circle. 
     The data sets are from POLARBEAR (black; \citet{polarbear14b}); ACTpol (dark green; \citet{naess14});  BICEP2/Keck Array (red; \citet{bicepkeck15}); and SPTpol (purple; \citet{keisler15}). 
-      Current B-mode measurements are noise-limited at all angular multipoles; the next generation of experiments is expected to significantly increase the signal-to-noise on the B-mode power spectrum. 
+      Current B-mode measurements are noise-limited at all angular multipoles; the next generation of experiments will significantly increase the signal-to-noise on the B-mode power spectrum. 
            \label{fig:pmf-experiments}
   }
 \end{figure*}
@@ -221,7 +222,7 @@ However, if a PMF is detected, this same steep scaling would allow excellent con
   The expected contributions to CMB B-modes. 
   The red line shows the expected lensing B-mode power in the \planck{} best-fit \lcdm{} cosmology. 
   The dark green line corresponds to the contribution from inflationary gravitational waves for $r=0.05$; the solid black line is the sum of the inflationary gravitational wave and lensing B-modes. 
-  The dashed purple line shows the nearly-scale invariant ($n_b=-2.9$) PMF template used in this work, scaled to \apmf{} = 0.2 (i.e.~\bpmf{}=1.7\,nG) to match the gravitational wave signal. 
+  The dashed purple line shows the nearly-scale invariant ($n_B=-2.9$) PMF template used in this work, scaled to \apmf{} = 0.2 (i.e.~\bpmf{}=1.7\,nG) to match the gravitational wave signal. 
   As can be seen, the tensor contribution from PMFs at large angular scales (low $\ell$) closely resembles the expected inflationary gravitational wave signal, and the two signals are effectively degenerate in a power spectrum (2-point) analysis.
   %However, if excess power on these scales is detected, higher order moments of the map (i.e.~4-point estimators) might be used to discriminate between   the inflationary and PMF explanations. 
       \label{fig:pmf-bb}
@@ -235,7 +236,7 @@ However, if a PMF is detected, this same steep scaling would allow excellent con
   The lensing B-mode power spectrum (solid, black line) are plotted against the PMF power for $n_B=-2.9$ (solid, purple line), $n_B=-1$ (dashed, green line), and $n_B=+2$ (dotted, red line). 
   To keep all the curves on the same scale, we adjust the RMS strength of the magnetic field, \bpmf{}, between the three cases as noted in the legend. 
   At fixed RMS magnetic field strength, increasing $n_B$ greatly increases the expected B-mode power. 
-  There is an inflection point between the nearly-scale-invariant PMF with $n_b=-2.9$ and the bluer PMF spectra ($n_b=-1$ or 2) which shifts power to smaller angular scales. 
+  There is an inflection point between the nearly-scale-invariant PMF with $n_B=-2.9$ and the bluer PMF spectra ($n_B=-1$ or 2) which shifts power to smaller angular scales and eliminates the peak at $\ell \lesssim 200$. 
   }
 \end{figure}
  
@@ -249,7 +250,7 @@ Somewhat counterintuitively, the limits are slightly better with \alens{} allowe
 In this case for  Planck alone, the 95\% confidence upper limit is $\apmf <  \upperAplkalens$, dropping to $\apmf <  \upperAallalens$ with the ground-based experiments. 
 We test which datasets are important by adding single datasets to the \planck{} set in the simple \lcdm{}+\apmf{} cosmology, and find that the majority of this improvement is due to the \bicepkeck{} ($\apmf <  \upperAbicep$) and \sptpol{} ($\apmf <  \upperAsptpol$) B-mode power spectrum measurements. 
 The other datasets do not have a large impact on the observed limits. 
-In short, the reduction in the allowed upper limit on \apmf{} for a nearly-scale-invariant PMF spectrum ($n_b=-2.9$) is primarily due to a more accurate measurement of the B-mode power spectrum at large angular scales. 
+In short, the reduction in the allowed upper limit on \apmf{} for a nearly-scale-invariant PMF spectrum ($n_B=-2.9$) is primarily due to a more accurate measurement of the B-mode power spectrum at large angular scales. 
 
 
 
@@ -259,9 +260,9 @@ Given this assumed scaling, the observed upper limits with a flat prior on \apmf
 We therefore importance sample the chains to generate a flat prior on \bpmf. 
 We find a 95\% limit of $\bpmf < \upperBplk$\,nG for \planck{} alone,
 This is somewhat better then the limit found by \citet{planck15-19} of $\bpmf < 2.0$\,nG with $n_B=-2.9$ held fixed as we've done. 
-The difference is due to a difference in the calculated tensor PMF power (for the same parameters) between the XXX and YYY codes. 
-Using the YYY code that \citet{planck15-19} used, we find a completely consistent upper limit of $\bpmf < 1.9$\,nG. 
-Returning to the XXX code, the upper limit is only slightly reduced to $\bpmf < \upperBall$\,nG for the combined dataset. 
+The difference is due to a difference in the calculated tensor PMF power (for the same parameters) between the CMBACT and \citet{zucca16} codes. 
+Using the CMBACT code that \citet{planck15-19} used, we find a completely consistent upper limit of $\bpmf < 1.9$\,nG. 
+Returning to the  \citet{zucca16} code, the upper limit is only slightly reduced to $\bpmf < \upperBall$\,nG for the combined dataset. 
 The improvement from adding more data is somewhat less than one might predict because the combined likelihood peaks somewhat above zero, whereas the \planck{}-only constraints peaks at zero. 
 %We also stress that this should not be treated as a robust limit as the tensor PMF modes are crucial to the improvement, and the assumed scaling has not been tested for the tensor PMF. 
 %We quote it nonetheless to illustrate that with a steep power law scaling, the relative improvement to \bpmf{} will be slower than the improvement to \apmf{} as more data is added.
@@ -300,31 +301,32 @@ Recall that the the PMF template is normalized to unity for \bpmf{} = 2.5\,nG.
 \end{center}
 \end{table}
 
+\tbd{Add other nb cases???}
 
 \section{Forecasts}
 \label{sec:forecasts}
 
-The sensitivity of CMB experiments is increasing rapidly due to the continuing growth in the number of detectors. 
+The sensitivity of CMB experiments is increasing rapidly due to the continued growth in the number of detectors. 
 \citet{abazajian16} thus defines four stages of CMB experiments. 
 The current experiments (i.e.~the ones used for PMF constraints in the last section) are classified as Stage II experiments. 
 Stage III experiments such as SPT-3G, the Simons Array, or AdvACTPol \citep{benson14,suzuki16,henderson16} have approximately ten times more detectors, and generically will start collecting data around 2017 and finish three to four years later.
 In this section, we forecast the expected constraints from the EE and BB power spectrum measurements  of the Stage III experiments by combining forecasts for SPT-3G and the Simons Array. 
 There is also a proposal to build a stage IV experiment, CMB-S4,  that would increase the detector counts by another order of magnitude and hopefully begin taking data in the early 2020s.
 A pathfinder to CMB-S4, the Simons Observatory, was funded in 2016. 
-We examine the likely PMF constraints from the EE and BB power spectrum measurements with CMB-S4, and consider which aspects of experimental or survey design are important to maximize the recovered information on PMFs.
+We examine the likely PMF constraints from the EE and BB power spectrum measurements with CMB-S4, and consider which aspects of experimental or survey design are most important to PMF searches.
 
 
 
 
 \subsection{Methods and Experimental Parameters}
 
-We use Fisher matrices to forecast the constraints on PMFs possible from each generation of experiment. 
+We use Fisher matrices to forecast the potential constraints on PMFs possible for each generation of experiments. 
 The Fisher matrix, $\mathcal{F}_{ij}$, can be defined as:
 \be
 \mathcal{F}_{ij} = \frac{1}{2} \frac{\partial^2 \chi^2}{\partial p_i \partial p_j},
 \ee
 for parameters, p. 
-The inverse of the Fisher matrix will be the covariance matrix for the parameters. 
+The inverse of the Fisher matrix is the covariance matrix for the parameters for Gaussian likelihoods. 
 While Fisher matrices underestimate the true uncertainties for non-Gaussian likelihoods \citep[see e.g.,][]{wolz12}, they 
  make it easy to combine different experiments and estimate the final parameter constraints. 
  
@@ -344,11 +346,12 @@ We do not expect the future experiments to substantially improve upon \planck{} 
 We do the opposite for the EE and BB spectra. 
 We do not include \planck{} BB information in any forecast, and  we throw away \planck{} EE data in the overlap region by appropriately increasing the \planck{} EE uncertainties. 
 %The exact increase depends on the assumed stage III or IV survey area.
-We ignore overlaps between the stage III  on the basis that the sky overlap between a Chilean experiment like the Simons Array and South Pole experiment like SPT-3G should be small. 
+We ignore overlaps between the stage-III experiments  on the basis that the sky overlap between a Chilean experiment like the Simons Array and South Pole experiment like SPT-3G should be small. 
 This is also why we do not include both Simons Array and AdvACTpol as the two experiments are likely to have substantial sky overlap. 
 The overlapping sky coverage is expected to be substantial between stage III and IV experiments, thus we do not include the stage III experiments, except as a prior on the polarized Poisson power, in the CMB-S4 constraints. 
 This prior is only relevant in practice when the assumed CMB-S4 configuration has a larger beam size than SPT-3G. 
-With these measures, no modes should be double-counted in this analysis. 
+With these measures in place, this analysis should not double-count any modes. 
+
 
 \begin{table*}[tbh]
 \begin{center}
@@ -382,9 +385,10 @@ We  assume a 5\% uncertainty on the beam FWHM and a 1\% power calibration uncert
 
 We consider the constraints on PMFs in two cosmologies. 
 The first is a 11-parameter model that extends \lcdm{} with 5 commonly considered extensions:  \lcdm{}  +r + \nrun{} + \neff{} + \mnu{}+ \apmf. 
+Here, r is the tensor-to-scalar ratio, \nrun{} is running of the scalar index, \neff{} is the effective number of relativistic species, and \mnu{} is the sum of the neutrino species. 
 This 11-parameter model is our default cosmological model for forecasting future PMF constraints. 
-We have examined the degree to which \apmf{} is degenerate with the other 10 parameters -- the only strong degeneracy is with the tensor-to-scalar ratio, r. 
-The reason for this degeneracy is illustrated in Fig.~\ref{fig:pmf-bb}, which shows that the tensor mode power due to inflationary gravitational waves and PMFs is nearly identical. 
+We have examined the degree to which \apmf{} is degenerate with the other 10 parameters -- the only strong degeneracy is in the $n_B=-2.9$ case with the tensor-to-scalar ratio, r. 
+The reason for this degeneracy is illustrated in Fig.~\ref{fig:pmf-bb}, which shows that the tensor mode power due to inflationary gravitational waves and a PMF with $n_B=-2.9$ is nearly identical. 
 To illustrate the degree to which parameter degeneracies limit the inferred constraints,  we also quote constraints from a `minimal' 7-parameter model in which the PMF power is the only extension to \lcdm{}:  \lcdm{}  + \apmf. 
 In both cases, we also marginalize over unknown Poisson EE and BB  terms due to polarized extragalactic sources. 
 We assume the galactic foregrounds are removed by a judicious combination of data from multiple frequencies. 
@@ -409,32 +413,31 @@ Such de-lensing techniques have long been proposed for inflationary gravitationa
 \subsection{Stage III forecasts}
 
 The experiments that will begin taking data in 2017 will dramatically improve constraints on the PMF power. 
-With the minimal cosmological model, the 1-sigma forecasts for \planck{}+\ho{} is $\sigma(\apmf)=\fisherAplk$ for a nearly-scale invariant PMF spectrum (i.e.~$n_b=-2.9$). 
+With the minimal cosmological model, the 1-sigma forecasts for \planck{}+\ho{} is $\sigma(\apmf)=\fisherAplk$ for a nearly-scale invariant PMF spectrum (i.e.~$n_B=-2.9$). 
 This is consistent with, although somewhat better than, the upper limits from the real data).  
 Adding the EE and BB bandpowers from the two stage III experiments (\sptnew{} and \simons{}) reduces the uncertainty by an order of magnitude in this 7-parameter model to $\sigma(\apmf)=0.015$. 
 The improvement is larger when including all eleven parameters, as the parameter degeneracies substantially weaken (by a factor of five) the \planck+\ho{} constraints on \apmf{}, while only weakening the stage III constraint by a  more modest 40\%. 
 Thus within the 11-parameter model however,  the addition of stage III CMB experiments improves the \apmf{} uncertainty by a factor of $\sim$\,35 to  $\sigma(\apmf)=0.022$. 
-The parameter degeneracies largely disappear for steeper PMF spectra (i.e. $n_b=-1$ or 2) as the PMF B-mode spectra then peaks at very small scales and this small-scale power can not be mimicked by any of the other 11-parameters. 
+The parameter degeneracies largely disappear for steeper PMF spectra (i.e. $n_B=-1$ or 2) as the PMF B-mode spectra then peaks at very small scales and this small-scale power can not be mimicked by any of the other 11-parameters. 
 The improvement for the CMB-S3 experiments over \planck{} remains impressive at a factor of 17 and 13 respectively. 
 We can expect substantially tighter constraints on PMFs by the end of the decade. 
 
 \subsection{Stage IV forecasts}
 
-The primary motivation behind the proposed CMB stage IV experiment commonly called CMB-S4 is to search for inflationary gravitational waves and neutrino masses, however, the experiment should also enable extremely sensitive searches for PMFs. 
-We look at the prospects for these searches using the polarization information (EE and BB power spectra) from CMB-S4. 
-We begin by making forecasts for the fiducial CMB-S4 configuration as laid out in Table~\ref{tab:experiments}, and then consider how changing the experimental design would impact the expected uncertainties. 
+The primary motivation behind the proposed CMB stage-IV experiment commonly called CMB-S4 is to search for inflationary gravitational waves and neutrino masses.
+However, CMB-S4 would also enable extremely sensitive searches for PMFs. 
+We begin by considering our fiducial CMB-S4 configuration, as laid out in Table~\ref{tab:experiments}. 
+For this fiducial configuration, we expect \tbd{add numbers}. 
 
 
-
-
-\subsection{Survey considerations for Stage IV}
-
-Given that CMB-S4 is still being designed, it is worthwhile to consider how design decisions will affect the final PMF constraints. 
-We look at five aspects of the experiment design: the instrumental sensitivity (as reflect by the map noise level), the telescope size or beam FWHM,  the low-$\ell$ noise performance (1/f knee), the choice of survey area,  and how well the beam size and calibration must be known. 
+Given that CMB-S4 is currently in the design phase, it is worthwhile to consider how design decisions will affect the final PMF constraints. 
+We look at five aspects of the experiment design: the instrumental sensitivity (as reflected by the map noise level), the telescope size or beam FWHM,  the low-$\ell$ noise performance (1/f knee), the choice of survey area,  and how well the beam size and calibration must be known. 
 Of these five, we find that the first two to be very important and the second two to be somewhat important when optimizing for searches for PMFs. 
 As should be expected, the preferred design depends on the shape of the PMF spectrum ($n_B$) which controls  the relative power between large and small angular scales. 
 
 \subsubsection{Instrumental sensitivity (map noise levels)}
+
+\tbd{I found this awkward text, will rewrite}
 
 We naturally expect more sensitive instruments to do a better job of constraining PMF models. 
 The goal of this section is to quantify that statement for the three PMF templates considered in the 11 or 7-parameter cosmological models. 
@@ -451,7 +454,7 @@ In the general, 11-parameter cosmological model, the PMF uncertainty does not pl
   Forecasts are shown for each of the three PMF scalar indices: $n_B = -2.9$ (solid), -1 (dashed), and +2 (dash-dot). 
   The black lines are for the conservative 11-parameter model, while the blue lines are for the simple \lcdm{}+\apmf{} model. 
   The model only matters in the nearly-scale invariant PMF case, where the constraints degrade in the 11-parameter model due a degeneracy with the tensor-to-scalar ratio. 
-  The PMF constraints improve rapidly with lower noise levels in all three cases up to $\sim$\,1\,\ukarcmin. 
+  The PMF constraints improve rapidly with lower noise levels in all three cases up to $\sim$\,1\,\ukarcmin, which is close to the  fiducial CMB-S4 noise levels. 
     }
 \end{figure}
 
@@ -464,7 +467,7 @@ In the general, 11-parameter cosmological model, the PMF uncertainty does not pl
  Larger telescopes (and smaller beams) will improve limits on the PMF power. 
  Forecasts are shown for each of the three PMF scalar indices: $n_B = -2.9$ (solid), -1 (dashed), and +2 (dash-dot). 
   The black lines are for the conservative 11-parameter model, while the blue lines are for the simple \lcdm{}+\apmf{} model. 
-  The model only matters in the nearly-scale invariant PMF case ($n_B=-2.9$), where the information on large angular scales dominates and the telescope size is relatively unimportant. 
+  The cosmological model only matters in the nearly-scale invariant PMF case ($n_B=-2.9$), where the information on large angular scales dominates and the telescope size is relatively unimportant. 
   The plateau near 4$^\prime$ for $n_B=-1, +2$ is where the gain from the $\ell\sim3000$ peak is saturated, but the resolution isn't yet adequate to pick up the next peak at $\ell > 8000$ (see  Fig.~\ref{fig:pmf-nb}).  
     }
 \end{figure}
@@ -475,17 +478,17 @@ We find a local plateau between FWHMs of 4$^\prime$ to 6$^\prime$; improving the
 We can understand this plateau by looking on the predicted PMF power in Fig.~\ref{fig:pmf-nb}. 
 All three templates have two peaks across this range of angular multiples, and we would expect such a plateau when, for instance, the resolution is adequate to resolve the first peak, but not yet sufficient to resolve the second peak. 
 The observed plateau positions are consistent with this hypothesis. 
- A beam size of FWHM=1$^\prime$ instead of 10$^\prime$ reduces the expected upper limit five-fold for $n_b=-2.9$ and 30- to 35-fold for the steeper PMF indices which are more heavily weighted towards small angular scales. 
+ A beam size of FWHM=1$^\prime$ instead of 10$^\prime$ reduces the expected upper limit five-fold for $n_B=-2.9$ and 30- to 35-fold for the steeper PMF indices which are more heavily weighted towards small angular scales. 
    The model only matters in the nearly-scale invariant PMF case ($n_B=-2.9$), where the information on large angular scales dominates and the telescope size is relatively unimportant. 
 
 
 However, larger telescopes are also more expensive to build which means for a fixed experimental budget, they would necessitate less ambitious focal planes and lower instantaneous mapping speed. 
 We very crudely approximated a cost-neutral setup with a noise level of 1.3 \ukarcmin{} for a FWHM of 4$^\prime$; a noise level of 2.9 \ukarcmin{} for a FWHM of 2$^\prime$; and a noise level of 4.1 \ukarcmin{} for a FWHM of 1$^\prime$. 
 We find 
-Improving the mapping speed rather than telescope size leads to somewhat better potential limits for these experimental configurations, by a factor of 1.6, 1.2 or 1.1 for $n_b = -2.9, -1, +2$ respectively. 
+Improving the mapping speed rather than telescope size leads to somewhat better potential limits for these experimental configurations, by a factor of 1.6, 1.2 or 1.1 for $n_B = -2.9, -1, +2$ respectively. 
 However the results are close enough that the crudeness of the cost-neutral estimates used here could be a factor, and the preference might flip for more accurately costed setups. 
-In short,  the tradeoff between larger telescopes or more detectors is largely a wash, although one would lean towards adding more detectors. 
-Raw sensitivity is important to an experiment's ability to study PMFs.
+In short,  the tradeoff between larger telescopes or more detectors is largely a wash, although one would likely lean towards adding more detectors. 
+%Raw sensitivity is important to an experiment's ability to study PMFs.
 
 \subsubsection{Survey Area}
 
@@ -493,8 +496,8 @@ Raw sensitivity is important to an experiment's ability to study PMFs.
 \includegraphics[width=0.45\textwidth,clip,trim={1.5cm 12.5cm 11cm 7.5cm}]{pmf_area.pdf}
   \caption[Area dependence]{
   The preferred survey area for PMF searches depends on the PMF spectral index. 
-    In the scale-invariant $n_b = -2.9$ case (solid line), we find that observing more than $\sim$\,15\% of the sky is strongly preferred for PMF searches. 
- In contrast, for the cases where $n_b = -1, +2$ (dashed and dot-dashed lines), we find that observing  $\sim$\,10\% of the sky produces the best PMF constraints. 
+    In the scale-invariant $n_B = -2.9$ case (solid line), we find that observing more than $\sim$\,15\% of the sky is strongly preferred for PMF searches. 
+ In contrast, for the cases where $n_B = -1, +2$ (dashed and dot-dashed lines), we find that observing  $\sim$\,10\% of the sky produces the best PMF constraints. 
    There is essentially no difference to the preferred areas between the 11-parameter cosmological model (black) or the restricted \lcdm{}+\apmf{} 7-parameter model (purple). 
      Fortunately, the minima for all three templates are relatively broad, and a survey covering 15+\% of the sky will do well for all values of the PMF spectral index. 
     \label{fig:area}
@@ -502,12 +505,12 @@ Raw sensitivity is important to an experiment's ability to study PMFs.
 \end{figure}
 
 
-A second question is whether it is better to integrate deeply on a small patch of sky or observe a wide area. 
-Unsurprisingly, we find opposing preferences for the scale-invariant $n_b=-2.9$ (which peaks at large scales) and the bluer $n_b=-1$ or 2 spectra peaking at small scales. 
-As shown in  Fig.~\ref{fig:area}, for $n_b=-2.9$, observing at least 15\% of the sky is very important to a search for nearly scale-invariant PMFs, and it is best  to cover as much sky as possible. 
+A third question is whether it is better to integrate deeply on a small patch of sky or observe a wide area. 
+Unsurprisingly, we find opposing preferences for the scale-invariant $n_B=-2.9$ (which peaks at large angular scales) and the bluer $n_B=-1$ or 2 spectra which peak at small scales. 
+As shown in  Fig.~\ref{fig:area}, for $n_B=-2.9$, observing at least 15\% of the sky is very important to a search for nearly scale-invariant PMFs, and it is best  to cover as much sky as possible. 
 A caveat to this analysis is that it is likely easier to remove galactic foregrounds to a specified level on targeted, `clean' patches as opposed to a substantial fraction of the sky, and we would expect galactic foregrounds to be important for the large angular scales. 
 With that said, the PMF constraints improve by a factor of 1.4-1.5 (depending on the cosmological model) going from 10\% to 25\% of the full sky, and are nearly flat (a 6\% improvement) from 25\% to 70\% of the sky (the widest area likely to be possible after galactic cuts).
-Conversely, $n_b=+2$, the optimal survey area is smaller at 10\%. 
+Conversely, $n_B=-1$or +2, the optimal survey area is smaller at 10\% of the full sky. 
 Note however that the minimum is extremely broad with only a 10\% worsening of the expected uncertainty as the survey area is increased from 10\% to 70\% of the  full sky. 
 A survey of around 25\% of the sky would perform well for all three considered PMF models. 
 
@@ -516,7 +519,7 @@ A survey of around 25\% of the sky would perform well for all three considered P
 \begin{figure}[htb]\centering
 \includegraphics[width=0.45\textwidth,clip,trim={1.5cm 12.5cm 11cm 7.5cm}]{pmf_knee.pdf}
   \caption[Map knee dependence]{
-  The forecasted uncertainty on the PMF power, \apmf{}, falls as expected with decreasing low-frequency map noise for a nearly scale-invariant PMF ($n_b = -2.9$) in the restricted \lcdm{}+\apmf{} 7-parameter model (solid, purple line). 
+  The forecasted uncertainty on the PMF power, \apmf{}, falls as expected with decreasing low-frequency map noise for a nearly scale-invariant PMF ($n_B = -2.9$) in the restricted \lcdm{}+\apmf{} 7-parameter model (solid, purple line). 
   However,  the achieved map 1/f knee frequency makes no difference to the potential power of CMB-S4 PMF searches in the 11-parameter model (solid, black line). 
   The change in behavior happens because the 11-parameter model introduces a degeneracy with r that shifts the angular scale of the PMF constraint to sub-degree scales. 
   The 1/f knee frequency also makes no difference for the bluer PMF templates in either the restricted or full 11-parameter model space (dashed and dash-dotted black lines). 
@@ -532,17 +535,18 @@ Effectively, we are multiplying the noise power, $N_\ell$, which is a constant f
 f(\ell) = 1 + \left(\frac{\ell_{\rm knee}}{\ell}\right)^{8/3}.
 \ee 
 The exponent, 8/3, was selected based on a Kolmogorov spectrum of turbulence within a thin plane \citep{lay00}. %lay & halverson 2000. 
-Note that this knob  serves as a placeholder for several effects, including a signal-to-noise hit due to galactic foregrounds or the methods used to clean these foregrounds, atmospheric noise, or actual instrumental 1/f noise. 
+Note that this knob  serves as a placeholder for several effects, including a signal-to-noise hit due to galactic foregrounds or the methods used to clean these foregrounds, atmospheric noise, or actual instrumental low frequency noise. 
 
 We generally find the forecasts to be insensitive to the 1/f knee or galactic foreground removal at the default beam size of 4$^\prime$. 
 It appears that even in the nearly scale-invariant case, the PMF constraint is being driven by smaller angular scales due to the the degeneracy with the tensor-to-scalar ratio at large angular scales. 
 Without this degeneracy, i.e. in the simple \lcdm{}+\apmf{} model, dropping \lknee{} from 400 to 50 reduces the uncertainty by a factor of 3.2 for a nearly scale-invariant PMF. 
 In this case, the degradation accelerates once the 1/f knee goes above $\ell \simeq 70$. 
-This is consistent with the statement for the same simple model that the current upper limits are dominated by the BICEP2/Keck Array data at low-$\ell$. 
-For the bluer PMF spectra ($n_b=-1$ or 2), the forecasts have nearly zero dependence on the knee frequency. 
+This is consistent with the earlier statement for the same simple model that the current upper limits are dominated by the BICEP2/Keck Array data at low-$\ell$. 
+For the bluer PMF spectra ($n_B=-1$ or 2), the forecasts have essentially no dependence on the knee frequency. 
 These results are consistent with the study of telescope size in the last section - which found that recovering smaller angular scales with larger telescopes helped (if one didn't consider cost).
 For a conservative 11-parameter model, our ability to separate a PMF from other physics is coming from sub-degree angular scales. 
-An instrument built to precisely measure gravitational lensing of the CMB should do very well at searching for PMFs. 
+%An instrument built to precisely measure gravitational lensing of the CMB should do very well at searching for PMFs. 
+The low frequency noise performance of CMB-S4 is not crucial to PMF searches. 
 
 
 \subsubsection{Beam and calibration uncertainties}
@@ -564,7 +568,7 @@ We have also shown that the next generation of experiments should dramatically r
 These so-called stage III experiments, which will begin taking data in 2017, expect to set upper limits at the level of $\apmf < 0.02$ even after marginalizing over a five-parameter extension to \lcdm.
 
 The potential for detection increases even further with planned experiments like the Simons Observatory or CMB-S4. 
-We show that an ideal version of CMB-S4 might decrease the 95\% CL upper limits eight-fold, to $\apmf < 0.00025$, and even non-ideal versions can easily set upper limits on order of $\apmf < 0.006$, i.e.~ a three-fold improvement over the forecasts for the stage III experiments and a 37-fold improvement over the current limits. 
+We show that an ideal version of CMB-S4 might decrease the 95\% CL upper limits eight-fold, to $\apmf < 0.0025$ \tbd{check these numbers}, and even non-ideal versions can easily set upper limits on order of $\apmf < 0.006$, i.e.~ a three-fold improvement over the forecasts for the stage III experiments and a 37-fold improvement over the current limits. 
 We consider how the design of these experiments will impact the resulting PMF limits -- the experimental sensitivity, angular resolution, survey area, low-frequency noise performance, and beam or calibration uncertainties -- and find sensitivity followed by telescope size to be the most important factors in predicting the PMF limits. 
 CMB-S4 will be a very exciting probe of PMFs and other sources of cosmic birefringence. 
 
