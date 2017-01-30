@@ -438,7 +438,7 @@ As should be expected, the preferred design depends on the shape of the PMF spec
 
 \begin{figure}[htb]\centering
 \includegraphics[width=0.45\textwidth,clip,trim={1.5cm 12.5cm 11cm 7.5cm}]{pmf_sens.pdf}
-  \caption[Insert plot of error on $A_{PMF}$ vs number of detectors]{ \label{fig:ndetector}
+  \caption[]{ \label{fig:ndetector}
   How the expected uncertainty on the PMF power scales with the polarized map noise. 
   Forecasts are shown for each of the three PMF scalar indices: $n_B = -2.9$ (solid), -1 (dashed), and +2 (dash-dot). 
   The black lines are for the conservative 11-parameter model, while the blue lines are for the simple \lcdm{}+\apmf{} model. 
@@ -449,8 +449,20 @@ As should be expected, the preferred design depends on the shape of the PMF spec
 
 \subsubsection{Telescope size}
 
+
+\begin{figure}[htb]\centering
+\includegraphics[width=0.45\textwidth,clip,trim={1.5cm 12.5cm 11cm 7.5cm}]{pmf_beam.pdf}
+  \caption[]{ \label{fig:beam}
+ Larger telescopes (and smaller beams) will improve limits on the PMF power. 
+ Forecasts are shown for each of the three PMF scalar indices: $n_B = -2.9$ (solid), -1 (dashed), and +2 (dash-dot). 
+  The black lines are for the conservative 11-parameter model, while the blue lines are for the simple \lcdm{}+\apmf{} model. 
+  The model only matters in the nearly-scale invariant PMF case ($n_B=-2.9$), where the information on large angular scales dominates and the telescope size is relatively unimportant. 
+    }
+\end{figure}
+
 Larger telescopes will allow CMB polarization to be measured on smaller angular scales, and should therefore always improve the PMF constraints. 
-We find the gains due to resolution at fixed mapping speed to be substantial for all three power law indices considered: a beam size of FWHM=1$^\prime$ instead of 10$^\prime$ reduces the expected upper limit five-fold for $n_b=-2.9$ and 30- to 35-fold for the steeper PMF indices which are more heavily weighted towards small angular scales. 
+As shown in Fig.~\ref{fig:beam}, we find the gains due to resolution at fixed mapping speed to be substantial for all three power law indices considered.
+ A beam size of FWHM=1$^\prime$ instead of 10$^\prime$ reduces the expected upper limit five-fold for $n_b=-2.9$ and 30- to 35-fold for the steeper PMF indices which are more heavily weighted towards small angular scales. 
 
 However, larger telescopes are also more expensive to build which means for a fixed experimental budget, they would necessitate less ambitious focal planes and lower instantaneous mapping speed. 
 We very crudely approximated a cost-neutral setup with a noise level of 1.3 \ukarcmin{} for a FWHM of 4$^\prime$; a noise level of 2.9 \ukarcmin{} for a FWHM of 2$^\prime$; and a noise level of 4.1 \ukarcmin{} for a FWHM of 1$^\prime$. 
@@ -530,15 +542,16 @@ The PMF constraints  for all three power law indices considered are insensitive 
 \label{sec:conclusions}
 
 In this work, we have improved the current upper limits on the strength of any primordial magnetic fields by including more CMB B-mode polarization data. 
-By adding \bicepkeck{}, \pb, and \sptpol{} to \planck{} we find the 95\% CL upper limit on the PMF power falls from $\apmf < \upperAplk$ to $\apmf < \upperAall$. 
+By adding \bicepkeck{}, \pb, and \sptpol{} to \planck{} we find the 95\% CL upper limit on the PMF power falls nearly two-fold from $\apmf < \upperAplk$ to $\apmf < \upperAall$. 
 The biggest contributor to this improvement is the low-$\ell$ data from \bicepkeck{}. 
 
 We have also shown that the next generation of experiments should dramatically reduce these limits, and potentially detect PMFs for the first time. 
-These so-called stage III experiments, which will begin taking data in 2017, expect to set upper limits at the level of $\apmf < 0.0062$ even after marginalizing over a five-parameter extension to \lcdm.
+These so-called stage III experiments, which will begin taking data in 2017, expect to set upper limits at the level of $\apmf < 0.02$ even after marginalizing over a five-parameter extension to \lcdm.
 
 The potential for detection increases even further with planned experiments like the Simons Observatory or CMB-S4. 
-We show that an ideal version of CMB-S4 might decrease the 95\% CL upper limits eight-fold, to $\apmf < 0.0008$, and even non-ideal versions can easily set upper limits on order of $\apmf < 0.001$, i.e.~ a six-fold improvement over the forecasts for the stage III experiments and a 330-fold improvement over the current limits. 
-These experiments will be very exciting probes of PMFs and other sources of cosmic birefringence. 
+We show that an ideal version of CMB-S4 might decrease the 95\% CL upper limits eight-fold, to $\apmf < 0.00025$, and even non-ideal versions can easily set upper limits on order of $\apmf < 0.006$, i.e.~ a three-fold improvement over the forecasts for the stage III experiments and a 37-fold improvement over the current limits. 
+We consider how the design of these experiments will impact the resulting PMF limits -- the experimental sensitivity, angular resolution, survey area, low-frequency noise performance, and beam or calibration uncertainties -- and find sensitivity followed by telescope size to be the most important factors in predicting the PMF limits. 
+CMB-S4 will be a very exciting probe of PMFs and other sources of cosmic birefringence. 
 
 \acknowledgments
 
