@@ -439,10 +439,12 @@ As should be expected, the preferred design depends on the shape of the PMF spec
 \begin{figure}[htb]\centering
 \includegraphics[width=0.45\textwidth,clip,trim={1.5cm 12.5cm 11cm 7.5cm}]{pmf_sens.pdf}
   \caption[Insert plot of error on $A_{PMF}$ vs number of detectors]{ \label{fig:ndetector}
-  How the expected PMF changes with the spectral index, $n_B$. 
-  The PMF B-modes are plotted against the lensing B-modes for $n_B = [-2.9, -1, 2]$. 
-  The PMF power shifts to smaller angular scales as $n_B$ increases. \tbd{placeholder}
-  }
+  How the expected uncertainty on the PMF power scales with the polarized map noise. 
+  Forecasts are shown for each of the three PMF scalar indices: $n_B = -2.9$ (solid), -1 (dashed), and +2 (dash-dot). 
+  The black lines are for the conservative 11-parameter model, while the blue lines are for the simple \lcdm{}+\apmf{} model. 
+  The model only matters in the nearly-scale invariant PMF case, where the constraints degrade in the 11-parameter model due a degeneracy with the tensor-to-scalar ratio. 
+  The PMF constraints improve rapidly with lower noise levels in all three cases up to $\sim$\,1\,\ukarcmin. 
+    }
 \end{figure}
 
 \subsubsection{Telescope size}
@@ -463,32 +465,24 @@ Raw sensitivity is important to an experiment's ability to study PMFs.
 \begin{figure}[htb]\centering
 \includegraphics[width=0.45\textwidth,clip,trim={1.5cm 12.5cm 11cm 7.5cm}]{pmf_area.pdf}
   \caption[Area dependence]{
-  The forecasted uncertainty on the PMF power depends on the assumed PMF model.
-  In the scale-invariant $n_b = -2.9$ case, we find that observing more than $\sim$\,15\% of the sky is strongly preferred for PMF searches.
-  In contrast, for the cases where $n_b = -1, +2$, we find that observing at least $\sim$\,10\% of the sky produces the best results for PMF searches. %However inreasing the survey area from this minimum area gradually reduces precision, but these effects may be negligible.
-%  The forecasted uncertainty on the PMF power, \apmf{}, falls as the survey area increases. 
-%  In particular, observing more than $\sim$\,15\% of the sky is strongly preferred for PMF searches.
-  Fortunately, the CMB-S4 survey concepts being discussed cover even larger areas of sky. 
-  The black solid line shows the forecast uncertainty as a function of area in the 11-parameter cosmological model.
-  The purple dot-dash line shows the same, except in the restricted \lcdm{}+\apmf{} 7-parameter model. 
-  At best, better limits on PMFs will be achieved with widers surveys and at worst wider surveys will have negligible impact on the precision.
-%  In both cases, better limits on PMFs will be achieved with wider surveys.
-  \tbd{may change strength of statements; haven't updated figure or caption}
+  The preferred survey area for PMF searches depends on the PMF spectral index. 
+    In the scale-invariant $n_b = -2.9$ case (solid line), we find that observing more than $\sim$\,15\% of the sky is strongly preferred for PMF searches. 
+ In contrast, for the cases where $n_b = -1, +2$ (dashed and dot-dashed lines), we find that observing  $\sim$\,10\% of the sky produces the best PMF constraints. 
+   There is essentially no difference to the preferred areas between the 11-parameter cosmological model (black) or the restricted \lcdm{}+\apmf{} 7-parameter model (purple). 
+     Fortunately, the minima for all three templates are relatively broad, and a survey covering 15+\% of the sky will do well for all values of the PMF spectral index. 
     \label{fig:area}
   }
 \end{figure}
 
-\tbd{may change strength of statements}
+
 A second question is whether it is better to integrate deeply on a small patch of sky or observe a wide area. 
-Unsurprisingly, we find opposing preferences for the scale-invariant $n_b=-2.9$ (which peaks at large scales) and very blue $n_b=2$ spectrum peaking at small scales. 
-We find very little dependence on area for the intermediate case of $n_b=-1$. 
-As shown in  Fig.~\ref{fig:area}, for $n_b=-2.9$, observing at least 15\% of the sky is very important to a PMF search, and it is best  to cover as much sky as possible. 
+Unsurprisingly, we find opposing preferences for the scale-invariant $n_b=-2.9$ (which peaks at large scales) and the bluer $n_b=-1$ or 2 spectra peaking at small scales. 
+As shown in  Fig.~\ref{fig:area}, for $n_b=-2.9$, observing at least 15\% of the sky is very important to a search for nearly scale-invariant PMFs, and it is best  to cover as much sky as possible. 
 A caveat to this analysis is that it is likely easier to remove galactic foregrounds to a specified level on targeted, `clean' patches as opposed to a substantial fraction of the sky, and we would expect galactic foregrounds to be important for the large angular scales. 
 With that said, the PMF constraints improve by a factor of 1.4-1.5 (depending on the cosmological model) going from 10\% to 25\% of the full sky, and are nearly flat (a 6\% improvement) from 25\% to 70\% of the sky (the widest area likely to be possible after galactic cuts).
-Conversely, $n_b=+2$, the optimal survey area is as small as possible. 
+Conversely, $n_b=+2$, the optimal survey area is smaller at 10\%. 
 Note however that the minimum is extremely broad with only a 10\% worsening of the expected uncertainty as the survey area is increased from 10\% to 70\% of the  full sky. 
-The optimal survey area for a PMF survey will depend on the targeted PMF models. 
-
+A survey of around 25\% of the sky would perform well for all three considered PMF models. 
 
 \subsubsection{Fidelity at large angular scales}
 
