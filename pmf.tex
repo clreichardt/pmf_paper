@@ -430,15 +430,23 @@ We begin by making forecasts for the fiducial CMB-S4 configuration as laid out i
 \subsection{Survey considerations for Stage IV}
 
 Given that CMB-S4 is still being designed, it is worthwhile to consider how design decisions will affect the final PMF constraints. 
-We look at four aspects of the experiment design: the telescope size or beam FWHM,  the low-$\ell$ noise performance (1/f knee), the choice of survey area,  and how well the beam size and calibration must be known. 
-Of these four, we find that the first three, the beam FWHM, low-$\ell$ noise performance and survey area, to be potentially important to searches for PMFs. 
+We look at five aspects of the experiment design: the instrumental sensitivity (as reflect by the map noise level), the telescope size or beam FWHM,  the low-$\ell$ noise performance (1/f knee), the choice of survey area,  and how well the beam size and calibration must be known. 
+Of these five, we find that the first two to be very important and the second two to be somewhat important when optimizing for searches for PMFs. 
 As should be expected, the preferred design depends on the shape of the PMF spectrum ($n_B$) which controls  the relative power between large and small angular scales. 
 
-\subsubsection{Number of detectors}
+\subsubsection{Instrumental sensitivity (map noise levels)}
+
+We naturally expect more sensitive instruments to do a better job of constraining PMF models. 
+The goal of this section is to quantify that statement for the three PMF templates considered in the 11 or 7-parameter cosmological models. 
+Our results are shown in Fig.~\ref{fig:sensitivity}. 
+For this figure, we have fixed the rest of the experimental configuration (i.e.~everything except the polarized noise levels) to the values of the CMB-S4 row in Table~\ref{tab:experiments}. 
+Clearly, continuing to improve the sensitivity of CMB experiments to CMB-S4 and beyond will be a boon to PMF searches. 
+In the general, 11-parameter cosmological model, the PMF uncertainty does not plateau in any of the three PMF templates considered till the map noise is at or below $0.3\,\ukarcmin$ (a factor of four lower then the fiducial CMB-S4 configuration). 
+
 
 \begin{figure}[htb]\centering
 \includegraphics[width=0.45\textwidth,clip,trim={1.5cm 12.5cm 11cm 7.5cm}]{pmf_sens.pdf}
-  \caption[]{ \label{fig:ndetector}
+  \caption[]{ \label{fig:sensitivity}
   How the expected uncertainty on the PMF power scales with the polarized map noise. 
   Forecasts are shown for each of the three PMF scalar indices: $n_B = -2.9$ (solid), -1 (dashed), and +2 (dash-dot). 
   The black lines are for the conservative 11-parameter model, while the blue lines are for the simple \lcdm{}+\apmf{} model. 
@@ -447,7 +455,7 @@ As should be expected, the preferred design depends on the shape of the PMF spec
     }
 \end{figure}
 
-\subsubsection{Telescope size}
+\subsubsection{Size of Telescope }
 
 
 \begin{figure}[htb]\centering
@@ -496,7 +504,7 @@ Conversely, $n_b=+2$, the optimal survey area is smaller at 10\%.
 Note however that the minimum is extremely broad with only a 10\% worsening of the expected uncertainty as the survey area is increased from 10\% to 70\% of the  full sky. 
 A survey of around 25\% of the sky would perform well for all three considered PMF models. 
 
-\subsubsection{Fidelity at large angular scales}
+\subsubsection{Noise performance at large angular scales}
 
 \begin{figure}[htb]\centering
 \includegraphics[width=0.45\textwidth,clip,trim={1.5cm 12.5cm 11cm 7.5cm}]{pmf_knee.pdf}
