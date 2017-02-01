@@ -219,7 +219,7 @@ However, if a PMF is detected, the steep scaling between \bpmf{} and the observe
 \end{figure*}
 
 \begin{figure*}[htb]\centering
-\includegraphics[width=0.9\textwidth,clip,trim={2.cm 12.cm 5cm 4cm}]{pmf_templates.pdf}
+\includegraphics[width=0.9\textwidth,clip,trim={1.5cm 12.cm 5.5cm 4cm}]{pmf_templates.pdf}
   \caption[CMB polarization from PMFs]{
   The expected contributions to CMB B-modes. \textbf{\textcolor{magenta}{CF: log y should show the degeneracy better}}
   The red line shows the expected lensing B-mode power in the \planck{} best-fit \lcdm{} cosmology. 
@@ -232,7 +232,7 @@ However, if a PMF is detected, the steep scaling between \bpmf{} and the observe
 \end{figure*}
 
 \begin{figure}[htb]\centering
-\includegraphics[width=0.45\textwidth,clip,trim={2.cm 12.cm 5.5cm 4cm}]{pmf_templates_nb.pdf}
+\includegraphics[width=0.45\textwidth,clip,trim={1.5cm 12.cm 5.5cm 4cm}]{pmf_templates_nb.pdf}
   \caption[CMB polarization from PMFs with different spectral indices]{ \label{fig:pmf-nb}
   How the expected PMF changes with the spectral index, $n_B$. 
   The lensing B-mode power spectrum (solid, black line) are plotted against the PMF power for $n_B=-2.9$ (solid, blue line), $n_B=-1$ (dashed, green line), and $n_B=+2$ (dotted, red line). 
@@ -317,13 +317,21 @@ The inverse of the Fisher matrix is the covariance matrix for the parameters for
 While Fisher matrices underestimate the true uncertainties for non-Gaussian likelihoods \citep[see e.g.,][]{wolz12}, they 
  make it easy to combine different experiments and estimate the final parameter constraints.  
 
-
 We include two external datasets in all forecasts. 
 The first dataset is the expected measurements of the  TT, TE and EE spectra from the \planck{} satellite. 
 We include \planck{} TT information in the multipole range $2\le \ell \le 3000$. 
 Due to the importance of galactic foreground removal at large scales in polarization, we only use TE and EE information starting from $\ell = 30$. 
 A prior on the optical depth of 0.005 is added to account for the expected optical depth constraint from the missing multipoles. 
 Second, we include a 1\% external measurement of the Hubble constant, such as is expected from the Taipan experiment \citep{kuehn14}. 
+
+
+To calculate the Fisher matrix for a CMB experiment, we need to calculate partial derivatives of the CMB spectra and the bandpower covariance matrix. 
+The partial derivatives are calculated numerically from CAMB spectra  \citep{lewis00}. 
+We calculate the bandpower covariance matrix using the Knox formula \citep{knox97} for the survey parameters in Table~\ref{tab:experiments}. 
+The sample variance contribution is calculated assuming the \planck{} best-fit \lcdm{} cosmology with a small gravitational wave contribution  ($r=0.01$) added. 
+This is the black line in Fig.~\ref{fig:pmf-experiments}. 
+We use a bandpower bin size of $\Delta\ell=50$. 
+We also add calibration and beam uncertainties to bandpower covariance matrix. 
 
 One concern with combining Fisher matrices from different experiments is double-counting modes due to overlapping sky coverage. 
 We avoid this problem in different ways in each of the CMB power spectra. 
