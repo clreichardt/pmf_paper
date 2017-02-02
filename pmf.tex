@@ -191,9 +191,9 @@ The timing is typically parametrized by the ratio of the scale factors at neutri
 Given that we are still in the era of upper limits,  we do not explore the full 3-dimensional PMF parameter space in this work. 
 Instead, we use publicly released modifications to CAMB from \citet{zucca16} to calculate a PMF template for the CMB TT, TE, EE and BB power spectra at fixed parameters: \bpmf = 2.5\,nG, $n_B = -2.9$ and $a_{\nu}/a_{\rm{PMF}} = 10^9$. 
 We also look at $n_B\,=\,-1$ and $n_B\,=\,2$ in the forecasting section. 
-We have compared calculated templates to the outputs of the earlier CMBACT-type code\footnote{\url{http://www.sfu.ca/~levon/cmbact.html}} \citep{pogosian99}. 
+We have compared calculated templates to the outputs of the earlier CMBACT-derived code\footnote{\url{http://www.sfu.ca/~levon/cmbact.html}} \citep{pogosian99}. 
 We find excellent agreement  for the vector modes as would be hoped, however a roughly factor of two difference on the tensor mode power. 
-The decision to use the  \citet{zucca16} code instead of CMBACT-type is based on the need to extend the calculation out to $\ell=10000$ for the Fisher matrix forecasts. 
+The decision to use the  \citet{zucca16} code instead of CMBACT-derived code is based on the need to extend the calculation out to $\ell=10000$ for the Fisher matrix forecasts. 
 The calculated templates include tensor and vector PMF contributions; scalar contributions are not implemented in the code. 
 The lack of scalar terms should only matter for constraints primarily from the temperature spectrum, i.e. the \planck-only results. 
 These temperature results are not the main focus of this work, and we find our results consistent with the \planck{} results from \citet{planck15-19} suggesting the impact is minor. 
@@ -260,12 +260,14 @@ We do this using the scaling from Eqn.~\ref{eqn:scaling}, $\apmf \propto \bpmf^4
 Given this scaling, the observed upper limits with a flat prior on \apmf{} would lead to an apparent ``detection" of \bpmf. 
 We therefore importance sample the chains to generate a flat prior on \bpmf. 
 We find a 95\% limit of $\bpmf < \upperBplk$\,nG for \planck{} alone,
-this is somewhat better then the limit found by \citet{planck15-19} of $\bpmf < 2.0$\,nG with $n_B=-2.9$ held fixed as we have done. This is due to a difference in the calculated tensor PMF power (for the same parameters) between the CMBACT-type and \citet{zucca16} codes. Using the CMBACT-type code that \citet{planck15-19} used, we find a completely consistent upper limit of $\bpmf < 1.9$\,nG. 
-Returning to the  \citet{zucca16} code, the upper limit is only slightly reduced to $\bpmf < \upperBall$\,nG for the combined dataset. 
-The improvement from adding more data is somewhat less than one might predict because the combined likelihood peaks somewhat above zero, whereas the \planck{}-only constraints peaks at zero. 
+this is somewhat better then the limit found by \citet{planck15-19} of $\bpmf < 2.0$\,nG with $n_B=-2.9$ held fixed as we have done. 
+This is due to a difference in the calculated tensor PMF power (for the same parameters) between the CMBACT-derived and \citet{zucca16} codes. 
+Using the CMBACT-derived code that \citet{planck15-19} used, we find a completely consistent upper limit of $\bpmf < 1.9$\,nG. 
+Returning to the  \citet{zucca16} code and adding the ground-based polarization measurements, we find the upper limit is only slightly reduced to $\bpmf < \upperBall$\,nG for the combined dataset. 
+The improvement from adding more data is less than one might predict because the combined likelihood peaks approximately $1\,\sigma$ above zero, whereas the \planck{}-only constraints peaks at zero. 
 %We also stress that this should not be treated as a robust limit as the tensor PMF modes are crucial to the improvement, and the assumed scaling has not been tested for the tensor PMF. 
 %We quote it nonetheless to illustrate that with a steep power law scaling, the relative improvement to \bpmf{} will be slower than the improvement to \apmf{} as more data is added.
-\textbf{These results are inconsistent (being higher) with the equivalent \planck{} + \sptpol{} upper limit quoted by \citet{zucca16}; we were unable to reproduce their listed upper limit for \planck{} + \sptpol{}.}  \textbf{\textcolor{magenta}{CF: we have to rephrase this better}}
+These results are higher and inconsistent with the \planck{} + \sptpol{} upper limit of $<1.2\,$nG quoted by \citet{zucca16}; we were unable to reproduce their listed upper limit for \planck{} + \sptpol{}.
 
 \begin{table}[tbh]
 \begin{center}
@@ -288,8 +290,6 @@ Recall that the the PMF template is normalized to unity for \bpmf{} = 2.5\,nG.
 } \normalsize
 \end{center}
 \end{table}
-
-\tbd{Add other nb cases???}  \textbf{\textcolor{magenta}{CF: It is not necessary since the scale-invariant case is the most motivated one. Adding more would just be confusing.}}
 
 \section{Forecasts}
 \label{sec:forecasts}
