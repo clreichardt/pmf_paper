@@ -509,7 +509,7 @@ In short,  the tradeoff between larger telescopes or more detectors is largely a
 \includegraphics[width=0.45\textwidth,clip,trim={2.cm 12.5cm 11cm 7.5cm}]{pmf_area.pdf}
   \caption[Area dependence]{
   The preferred survey area for PMF searches depends on the PMF spectral index. 
-    In the scale-invariant $n_B = -2.9$ case (solid line), we find that observing more than $\sim$\,15\% of the sky is strongly preferred for PMF searches. 
+    In the best-motivated, nearly scale-invariant $n_B = -2.9$ case (solid line), we find PMF searches should observe more than $\sim$\,15\%. 
  In contrast, for the cases where $n_B = -1, +2$ (dashed and dot-dashed lines), we find that observing  $\sim$\,10\% of the sky produces the best PMF constraints. 
    Note that in the case of $n_B=2$, the uncertainties have been multiplied by a factor of $10^5$ for plotting purposes. 
    There is essentially no difference to the preferred areas between the 11-parameter cosmological model (black) or the restricted \lcdm{}+\apmf{} 7-parameter model (light blue). 
@@ -519,8 +519,8 @@ In short,  the tradeoff between larger telescopes or more detectors is largely a
 \end{figure}
 
 
-A third question is whether it is better to integrate deeply on a small patch of sky or observe a wide area. 
-Unsurprisingly, we find opposing preferences for the scale-invariant $n_B=-2.9$ (which peaks at large angular scales) and the bluer $n_B=-1$ or 2 spectra which peak at small scales. 
+A third question is how much sky to observe with CMB-S4. 
+Unsurprisingly, we find opposing preferences for the nearly scale-invariant $n_B=-2.9$ (which peaks at large angular scales) and the bluer $n_B=-1$ or 2 spectra which peak at small scales. 
 As shown in  Fig.~\ref{fig:area}, for $n_B=-2.9$, observing at least 15\% of the sky is very important to a search for nearly scale-invariant PMFs, and it is best  to cover as much sky as possible. 
 A caveat to this analysis is that it is likely easier to remove galactic foregrounds to a specified level on targeted, `clean' patches as opposed to a substantial fraction of the sky, and we would expect galactic foregrounds to be important for the large angular scales. 
 With that said, the PMF constraints improve by a factor of 1.4-1.5 (depending on the cosmological model) going from 10\% to 25\% of the full sky, and are nearly flat (a 6\% improvement) from 25\% to 70\% of the sky (the widest area likely to be possible after galactic cuts).
@@ -533,18 +533,18 @@ A survey of around 25\% of the sky would perform well for all three considered P
 \begin{figure}[htb]\centering
 \includegraphics[width=0.45\textwidth,clip,trim={2.cm 12.5cm 11cm 7.5cm}]{pmf_knee.pdf}
   \caption[Map knee dependence]{
-  The forecasted uncertainty on the PMF power, \apmf{}, falls as expected with decreasing low-frequency map noise for a nearly scale-invariant PMF ($n_B = -2.9$) in the restricted \lcdm{}+\apmf{} 7-parameter model (solid, light blue line). 
-  However,  the achieved map 1/f knee frequency makes no difference to the potential power of CMB-S4 PMF searches in the 11-parameter model (solid, black line). 
-  The change in behavior happens because the 11-parameter model introduces a degeneracy with r that shifts the angular scale of the PMF constraint to sub-degree scales. 
+  Recovering large angular scales is only important for a nearly scale-invariant PMF ($n_B = -2.9$) in the restricted \lcdm{}+\apmf{} 7-parameter model (solid, light blue line). 
+The achieved map 1/f knee frequency makes no difference to CMB-S4 PMF searches in the 11-parameter model (black lines). 
+  For $n_B=-2.9$, this transition occurs because the 11-parameter model introduces a degeneracy with r on the large angular scales impacted by the map 1/f knee. 
   The 1/f knee frequency also makes no difference for the bluer PMF templates  (dashed and dash-dotted black lines) in either the restricted (light blue) or full 11-parameter (black) model space. 
      Note that in the case of $n_B=2$, the forecasts have been multiplied by a factor of $10^5$ for plotting purposes. 
     \label{fig:knee}
   }
 \end{figure}
 
-Next we turn to the recovery of large angular scales, and the noise performance at low frequencies. 
-We look at the impact of shifting the 1/f knee of the map-space noise. 
-Effectively, we are multiplying the noise power, $N_\ell$, which is a constant for white noise,  by a function of angular multipole:
+Next we turn to the recovery of large angular scales on the sky, and the required noise performance at these low frequencies. 
+For this, we look at the impact of shifting the 1/f knee of the map-space noise. 
+Specifically, we are multiplying the noise power, $N_\ell$, which is a constant for white noise,  by a function of angular multipole:
 \be \label{eqn:knee}
 f(\ell) = 1 + \left(\frac{\ell_{\rm knee}}{\ell}\right)^{8/3}.
 \ee 
@@ -556,9 +556,8 @@ It appears that even in the nearly scale-invariant case, the PMF constraint is b
 Without this degeneracy, i.e. in the simple \lcdm{}+\apmf{} model, dropping \lknee{} from 400 to 50 reduces the uncertainty by a factor of 3.2 for a nearly scale-invariant PMF. 
 In this case, the degradation accelerates once the 1/f knee goes above $\ell \simeq 70$. 
 This is consistent with the earlier statement for the same simple model that the current upper limits are dominated by the BICEP2/Keck Array data at low-$\ell$. 
-For the bluer PMF spectra ($n_B=-1$ or 2), the forecasts have essentially no dependence on the knee frequency. 
-These results are consistent with the study of telescope size in the last section - which found that recovering smaller angular scales with larger telescopes helped (if one didn't consider cost).
-For a conservative 11-parameter model, our ability to separate a PMF from other physics is coming from sub-degree angular scales. 
+For the bluer PMF spectra ($n_B=-1$ or 2), the forecasts show no dependence on the knee frequency. 
+For the fiducial 11-parameter model, our ability to separate a PMF from other physics is coming from sub-degree angular scales. 
 %An instrument built to precisely measure gravitational lensing of the CMB should do very well at searching for PMFs. 
 The low frequency noise performance of CMB-S4 is not crucial to PMF searches. 
 
@@ -566,7 +565,7 @@ The low frequency noise performance of CMB-S4 is not crucial to PMF searches.
 \subsubsection{Beam and calibration uncertainties}
 \label{subsec:beamcal}
 
-Finally, we consider if searches for PMFs introduce new requirements on the accuracy to which the instrumental beam or overall calibration of an experiment must be known. 
+Finally, we consider if searches for PMFs introduce new requirements on the accuracy to which the beam or  calibration of an experiment must be known. 
 We find they do not. 
 We parameterize the beam uncertainty as a fractional uncertainty on the FWHM of the Gaussian beam, and calibration uncertainty as an overall power uncertainty. 
 We find negligible, sub-percent shifts in the forecasted uncertainty for calibration uncertainties from 0.2 to 5\% and beam FWHM uncertainties from 2 to 12.5\%. 
@@ -575,16 +574,18 @@ The PMF constraints  for all three power law indices considered are insensitive 
 \section{Conclusions}
 \label{sec:conclusions}
 
-In this work, we have improved the current upper limits on the strength of any primordial magnetic fields by including more CMB B-mode polarization data. 
+In this work, we have improved the current upper limits on the strength of   primordial magnetic fields by including more CMB B-mode polarization data. 
 By adding \bicepkeck{}, \pb, and \sptpol{} to \planck{} we find the 95\% CL upper limit on the PMF power falls nearly two-fold from $\apmf < \upperAplk$ to $\apmf < \upperAall$. 
 The biggest contributor to this improvement is the low-$\ell$ data from \bicepkeck{}. 
 
-We have also shown that the next generation of experiments should dramatically reduce these limits, and potentially detect PMFs for the first time. 
-These so-called stage III experiments, which will begin taking data in 2017, expect to set upper limits at the level of $\apmf < 0.02$ even after marginalizing over a five-parameter extension to \lcdm.
+We have also shown that the next generation of experiments should dramatically reduce these limits, with the potential to detect PMFs for the first time. 
+These so-called stage III experiments, which will begin taking data in 2017, can be expected to set upper limits at the level of $\apmf < 0.02$ even after marginalizing over a five-parameter extension to \lcdm{} and foregrounds. 
 
 The potential for detection increases even further with planned experiments like the Simons Observatory or CMB-S4. 
-We show that an ideal version of CMB-S4 might decrease the 95\% CL upper limits eight-fold, to $\apmf < 0.0025$ \tbd{check these numbers}, and even non-ideal versions can easily set upper limits on order of $\apmf < 0.006$, i.e.~ a three-fold improvement over the forecasts for the stage III experiments and a 37-fold improvement over the current limits. 
-We consider how the design of these experiments will impact the resulting PMF limits -- the experimental sensitivity, angular resolution, survey area, low-frequency noise performance, and beam or calibration uncertainties -- and find sensitivity followed by telescope size to be the most important factors in predicting the PMF limits. 
+We show that an ideal version of CMB-S4 might decrease the 95\% CL upper limits eight-fold, to $\apmf < 0.0025$, and less optimistic versions can still set upper limits on order of $\apmf < 0.006$ in a 11-parameter cosmological model with  \lcdm{} +  $r$ + \nrun{} +  \neff{} + \mnu{} + \apmf. 
+This represents a three-fold improvement over the forecasts for the stage III experiments and a more than 100-fold improvement over the current limits. 
+We consider how the design of these experiments will impact the PMF limits, looking at the experimental sensitivity, angular resolution, survey area, low-frequency noise performance, and beam or calibration uncertainties. 
+We find experiment's sensitivity followed by telescope size to be the most important factors in predicting the PMF limits. 
 CMB-S4 will be a very exciting probe of PMFs and other sources of cosmic birefringence. 
 
 \acknowledgments
