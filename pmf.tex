@@ -68,9 +68,9 @@
 \begin{abstract}
 
 We present new limits on the amplitude of potential primordial magnetic fields (PMFs) using temperature and polarization measurements of the cosmic microwave background (CMB)  from \planck{}, \bicepkeck{}, \pb, and \sptpol. 
-We reduce twofold the upper limit on the CMB anisotropy power due to a PMF, from $\apmf < \upperAplk$ from Planck alone to $\apmf < \upperAall$ for the combined dataset at 95\% CL. 
+We reduce twofold the 95\% CL upper limit on the CMB anisotropy power due to a PMF, from $\apmf < \upperAplk$ for Planck alone to $\apmf < \upperAall$ for the combined dataset . 
 %Most of the improvement is due to the addition of the \bicepkeck{} data; without these bandpowers, the combined limit weakens to $\apmf < 0.\tbd{XX}$. 
-We also forecast the expected future limits from soon-to-deploy CMB experiments (like \sptnew{},  \advactpol, or the \simons) and the proposed CMB-S4 experiment. 
+We also forecast the expected  limits from soon-to-deploy CMB experiments (like \sptnew{},  \advactpol, or the \simons) and the proposed CMB-S4 experiment. 
 Future CMB experiments should dramatically reduce the current uncertainties, by one order of magnitude for the near-term experiments and two orders of magnitude for the CMB-S4 experiment. 
 The constraints from CMB-S4 have the potential to rule out much of the parameter space for PMFs.
 
@@ -145,7 +145,7 @@ We use \planck{} data from the 2015 release to constrain the TT, TE, EE and lens
 Specifically, these are the ``plik\_dx11dr21\_HM\_v18\_TT", ``lowTEB" and ``lensing" \planck{} likelihood modules.
 
 
-In addition to the \planck{} data, we use a number of recent CMB B-mode polarization measurements. 
+In addition to the \planck{} data, we use a number of ground-based CMB B-mode polarization measurements. 
 First, we include measurements of the TE, EE and BB power spectra from the \sptpol{} experiment \citep{crites15,keisler15}. 
 The BB bandpowers cover the angular multipoles $\ell \in [500,2000]$. 
 We also add the BB bandpowers from \pb{} that cover the multipoles from 500 to 2500 \citep{polarbear15}. 
@@ -155,7 +155,7 @@ This latter dataset also places limits on the tensor modes of a PMF due to its c
 During the writing of this work, ACTpol polarization power spectra became available \citep{naess14,louis16}. 
 We have not included them as the public likelihoods do not include the B-mode power spectrum; we do not expect adding the ACTpol bandpowers to significantly change the PMF limits based on a visual comparison of the current BB bandpowers from different experiments (see Fig.~\ref{fig:pmf-experiments}).
 In all chains, we marginalize over the recommended foreground models for each data set. 
-We do not however require consistency between these foreground models since the data don't have identical flux cuts for extragalactic sources and so on. 
+We do not however require consistency between these foreground models as the data don't have identical flux cuts for extragalactic sources and so on. 
 %In the case of an upper limit this treatment is conservative since wider foreground priors should only weaken the limit on the PMF strength. 
 These data are plotted against the expected B-mode power spectrum for the standard cosmological model in Fig.~\ref{fig:pmf-experiments}. 
 
@@ -164,48 +164,51 @@ These data are plotted against the expected B-mode power spectrum for the standa
 We use MCMC methods to determine the parameter constraints reported in this work. 
 The results are calculated using  the {\textsc CosmoMC}\footnote{http://cosmologist.info/cosmomc (July 2015 version)} package \citep{lewis02b}. 
 CosmoMC invokes  CAMB\footnote{http://camb.info}  \citep{lewis00} to calculate the CMB power spectrum for each set of cosmological parameters. 
-Although CosmoMC and CAMB have a partial implementation of PMF, we choose to adopt a simpler, fast template-based calculation for the PMF power. 
+Although CosmoMC and CAMB have a partial implementation of PMFs, we choose to adopt a simpler, fast template-based calculation for the PMF-sourced power. 
 We have adapted CosmoMC to add a scaled version of the template to all four CMB power spectra: TT, TE, EE, and BB, where the scale factor is \apmf. 
 \be
 C_\ell = C_\ell^{\rm{CAMB}} + \apmf \cpmf
 \ee
 The calculation of the PMF template, \cpmf, is described in \S\ref{sec:template}. 
-Note that no other effect of the PMF is considered; this is one reason we only consider CMB data.
+Note that no other effect of  PMFs is considered; this is one reason we only consider CMB data.
 
-For the real data, unless noted, we assume the six-parameter, spatially-flat \lcdm{} model with a single massive neutrino of 60\,meV and a seventh parameter \apmf{} describing the power due to the PMF. 
+For the real data, unless noted, we assume the six-parameter, spatially-flat \lcdm{} model with a single massive neutrino of 60\,meV and a seventh parameter \apmf{} describing the power due to PMFs. 
 We adopt flat priors on all parameters. 
 In particular, note that this is a flat prior on the observed PMF power, $\apmf$, not the rms magnetic field strength, \bpmf, that has often been used in the literature. 
-In many chains, we also add \alens{} as a simple way of marginalizing over uncertainty in the predicted lensed BB power spectrum for any extension to the \lcdm{} model. 
+We sometimes also add \alens{} as a simple way of marginalizing over uncertainty in the predicted lensed BB power spectrum for any extension to the \lcdm{} model. 
 Finally, in some cases, we allow non-zero tensors, parameterized by the tensor-to-scalar ratio, r. 
 
 \subsection{Primordial Magnetic Field Template}
 \label{sec:template}
 
 The density and stress perturbations introduced by PMFs give rise to vorticity and gravitational waves in the early photon-baryon  plasma, i.e., vector and tensor modes, as well as scalar modes. 
-The exact amplitude of these modes can be calculated by modifying the normal Boltzmann equations to includes sources due to the PMFs. 
-The primary PMF anisotropy is assumed to be Gaussian distributed with a power law power spectrum, $A_B k^{n_B}$, with $n_B$ the spectral index and $A_B$ the PMF power normalization. 
-We can translate the power, $A_B$, into more physically-motivated units by calculating the rms of the PMF field strength over a length scale of 1\,Mpc, thereby defining \bpmf. 
-Finally, the timing of when the PMFs are generated matters because the PMF-induced stress anisotropy can be compensated by decoupled or partially-decoupled neutrinos. 
+The exact amplitude of these modes can be calculated by modifying the normal Boltzmann equations to include sources due to the PMFs. 
+The primary PMF anisotropy is assumed to be Gaussian distributed with a power law power spectrum, $A_B k^{n_B}$, where $n_B$ is the spectral index and $A_B$ is the PMF power normalization. 
+We can translate the normalization, $A_B$, into more physically-motivated units by calculating the rms of the PMF field strength over a length scale of 1\,Mpc, which we will call \bpmf. 
+Finally, the timing of when PMFs are generated relative to neutrino decoupling matters because the PMF-induced stress anisotropy can be compensated by decoupled or partially-decoupled neutrinos. 
 The timing is typically parametrized by the ratio of the scale factors at neutrino decoupling and PMF generation, $a_{\nu}/a_{\rm{PMF}}$. 
 
 Given that we are still in the era of upper limits,  we do not explore the full 3-dimensional PMF parameter space in this work. 
 Instead, we use publicly released modifications to CAMB from \citet{zucca16} to calculate a PMF template for the CMB TT, TE, EE and BB power spectra at fixed parameters: \bpmf = 2.5\,nG, $n_B = -2.9$ and $a_{\nu}/a_{\rm{PMF}} = 10^9$. 
+\tbd{somewhere around here add arguments for $nb=-2.9$beinbg preferred} 
 We also look at $n_B\,=\,-1$ and $n_B\,=\,2$ in the forecasting section. 
 We have compared calculated templates to the outputs of the earlier CMBACT-derived code\footnote{\url{http://www.sfu.ca/~levon/cmbact.html}} \citep{pogosian99}. 
 We find excellent agreement  for the vector modes as would be hoped, however a roughly factor of two difference on the tensor mode power. 
-The decision to use the  \citet{zucca16} code instead of CMBACT-derived code is based on the need to extend the calculation out to $\ell=10000$ for the Fisher matrix forecasts. 
+The origin of the difference is unclear. 
+We have chosen to use the  more recent \citet{zucca16} code instead of CMBACT-derived code, largely due to our desire to extend the calculation out to $\ell=10000$ for the Fisher matrix forecasts. 
 The calculated templates include tensor and vector PMF contributions; scalar contributions are not implemented in the code. 
-The lack of scalar terms should only matter for constraints primarily from the temperature spectrum, i.e. the \planck-only results. 
-These temperature results are not the main focus of this work, and we find our results consistent with the \planck{} results from \citet{planck15-19} suggesting the impact is minor. 
+The lack of scalar terms should not matter for CMB polarization data. 
+Temperature data is not the main focus of this work, and  and we find our \planck{} results  to be consistent with \citet{planck15-19}, suggesting the impact of the scalar terms is minor. 
 The PMF template is plotted against other signals in the CMB B-mode power spectrum in Fig.~\ref{fig:pmf-bb}. 
-In the MCMC, we add a new scaling parameter, $A_{pmf}$, that rescales the PMF power spectrum template. 
+
+In the MCMC, we add a new scaling parameter, \apmf{}, that rescales the PMF power spectrum template. 
 We can translate the amplitude constraint on this template to a constraint on the r.m.s. magnetic field strength on 1\,Mpc scales, \bpmf, using the expected scaling:
 \be \label{eqn:scaling}
 \apmf \propto \bpmf^4.
 \ee
 Note that the power in the tensor modes also depends on the timing of PMF generation relative to neutrino decoupling, which is not captured in the above expression. 
 An unfortunate consequence of this steep fourth-power scaling is that substantial reductions in the observationally allowed vector-mode power lead to only modestly better limits on the magnetic field strength. 
-However, if a PMF is detected, the steep scaling between \bpmf{} and the observed would allow excellent constraints on the PMF properties.
+However, if a PMF is detected, the steep scaling between \bpmf{} and the observed CMB B-mode power spectrum would allow excellent constraints on the PMF properties.
 
 \begin{figure*}[htb]\centering
 \includegraphics[width=0.9\textwidth,clip,trim={1.5cm 12.5cm 5cm 3.8cm}]{pmf_experiments.pdf}
@@ -246,29 +249,36 @@ However, if a PMF is detected, the steep scaling between \bpmf{} and the observe
 \section{Results}
 \label{sec:results}
 
-We investigate how the addition of ground-based CMB polarization data to \planck{} data affects the PMF limits, focusing on the most theoretically motivated scenario of an approximately scale-invariant spectrum for the PMFs ($n_B=-2.9$). 
-The ground-based CMB polarization data  substantially improves the upper limits on the allowed PMF power, leading to a factor of two improvement over \planck{} alone. 
-With Planck alone, the 95\% confidence upper limit is $\apmf <  \upperAplk$ for \lcdm{}+\apmf{}; with the ground-based experiments, this limit drops to $\apmf <  \upperAall$. 
+We begin by investigating how the addition of ground-based CMB polarization data to \planck{} data affects the limits on PMFs. 
+For the real data, we focus on the most theoretically motivated scenario of an approximately scale-invariant spectrum for the PMFs ($n_B=-2.9$), although we will consider other scenarios in the forecasts of the next section. 
+The ground-based CMB polarization data  substantially reduce the allowed PMF power; we see a factor of two reduction over \planck{} alone in the simple 7-parameter model. 
+The 95\% confidence upper limit for \planck{} is $\apmf <  \upperAplk$ for \lcdm{}+\apmf{}. 
+Adding the ground-based experiments brings this limit to $\apmf <  \upperAall$. 
+We test which datasets are important by adding single datasets to the \planck{} data, and find that the majority of this improvement is due to the \bicepkeck{} ($\apmf <  \upperAbicep$) and \sptpol{} ($\apmf <  \upperAsptpol$) B-mode power spectrum measurements. 
+The other datasets do not have a large impact on the observed limits. 
+In short, the factor of two reduction in the upper limit on \apmf{} for a nearly-scale-invariant PMF spectrum ($n_B=-2.9$) is primarily due to a more accurate measurement of the B-mode power spectrum at large angular scales. 
+
+We next look at the model dependence of these upper limits. 
 We list the limits for the combined dataset  with different parameter sets in Table~\ref{tab:param_all}. 
 Somewhat counterintuitively, the limits are slightly better with \alens{} allowed to vary (this is due to a mild preference for \alens{} above unity). 
 In this case for  Planck alone, the 95\% confidence upper limit is $\apmf <  \upperAplkalens$, dropping to $\apmf <  \upperAallalens$ with the ground-based experiments. 
-We test which datasets are important by adding single datasets to the \planck{} set in the simple \lcdm{}+\apmf{} cosmology, and find that the majority of this improvement is due to the \bicepkeck{} ($\apmf <  \upperAbicep$) and \sptpol{} ($\apmf <  \upperAsptpol$) B-mode power spectrum measurements. 
-The other datasets do not have a large impact on the observed limits. 
-In short, the reduction in the allowed upper limit on \apmf{} for a nearly-scale-invariant PMF spectrum ($n_B=-2.9$) is primarily due to a more accurate measurement of the B-mode power spectrum at large angular scales. 
+The 95\% CL upper limit on \apmf{} also drops when tensor modes are introduced, as parameterized by the tensor-to-scalar ratio r. 
+This is easily understood as a splitting of the large-scale B-mode power between two positive-definite terms, r or \apmf{}. 
 
-We propagate these limits on the observed PMF power into limits on the magnetic field strength, \bpmf. 
-We do this using the scaling from Eqn.~\ref{eqn:scaling}, $\apmf \propto \bpmf^4$. 
+
+We also propagate the limits on the observed PMF power into limits on the magnetic field strength, \bpmf. 
+We do this using the scaling of Eqn.~\ref{eqn:scaling}, $\apmf \propto \bpmf^4$. 
 Given this scaling, the observed upper limits with a flat prior on \apmf{} would lead to an apparent ``detection" of \bpmf. 
-We therefore importance sample the chains to generate a flat prior on \bpmf. 
+We therefore importance sample the chains to apply a flat prior on \bpmf. 
 We find a 95\% limit of $\bpmf < \upperBplk$\,nG for \planck{} alone,
 this is somewhat better then the limit found by \citet{planck15-19} of $\bpmf < 2.0$\,nG with $n_B=-2.9$ held fixed as we have done. 
-This is due to a difference in the calculated tensor PMF power (for the same parameters) between the CMBACT-derived and \citet{zucca16} codes. 
-Using the CMBACT-derived code that \citet{planck15-19} used, we find a completely consistent upper limit of $\bpmf < 1.9$\,nG. 
-Returning to the  \citet{zucca16} code and adding the ground-based polarization measurements, we find the upper limit is only slightly reduced to $\bpmf < \upperBall$\,nG for the combined dataset. 
+The improvement is due to a difference in the calculated tensor PMF power (for the same parameters) between the CMBACT-derived and \citet{zucca16} codes. 
+Using the CMBACT-derived code that \citet{planck15-19} used, we find a consistent upper limit of $\bpmf < 1.9$\,nG. 
+Returning to the  \citet{zucca16} code and adding the ground-based polarization measurements, we find the upper limit is  reduced only slightly to $\bpmf < \upperBall$\,nG. 
 The improvement from adding more data is less than one might predict because the combined likelihood peaks approximately $1\,\sigma$ above zero, whereas the \planck{}-only constraints peaks at zero. 
 %We also stress that this should not be treated as a robust limit as the tensor PMF modes are crucial to the improvement, and the assumed scaling has not been tested for the tensor PMF. 
 %We quote it nonetheless to illustrate that with a steep power law scaling, the relative improvement to \bpmf{} will be slower than the improvement to \apmf{} as more data is added.
-These results are higher and inconsistent with the \planck{} + \sptpol{} upper limit of $<1.2\,$nG quoted by \citet{zucca16}; we were unable to reproduce their listed upper limit for \planck{} + \sptpol{}.
+These results are higher than the \planck{} + \sptpol{} upper limit of $<1.2\,$nG quoted by \citet{zucca16}; we were unable to reproduce their listed upper limit for \planck{} + \sptpol{}.
 
 \begin{table}[tbh]
 \begin{center}
