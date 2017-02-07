@@ -41,7 +41,7 @@
 \newcommand{\wmap}{{\sl WMAP}}
 \newcommand{\bicepkeck}{BICEP2/Keck Array}
 \newcommand{\sptnew}{SPT-3G}
-\newcommand{\pb}{POLARBEAR}
+\newcommand{\pb}{\textsc{Polarbear}}
 \newcommand{\simons}{Simons Array}
 \newcommand{\sptpol}{SPTpol}
 \newcommand{\advactpol}{Adv.~ACTpol}
@@ -115,7 +115,7 @@ The CMB anisotropies have yielded some of the strongest constraints on PMFs and 
 There have been three recent results of note. 
 \citet{planck15-19} have used the \planck{} 2015 release of temperature and polarization data to set limits on a variety of PMF models. 
 With the CMB power spectrum data that will be the focus of this paper, \citet{planck15-19} find 95\% CL upper limits ranging from $\bpmf < 5.6$\,nG to $<0.7$\,nG depending on the exact model. 
-Here \bpmf{} is the rms field strength on a 1\,Mpc length scale. 
+Here \bpmf{} is the rms magnetic field strength on a 1\,Mpc length scale. 
 The \pb{} collaboration also recently announced limits on PMFs from the \pb{} data using either a 4-point estimator or B-mode power spectrum measurement \citep{polarbear15}. 
 The strongest constraints were from the B-mode spectrum; the observed upper limit was $\bpmf < 3.9$\,nG. 
 Two other experiments, \sptpol{} and \bicepkeck{}, have also reported B-mode power spectrum measurements \citep{keisler15,bicepkeck15}, 
@@ -219,12 +219,12 @@ Given that we are still in the era of upper limits, we do not explore the full 3
 Instead, we use publicly released modifications to CAMB from \citet{zucca16} to calculate a PMF template for the CMB TT, TE, EE and BB power spectra at fixed parameters: \bpmf = 2.5\,nG, $n_B = -2.9$ and $a_{\nu}/a_{\rm{PMF}} = 10^9$. 
 We also consider $n_B\,=\,-1$ and $n_B\,=\,2$ for the forecasts in \S\ref{sec:forecasts}. 
 We focus on the nearly-scale-invariant ($n_B = -2.9$) PMF template in this work due to its connection to inflation.  
-Quantum mechanical zero-point fluctuations during inflation can generate an approximately scale-invariant PMF with a spectral index close to $n_B = -3$ \citep[e.g.,][]{turner88, mack01,2008PhRvD..78f3012K}.%\footnote{We select $n_B = -2.9$ as opposed to another number near -3 to facilitate comparison to other PMF papers, while avoiding the singularity at -3.} 
+Quantum mechanical zero-point fluctuations during inflation can generate an approximately scale-invariant PMF with a spectral index close to $n_B = -3$ \citep[e.g.,][]{turner88, mack01,2008PhRvD..78f3012K}. %\footnote{We select $n_B = -2.9$ as opposed to another number near -3 to facilitate comparison to other PMF papers, while avoiding the singularity at -3.}
 In contrast, causal PMFs with bluer spectra require later phase transitions or other new physics after inflation \citep[e.g.,][]{durrer03, subramanian16}. 
-We have compared calculated templates to the outputs of the earlier CMBACT-derived code\footnote{\url{http://www.sfu.ca/~levon/cmbact.html}} \citep{pogosian99}. 
+We have compared the calculated templates to the outputs of the earlier CMBACT-derived code\footnote{\url{http://www.sfu.ca/~levon/cmbact.html}} \citep{pogosian99}. 
 We find excellent agreement  for the vector modes as would be hoped, however a roughly factor of two difference on the tensor mode power. 
 The origin of the difference is unclear. 
-We have chosen to use the  more recent \citet{zucca16} code instead of CMBACT-derived code, largely due to our desire to extend the calculation out to $\ell=10000$ for the Fisher matrix forecasts. 
+We have chosen to use the  more recent \citet{zucca16} code instead of the CMBACT-derived code, largely due to our desire to extend the calculation out to $\ell=10000$ for the Fisher matrix forecasts. 
 The calculated templates include tensor and vector PMF contributions; scalar contributions are not implemented in the code. 
 The lack of scalar terms should not matter for CMB polarization data. 
 Temperature data is not the main focus of this work, and  and we find our \planck{} results  to be consistent with \citet{planck15-19}, suggesting the impact of the scalar terms is minor. 
@@ -263,7 +263,7 @@ Adding the ground-based experiments brings this limit to $\apmf <  \upperAall$.
 We test which datasets are important by adding single datasets to the \planck{} data, and find that the majority of this improvement is due to the \bicepkeck{}  
 B-mode power spectrum measurements: $\apmf^{\planck+\bicepkeck} <  \upperAbicep$. 
 %and \sptpol{} ($\apmf <  \upperAsptpol$) B-mode power spectrum measurements. 
-The other datasets do not have a large impact on the observed limits. 
+The other datasets do not have a large impact on the observed limits for a scale-invariant PMF, although they would for bluer PMFs. 
 In short, the factor of two reduction in the upper limit on \apmf{} for a nearly-scale-invariant PMF spectrum ($n_B=-2.9$) is primarily due to a more accurate measurement of the B-mode power spectrum at large angular scales. 
 
 We next look at the model dependence of these upper limits. 
@@ -273,14 +273,14 @@ Somewhat counterintuitively, the limits are slightly better with \alens{} allowe
 In this case for  Planck alone, the 95\% confidence upper limit is $\apmf <  \upperAplkalens$, dropping to $\apmf <  \upperAallalens$ with the ground-based experiments. 
 Next we introduce inflationary gravitational waves, as parameterized by the tensor-to-scalar ratio r. 
 The 95\% CL upper limit on \apmf{} drops slightly again.  
-This is easily understood as a splitting of the large-scale B-mode power between two positive-definite terms, r and \apmf{}. 
+This is easily understood as a splitting of the large-scale B-mode power between two positive-definite terms: r and \apmf{}. 
 
 
 We also propagate the limits on the observed PMF power into limits on the magnetic field strength, \bpmf. 
 We do this using the scaling of Eqn.~\ref{eqn:scaling}, $\apmf \propto \bpmf^4$. 
 Given this scaling, the observed upper limits with a flat prior on \apmf{} would lead to an apparent ``detection" of \bpmf. 
 We therefore importance sample the chains to apply a flat prior on \bpmf. 
-We find a 95\% limit of $\bpmf < \upperBplk$\,nG for \planck{} alone,
+We find a 95\% CL upper limit of $\bpmf < \upperBplk$\,nG for \planck{} alone,
 this is somewhat better than the limit found by \citet{planck15-19} of $\bpmf < 2.0$\,nG with $n_B=-2.9$ held fixed as we have done. 
 The improvement is due to a difference in the calculated tensor PMF power (for the same parameters) between the CMBACT-derived and \citet{zucca16} codes. 
 Using the CMBACT-derived code that \citet{planck15-19} used, we find a consistent upper limit of $\bpmf < 1.9$\,nG. 
@@ -585,7 +585,7 @@ The PMF constraints  for all three power law indices considered are insensitive 
 \label{sec:conclusions}
 
 In this work, we have improved the current upper limits on the strength of   primordial magnetic fields by including more CMB B-mode polarization data. 
-By adding \bicepkeck{}, \pb, and \sptpol{} to \planck{} we have found the 95\% CL upper limit on the PMF power falls nearly two-fold from $\apmf < \upperAplk$ to $\apmf < \upperAall$. 
+By adding \bicepkeck{}, \pb, and \sptpol{} to \planck{} we have found that the 95\% CL upper limit on the PMF power falls nearly two-fold from $\apmf < \upperAplk$ to $\apmf < \upperAall$. 
 The biggest contributor to this improvement is the low-$\ell$ B-mode data from \bicepkeck{}. 
 
 We have also shown that the next generation of experiments should dramatically reduce these limits, with the potential to detect PMFs for the first time. 
