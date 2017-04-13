@@ -87,7 +87,7 @@ Precision measurements of CMB polarization promise new tests of the standard cos
 The best known of these tests are the searches for inflationary gravitational waves in B-modes at large angular scales and plans to measure the sum of the neutrino masses through the lensing B-modes on small angular scales \citep[for a recent review see,][]{abazajian16}. 
 
 CMB B-mode measurements can also be used to constrain more exotic models, such as the possible existence of cosmic birefringence \citep{carroll98,lue99} or primordial magnetic fields (PMFs) \citep{kosowsky96, seshadri01}.  
-Both effects lead to the rotation of E-modes into B-modes. 
+Both effects lead to the rotation of E-modes into B-modes \textcolor{red}{which leads to an increase in power in the BB spectrum.}
 By equating the magnitude of the resulting B-modes, parity-violating processes can be translated into an equivalent PMF strength. 
 It is therefore common to simply quote effective limits on PMFs. 
 In this work, we present new upper limits from current CMB polarization data on the possibility of PMFs or parity-violating physics. 
@@ -220,10 +220,16 @@ We also consider $n_B\,=\,-1$ and $n_B\,=\,2$ for the forecasts in \S\ref{sec:fo
 We focus on the nearly-scale-invariant ($n_B = -2.9$) PMF template in this work due to its connection to inflation.  
 Quantum mechanical zero-point fluctuations during inflation can generate an approximately scale-invariant PMF with a spectral index close to $n_B = -3$ \citep[e.g.,][]{turner88, mack01,2008PhRvD..78f3012K}. %\footnote{We select $n_B = -2.9$ as opposed to another number near -3 to facilitate comparison to other PMF papers, while avoiding the singularity at -3.}
 In contrast, causal PMFs with bluer spectra require later phase transitions or other new physics after inflation \citep[e.g.,][]{durrer03, subramanian16}. 
-We have compared the calculated templates to the outputs of the earlier CMBACT-derived code\footnote{\url{http://www.sfu.ca/~levon/cmbact.html}} \citep{pogosian99}. 
+\st{
+We have compared the calculated templates to the outputs of the earlier CMBACT-derived code}\footnote{\url{http://www.sfu.ca/~levon/cmbact.html}}
+}
+\citep{pogosian99}.
+\st{
 We find excellent agreement  for the vector modes as would be hoped, however a roughly factor of two difference on the tensor mode power. 
-The origin of the difference is unclear. 
-We have chosen to use the  more recent \citet{zucca16} code instead of the CMBACT-derived code, largely due to our desire to extend the calculation out to $\ell=10000$ for the Fisher matrix forecasts. 
+The origin of the difference is unclear.
+}
+\st{We have chosen to use the more recent} \citet{zucca16} \st{code instead of the CMBACT-derived code, largely due to our desire to extend the calculation out to $\ell=10000$ for the Fisher matrix forecasts.}
+\textcolor{red}{We use the code from} \citet{zucca16} \textcolor{red}{which allows us to extend the calculation out to $\ell=10000$ for the Fisher matrix forecasts.}
 The calculated templates include tensor and vector PMF contributions; scalar contributions are not implemented in the code. 
 The lack of scalar terms should not matter for CMB polarization data. 
 Temperature data is not the main focus of this work, and  and we find our \planck{} results  to be consistent with \citet{planck15-19}, suggesting the impact of the scalar terms is minor. 
@@ -281,9 +287,10 @@ Given this scaling, the observed upper limits with a flat prior on \apmf{} would
 We therefore importance sample the chains to apply a flat prior on \bpmf. 
 We find a 95\% CL upper limit of $\bpmf < \upperBplk$\,nG for \planck{} alone,
 this is somewhat better than the limit found by \citet{planck15-19} of $\bpmf < 2.0$\,nG with $n_B=-2.9$ held fixed as we have done. 
-The improvement is due to a difference in the calculated tensor PMF power (for the same parameters) between the CMBACT-derived and \citet{zucca16} codes. 
-Using the CMBACT-derived code that \citet{planck15-19} used, we find a consistent upper limit of $\bpmf < 1.9$\,nG. 
-Returning to the  \citet{zucca16} code and adding the ground-based polarization measurements, we find the upper limit is  reduced only slightly to $\bpmf < \upperBall$\,nG. 
+\st{The improvement is due to a difference in the calculated tensor PMF power (for the same parameters) between the CMBACT-derived and} \citet{zucca16} \st{codes.}
+\textcolor{red}{The improvement comes from our choice of value for the PMF generation time versus the decision in} \citet{planck15-19} \textcolor{red}{to marginalise over PMF generation time altogether.}
+\st{Using the CMBACT-derived code that} \citet{planck15-19} \st{used, we find a consistent upper limit of $\bpmf < 1.9$\,nG.
+Returning to} \textcolor{red}{Using} the  \citet{zucca16} code and adding the ground-based polarization measurements, we find the upper limit is  reduced only slightly to $\bpmf < \upperBall$\,nG. 
 The improvement from adding more data is less than one might predict because the combined likelihood peaks approximately $1\,\sigma$ above zero, whereas the \planck{}-only constraints peaks at zero. 
 These results are higher than the \planck{} + \sptpol{} upper limit of $<1.2\,$nG quoted by \citet{zucca16}; we were unable to reproduce their listed upper limit for \planck{} + \sptpol{}.
 
