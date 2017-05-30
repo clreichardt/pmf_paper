@@ -4,7 +4,43 @@
 \usepackage{soul}
 
 \usepackage[usenames, dvipsnames]{color}
- 
+
+\newcommand{\sqdeg}{deg$^2$ }
+\newcommand{\omb}{\ensuremath{\Omega_b h^2}}
+\newcommand{\omc}{\ensuremath{\Omega_c h^2}}
+\newcommand{\clpp}{\ensuremath{C_{L}^{\phi\phi}}}
+\newcommand{\cpmf}{\ensuremath{C_{\ell}^{\rm PMF}}}
+
+\newcommand{\cpmftens}{\ensuremath{C_{\ell}^{\rm PMF,\,tens}}}
+\newcommand{\cpmfvec}{\ensuremath{C_{\ell}^{\rm PMF,\,vec}}}
+\newcommand{\apmf}{\ensuremath{A_{\rm PMF}}}
+\newcommand{\bpmf}{\ensuremath{B_{\rm 1\,Mpc}}}
+\newcommand{\alens}{\ensuremath{A_{\rm lens}}}
+\newcommand{\lcdm}{\ensuremath{\Lambda}CDM}
+\newcommand{\nrun}{\ensuremath{n_{\rm run}}}
+\newcommand{\neff}{\ensuremath{N_{\rm eff}}}
+\newcommand{\ho}{H\ensuremath{_0}}
+\newcommand{\mnu}{\ensuremath{\sum m_\nu}}
+\newcommand{\ukarcmin}{\ensuremath{\mu}{\rm K-arcmin}}
+\newcommand{\lknee}{\ensuremath{\ell_{\rm knee}}}
+\newcommand{\fermilat}{\textit{Fermi}-LAT}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\planck}{{\sl Planck}}
+\newcommand{\wmap}{{\sl WMAP}}
+\newcommand{\bicepkeck}{BICEP2/Keck Array}
+\newcommand{\sptnew}{SPT-3G}
+\newcommand{\pb}{\textsc{Polarbear}}
+\newcommand{\simons}{Simons Array}
+\newcommand{\sptpol}{SPTpol}
+\newcommand{\advactpol}{Adv.~ACTpol}
+
+\newcommand{\tbd}[1]{\textcolor{Red}{{\bf TBD}: #1}}
+\newcommand{\gab}[1]{\textcolor{Orchid}{[{\bf GS}: #1]}}
+\newcommand{\changed}[1]{\textcolor{Red}{#1}}
+\newcommand{\removed}[1]{\textcolor{Red}{}}
+
 \begin{document}
 
 Dear Editor,
@@ -26,7 +62,7 @@ In addition to producing a non-zero EB and TB power spectrum, PMFs and other par
 
 \textcolor{PineGreen}{CMB B-mode measurements can also be used to constrain more exotic models, such as the possible existence of cosmic birefringence (\citep{carroll98,lue99}) or primordial magnetic fields (PMFs) (\citep{kosowsky96, seshadri01}).  
 Both effects lead to the rotation of E-modes into B-modes \textbf{which leads to an increase in power in the BB spectrum.}
-By equating the magnitude of the resulting B-modes, parity-violating processes can be translated into an equivalent PMF strength.  }
+ By equating the magnitude of the resulting B-modes, parity-violating processes can be translated into an equivalent PMF strength.  }
 \\
 
 \textcolor{blue}{The work assumes a fixed PMF template based on a model with a fixed value of the PMF generation time: $a_{\nu}/a_{PMF}$. This parameter is entirely arbitrary, and directly determines the amplitude of the tensor mode, which is responsible for the tight bound the authors get from BICEP2/Keck. I think it is misleading to present bounds based on this assumption as bounds on PMF. The authors should, at the very least, add a discussion of how the bound changes if one allows the PMF generation time to be a free parameter that is marginalized over. In such a case, the bound will be dominated by the vector mode contribution, with SPTPol likely dominating the constraints.}
@@ -65,6 +101,41 @@ parameters) between the CMBACT-derived and Zucca et al. (2016) codes". The also 
 \textcolor{blue}{Instead, the "improvement" comes from the fact that the analysis by Planck collaboration (as well as Zucca et al) marginalized over the PMF generation time, which negated the contribution of the PMF tensor modes to the constraints.}
 
 \textcolor{blue}{In summary, I think the paper contains some claims that need revisiting. I suggest repeating the analysis with the PMF generation time set free and report the bounds in that case. Only then they can be seriously compared to previous results in the literature.}
+
+
+
+\\
+\textcolor{red}{Changes by section - to dos}
+\\
+
+
+\changed{2.2 old}
+
+\be
+C_\ell = C_\ell^{\rm{CAMB}} + \apmf \cpmf
+\ee
+
+The calculation of the PMF template, \cpmf, is described in \S\ref{sec:template}.
+
+For the real data, unless noted, we assume the six-parameter, spatially-flat \lcdm{} model with a single massive neutrino of 60\,meV and a seventh parameter \apmf{} describing the power due to PMFs. 
+
+\changed{2.2 new}
+
+\be
+C_\ell = C_\ell^{\rm{CAMB}} + \apmf \left[\cpmfvec + \left(\frac{\beta}{20}\right)^{1.9}  \cpmftens \right]
+\ee
+The calculation of the PMF templates, \cpmfvec{} and \cpmfvec{}, and the motivation for the $\beta$ scaling are described in \S\ref{sec:template}. 
+The parameter $\beta = {\rm ln}(a_{\nu}/a_{\rm{PMF}})$ relates the timing of neutrino decoupling and the generation of the PMF, where $a_x$ represents the scale factor at the respective events.
+
+For the real data, unless noted, we assume the six-parameter, spatially-flat \lcdm{} model with a single massive neutrino of 60\,meV and \changed{2 parameters, \apmf{} and $\beta$, }describing the power due to PMFs.
+
+There are two points to note about the PMF priors. 
+First, this is a flat prior on the observed PMF power, $\apmf$, not the rms magnetic field strength, \bpmf, that has often been used in the literature. 
+In the current era of upper limits, this prior choice has some impact on the resulting PMF limits. 
+Second, the exact range of the uniform prior on $\beta$ matters. 
+Here we follow \citet{planck15-19} and \citet{zucca16} and use $\beta \in [11.513, 41.447]$.\footnote{This corresponds to $log_{10} (a_{\nu}/a_{\rm{PMF}}) \in[4,17]$.}
+However, the constraints, especially those from \planck{} alone, weaken substantially if the lower bound on $\beta$ is lowered further. 
+If we follow \citet{polarbear15} who used $\beta \in [0,39]$, the upper limits are relaxed by a factor of roughly eight for \planck-only and by a factor of two for the combined dataset. 
 
 \end{document}
 
