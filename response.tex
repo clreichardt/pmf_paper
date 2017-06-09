@@ -71,6 +71,37 @@ Both effects lead to the rotation of E-modes into B-modes \textbf{which leads to
 
 \reviewer{The work assumes a fixed PMF template based on a model with a fixed value of the PMF generation time: $a_{\nu}/a_{PMF}$. This parameter is entirely arbitrary, and directly determines the amplitude of the tensor mode, which is responsible for the tight bound the authors get from BICEP2/Keck. I think it is misleading to present bounds based on this assumption as bounds on PMF. The authors should, at the very least, add a discussion of how the bound changes if one allows the PMF generation time to be a free parameter that is marginalized over. In such a case, the bound will be dominated by the vector mode contribution, with SPTPol likely dominating the constraints.}
 
+In response, we have repeated the analysis, adding $\beta = ln(a_{\nu}/a_{PMF})$ as a free-parameter.
+
+We include a discussion on the significance of $\beta$ in section 2.2 as follows:
+
+\diff{
+\be
+C_\ell = C_\ell^{\rm{CAMB}} + \apmf \left[\cpmfvec + \left(\frac{\beta}{20}\right)^{1.9}  \cpmftens \right]
+\ee
+The calculation of the PMF templates,\added{ \cpmfvec{} and \cpmfvec{}, and the motivation for the $\beta$ scaling} are described in \S\ref{sec:template}. 
+\added{The parameter $\beta = {\rm ln}(a_{\nu}/a_{\rm{PMF}})$ relates the timing of neutrino decoupling and the generation of the PMF, where $a_x$ represents the scale factor at the respective events.} Note that no other effect of  PMFs is considered; this is one reason we only use CMB data.}
+
+\diff{For the real data, unless noted, we assume the six-parameter, spatially-flat \lcdm{} model with a single massive neutrino of 60\,meV and \added{2 parameters, \apmf{} and $\beta$,}describing the power due to PMFs.
+We adopt flat priors on all parameters. 
+\added{There are two points to note about the PMF priors. 
+First}, this is a flat prior on the observed PMF power, $\apmf$, not the rms magnetic field strength, \bpmf, that has often been used in the literature. 
+\added{In the current era of upper limits, this prior choice has some impact on the resulting PMF limits. 
+Second, the exact range of the uniform prior on $\beta$ matters. 
+Here we follow (planck15-19) and  (zucca16) and use $\beta \in [11.513, 41.447]$.\footnote{This corresponds to $log_{10} (a_{\nu}/a_{\rm{PMF}}) \in[4,17]$.}
+However, the constraints, especially those from \planck{} alone, weaken substantially if the lower bound on $\beta$ is lowered further. 
+If we follow (polarbear15) who used $\beta \in [0,39]$, the upper limits are relaxed by a factor of roughly eight for \planck-only and by a factor of two for the combined dataset.}}
+
+Section 2.3:
+
+\diff{Finally, the timing of when PMFs are generated relative to neutrino decoupling matters \added{for the tensor component} because the PMF-induced stress anisotropy can be compensated by decoupled or partially-decoupled neutrinos. 
+The timing is \removed{typically parametrized by the ratio of the scale factors at neutrino decoupling and PMF generation, $a_{\nu}/a_{\rm{PMF}}$.} parametrized by \added{$\beta = ln(a_{\nu}/a_{\rm{PMF}})$,  the natural logarithm of the ratio of the scale factors at neutrino decoupling and PMF generation.}}
+
+Further note that since we have added $/beta$ to the analysis, our fisher models have increased from 6 and 11 parameter models to 7 and 12 parameter models. (Due to the prevalence of this change we have not listed its occurances here).
+
+
+\reviewer{The authors report a factor of 2 difference in the normalization of the tensor mode between the public code provided by Zucca et al and a "CMBACT-derived code", saying that "the origin of the difference is unclear". The public version of CMBACT is a code for CMB anisotropies from cosmic strings and does not concern PMFs. Any code that the authors might have used would be a private modification. Either the authors should clarify what code they are referring to, or avoid mentioning it.}
+
 As per the advice of the reviewer we have removed any mention of the CMBACT code.
 
 \diff{
@@ -80,18 +111,6 @@ We find excellent agreement  for the vector modes as would be hoped, however a r
 The origin of the difference is unclear.
 We have chosen to use the more recent (Zucca16) code instead of the CMBACT-derived code, largely due to our desire to extend the calculation out to $\ell=10000$ for the Fisher matrix forecasts.}}
 
-In addition, we added further discussion about the the significance of $a_{\nu}/a_{PMF}$ to section 2.2 (Method):
-
-\diff{
-\be
-C_\ell = C_\ell^{\rm{CAMB}} + \apmf \left[\cpmfvec + \left(\frac{\beta}{20}\right)^{1.9}  \cpmftens \right]
-\ee
-The calculation of the PMF templates,\added{ \cpmfvec{} and \cpmfvec{}, and the motivation for the $\beta$ scaling} are described in \S\ref{sec:template}. 
-\added{The parameter $\beta = {\rm ln}(a_{\nu}/a_{\rm{PMF}})$ relates the timing of neutrino decoupling and the generation of the PMF, where $a_x$ represents the scale factor at the respective events.}}
-
-\reviewer{The authors report a factor of 2 difference in the normalization of the tensor mode between the public code provided by Zucca et al and a "CMBACT-derived code", saying that "the origin of the difference is unclear". The public version of CMBACT is a code for CMB anisotropies from cosmic strings and does not concern PMFs. Any code that the authors might have used would be a private modification. Either the authors should clarify what code they are referring to, or avoid mentioning it.}
-
-As above, we removed mentions of CMBACT code as well as its results, thus there is no mention of the factor of 2 difference in the normalization of the tensor mode.
 
 \diff{}
 \\
@@ -106,26 +125,6 @@ parameters) between the CMBACT-derived and Zucca et al. (2016) codes". The also 
 
 
 \changed{Changes by section - to dos}
-
-
-
-\changed{2.2 old}
-
-For the real data, unless noted, we assume the six-parameter, spatially-flat \lcdm{} model with a single massive neutrino of 60\,meV and a seventh parameter \apmf{} describing the power due to PMFs. 
-
-\removed{In particular, note that} this is a flat prior on the observed PMF power, $\apmf$, not the rms magnetic field strength, \bpmf, that has often been used in the literature.
-
-\changed{2.2 new}
-
-For the real data, unless noted, we assume the six-parameter, spatially-flat \lcdm{} model with a single massive neutrino of 60\,meV and \added{2 parameters, \apmf{} and $\beta$,}describing the power due to PMFs.
-
-\added{There are two points to note about the PMF priors. 
-First}, this is a flat prior on the observed PMF power, $\apmf$, not the rms magnetic field strength, \bpmf, that has often been used in the literature. 
-\added{In the current era of upper limits, this prior choice has some impact on the resulting PMF limits. 
-Second, the exact range of the uniform prior on $\beta$ matters. 
-Here we follow (planck15-19) and  (zucca16) and use $\beta \in [11.513, 41.447]$.\footnote{This corresponds to $log_{10} (a_{\nu}/a_{\rm{PMF}}) \in[4,17]$.}
-However, the constraints, especially those from \planck{} alone, weaken substantially if the lower bound on $\beta$ is lowered further. 
-If we follow (polarbear15) who used $\beta \in [0,39]$, the upper limits are relaxed by a factor of roughly eight for \planck-only and by a factor of two for the combined dataset. }
 
 \changed{2.3 old}
 
