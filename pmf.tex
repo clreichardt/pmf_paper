@@ -187,7 +187,7 @@ CosmoMC invokes  CAMB\footnote{http://camb.info}  \citep{lewis00} to calculate t
 Although CosmoMC and CAMB have a partial implementation of PMFs, we choose to adopt a simpler, fast, template-based calculation for the PMF-sourced power. 
 We have adapted CosmoMC to add a scaled version of a PMF template to all four CMB power spectra: TT, TE, EE, and BB, where the scale factor is \apmf. 
 \be
-\changed{C_\ell = C_\ell^{\rm{CAMB}} + \apmf \left[\cpmfvec + \left(\frac{\beta}{20}\right)^{1.9}  \cpmftens \right]}
+\changed{C_\ell = C_\ell^{\rm{CAMB}} + \apmf \left[\cpmfvec + \left(\frac{\beta}{20}\right)^{1.9}  \cpmftens \right]}\label{clmodel}
 \ee
 \changed{The calculation of the PMF templates, \cpmfvec{} and \cpmfvec{}, and the motivation for the $\beta$ scaling are described in \S\ref{sec:template}. 
 The parameter $\beta = {\rm ln}(a_{\nu}/a_{\rm{PMF}})$ relates the timing of neutrino decoupling and the generation of the PMF, where $a_x$ represents the scale factor at the respective events. }
@@ -243,18 +243,20 @@ The PMF templates are plotted against other signals in the CMB B-mode power spec
 As noted in the last section, the MCMC includes a  scaling parameter, \apmf{}, for the PMF power spectrum template. 
 We can translate the amplitude constraint on this template to a constraint on the r.m.s. magnetic field strength on 1\,Mpc scales, \bpmf, using the expected scaling:
 \be \label{eqn:scaling}
-\apmf \propto \bpmf^4.
+C_{\ell}^{\rm{vec}} \propto \bpmf^4.
 \ee
 An unfortunate consequence of this steep fourth-power scaling is that substantial reductions in the observationally allowed power lead to only modestly better limits on the magnetic field strength. 
 However, if a PMF is detected, the steep scaling between \bpmf{} and the observed CMB B-mode power spectrum would allow excellent constraints on the PMF properties.
 
-\changed{The power in the tensor modes also depends on the timing of PMF generation relative to neutrino decoupling. 
-We evaluate the tensor power predicted by the \citet{zucca16} code while stepping $\beta$ by two from 2 to 20, and find it scales as $\beta^{1.9}$ to an excellent approximation. 
-We use this $\beta$ power law form to handle the PMF timing dependence. 
-Thus the tensor PMF power will scale as:
+\changed{The power in the tensor mode depends on the timing of PMF generation relative to neutrino decoupling. 
+%We evaluate the tensor power predicted by the \citet{zucca16} code while stepping $\beta$ by two from 2 to 20, and find it scales as $\beta^{1.9}$ to an excellent %approximation. 
+We use the code developed by \citet{zucca16} to compute the tensor power spectra with a fixed magnetic field strength but different $\beta$ values. Given the fact that the amplitude of the tensor mode reaches the maximum around $\ell$ = 100, we assume a simple power law and extrapolate the scaling relation between the power and the parameter $\beta$ from an ensemble of amplitudes at $\ell$ =100. Similar to the vector mode, the tensor power depends on the amplitude of the magnetic field as well. 
+%We use this $\beta$ power law form to handle the PMF timing dependence. 
+Thus the tensor PMF power scales as:
 \be \label{eqn:betascaling}
-\apmf^{tens} \propto  \bpmf^4 \beta^{1.9},
+C_{\ell}^{\rm{tens}} \propto  \bpmf^4 \beta^{1.9},
 \ee
+which corresponds to the last term in Eq. (\ref{clmodel}).
 }
 
 \begin{figure}[htb]\centering
