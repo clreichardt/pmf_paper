@@ -51,8 +51,8 @@
 
 \newcommand{\tbd}[1]{\textcolor{Red}{{\bf TBD}: #1}}
 \newcommand{\gab}[1]{\textcolor{Orchid}{[{\bf GS}: #1]}}
-\newcommand{\changed}[1]{\textcolor{Black}{#1}}
-\newcommand{\removed}[1]{\textcolor{Black}{}}
+\newcommand{\changed}[1]{\textcolor{Red}{#1}}
+\newcommand{\removed}[1]{\textcolor{Red}{}}
 \include{number_list}
 
 %
@@ -289,7 +289,7 @@ First, we vary the largest source of  B-mode power, gravitational lensing, by al
 Somewhat counterintuitively, the limits are \changed{somewhat} better with \alens{} allowed to vary (this is due to a mild preference for \alens{} above unity which increases the lensed B-mode power). 
 In this case for  Planck alone, the 95\% confidence upper limit is $\apmf <  \upperAplkalens$, dropping to $\apmf <  \upperAallalens$ with the ground-based experiments. 
 Next we introduce inflationary gravitational waves, as parameterized by the tensor-to-scalar ratio r. 
-The 95\% CL upper limit on \apmf{} drops again.  
+The 95\% CL upper limit on \apmf{} drops \st{slightly} again.  
 This is easily understood as a splitting of the large-scale B-mode power between two positive-definite terms: r and \apmf{}. 
 
 
@@ -299,7 +299,10 @@ Given this scaling, the observed upper limits with a flat prior on \apmf{} would
 We therefore importance sample the chains to apply a flat prior on \bpmf. 
 We find a 95\% CL upper limit of $\bpmf < \upperBplk$\,nG for \planck{} alone,
 \changed{similar to} the limit found by \citet{planck15-19} of $\bpmf < 2.0$\,nG with $n_B=-2.9$ held fixed as we have done. 
+\st{The improvement is due to a difference in the calculated tensor PMF power (for the same parameters) between the CMBACT-derived and} \citet{zucca16} \st{codes.}
+\st{Using the CMBACT-derived code that} \citet{planck15-19} \st{used, we find a consistent upper limit of $\bpmf < 1.9$\,nG.}
 \changed{Adding the ground-based polarization measurements significantly reduces the 95\% CL upper limit to $\bpmf < \upperBall$\,nG. }
+\st{The improvement from adding more data is less than one might predict because the combined likelihood peaks approximately $1\,\sigma$ above zero, whereas the \planck{}-only constraints peaks at zero. }
 \changed{Due to the inclusion of the \bicepkeck{} and POLARBEAR data, these results are slightly lower than the \planck{} + \sptpol{} upper limit of $<1.2\,$nG quoted by \citet{zucca16}.}
 
 \begin{table}[tbh]
@@ -571,6 +574,9 @@ Note that this knob  serves as a placeholder for several effects, including a si
 
 We generally find the forecasts to be insensitive to the 1/f knee or galactic foreground removal at the default beam size of 4$^\prime$. 
 It appears that even in the nearly scale-invariant case, the PMF constraint is coming primarily from smaller angular scales due to the degeneracy \changed{at large angular scales with both the tensor-to-scalar ratio and the PMF timing parameter $\beta$}. 
+\st{Without this degeneracy, i.e. in the simple \lcdm{}+\apmf{} model, dropping \lknee{} from 400 to 50 reduces the uncertainty by a factor of 3.2 for a nearly scale-invariant PMF. 
+In this case, the degradation accelerates once the 1/f knee rises to $\lknee{} \gtrsim 70$. 
+This is consistent with the earlier statement for the same simple model that the current upper limits are dominated by the BICEP2/Keck Array data at low-$\ell$. }
 For the bluer PMF spectra ($n_B=-1$ or 2), the forecasts show no dependence on the knee frequency. 
 For the fiducial \changed{12}-parameter model, our ability to separate a PMF from other physics is coming from sub-degree angular scales. 
 %An instrument built to precisely measure gravitational lensing of the CMB should do very well at searching for PMFs. 
@@ -605,7 +611,7 @@ CMB-S4 will be a very exciting probe of PMFs and other sources of cosmic birefri
 
 \acknowledgments
 
-We thank the referee as well as Srinivasan Raghunathan and Federico Bianchini for valuable feedback on the manuscript. 
+We thank the \changed{referee as well as} Srinivasan Raghunathan and Federico Bianchini for valuable feedback on the manuscript. 
 CR is the recipient of an Australian Research Council Future Fellowship (FT150100074), and also acknowledges support from the University of Melbourne. 
 CF acknowledges support from NASA grants NASA NNX16AJ69G and NASA NNX16AF39G. 
 This research used resources of the National Energy Research Scientific Computing Center, which is supported by the Office of Science of the U.S. Department of Energy under Contract No. DE-AC02-05CH11231. 
