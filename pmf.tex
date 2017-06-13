@@ -249,12 +249,13 @@ An unfortunate consequence of this steep fourth-power scaling is that substantia
 However, if a PMF is detected, the steep scaling between \bpmf{} and the observed CMB B-mode power spectrum would allow excellent constraints on the PMF properties.
 
 \changed{The power in the tensor modes also depends on the timing of PMF generation relative to neutrino decoupling. 
-We evaluate the tensor power predicted by the \citet{zucca16} code while stepping $\beta$ by two from 2 to 20, and find it scales as:
+We evaluate the tensor power predicted by the \citet{zucca16} code while stepping $\beta$ by two from 2 to 20, and find it scales as $\beta^{1.9}$ to an excellent approximation. 
+We use this $\beta$ power law form to handle the PMF timing dependence. 
+Thus the tensor PMF power will scale as:
 \be \label{eqn:betascaling}
-\apmf^{tens} \propto \beta^{1.9},
+\apmf^{tens} \propto  \bpmf^4 \beta^{1.9},
 \ee
-to an excellent approximation. 
-We use this $\beta$ power law form to handle the PMF timing dependence. }
+}
 
 \begin{figure}[htb]\centering
 \includegraphics[width=0.45\textwidth,clip,trim={1.5cm 12.cm 5.5cm 4cm}]{pmf_templates_nb.pdf}
