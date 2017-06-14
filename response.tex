@@ -65,200 +65,55 @@ Dear Editor,\\
 We thank the reviewer for their  careful read of our paper, and their comments and suggestions. Below we address their feedback and list the changes we've made to the paper in response.\\
 
 
-\reviewer{The reviewer's feedback is shown in blue.}\\
+The reviewer's comments are shown in \reviewer{blue,} our response is in black, and the revised text in the paper is in \diff{green}. \\
 
-Our response to the feedback will be included in black.\\
-
-\diff{The changed sections in our paper will then be included below in green \added{with additions presented in boldface}}\\
+\section{Major comments}
 
 
+\subsection{$\beta$ should be marginalized over}
+\begin{itemize}
+\item \reviewer{The work assumes a fixed PMF template based on a model with a fixed value of the PMF generation time: $a_{\nu}/a_{PMF}$. This parameter is entirely arbitrary, and directly determines the amplitude of the tensor mode, which is responsible for the tight bound the authors get from BICEP2/Keck. I think it is misleading to present bounds based on this assumption as bounds on PMF. The authors should, at the very least, add a discussion of how the bound changes if one allows the PMF generation time to be a free parameter that is marginalized over. In such a case, the bound will be dominated by the vector mode contribution, with SPTPol likely dominating the constraints.}
+
+\item \reviewer{In summary, I think the paper contains some claims that need revisiting. I suggest repeating the analysis with the PMF generation time set free and report the bounds in that case. Only then they can be seriously compared to previous results in the literature.}
+\end{itemize}
+
+We agree with the referee that freeing the PMF generation time would strengthen the results, and have implemented this in both the fits to the real data and the Fisher matrix forecasts. All the numbers and plots have been updated with results that are marginalized over $\beta$. 
+This significantly changes the results for the real data, making SPTpol more competitive with BICEP2/Keck as the referee expected. 
+The impact on the Fisher forecasts however is fairly minor.\\
+
+We have updated the text in light of this change. There are significant additions to Sec 2.2 (Methods) and 2.3 (PMF template) to describe what happens when $\beta$ is varied. The text of Sec 3 has also been updated to reflect the new upper limits (with $\beta$ marginalized over), and the lesser relative importance of BICEP2/Keck.\\
+
+Additionally, there is a small change in the first paragraph of 4.2 to describe how the prior placed on $\beta$ in the Fisher analysis. There are also a number of places that had referred to 6 and 11 parameter models that now refer to 7 and 12 parameter models. \\\\
+
+
+
+\subsection{CMBACT / Planck PMF code}
+\reviewer{The authors report a factor of 2 difference in the normalization of the tensor mode between the public code provided by Zucca et al and a "CMBACT-derived code", saying that "the origin of the difference is unclear". The public version of CMBACT is a code for CMB anisotropies from cosmic strings and does not concern PMFs. Any code that the authors might have used would be a private modification. Either the authors should clarify what code they are referring to, or avoid mentioning it.\\
+In the results section, the authors claim that "The improvement [compared to Planck] is due to a difference in the calculated tensor PMF power (for the same parameters) between the CMBACT-derived and Zucca et al. (2016) codes". They also claim that Planck used "the CMBACT-derived" code. This is a false claim. Firstly, see the point 3 above. Secondly, as far as I know, Planck used a private code written primarily by Daniela Paoletti.\\
+Instead, the "improvement" comes from the fact that the analysis by Planck collaboration (as well as Zucca et al) marginalized over the PMF generation time, which negated the contribution of the PMF tensor modes to the constraints.}
+\\\\
+
+We had indeed mistakenly attributed CMBACT to Planck. 
+The private CMBACT-derived code was used in the Polarbear PMF paper (Ade et al. Phys. Rev. D 92, 123509 (2015)), and did have the factor of two difference in normalization that mimicked the change in reported upper limits due to varying beta. 
+We mis-identified this as the cause for the difference in the reported Planck limits.\\
+
+We have now struck all mention of CMBACT. There is no longer a discussion of the differences in the Planck numbers since $\beta$ floats in both works.
+
+
+
+
+
+\section{Minor comments:}
+\subsection{Parity-violating physics}
 \reviewer{The end of the 2nd paragraph says that this work constrains the possibility of PMFs "or parity-violating physics". As far as I can tell, the analysis uses only parity-even spectra, such as TT, TE, EE and BB. The authors should either clarify what they mean or remove the claim.}
+\\\\
 
-In addition to producing a non-zero EB and TB power spectrum, PMFs and other parity-violating physics are also known to convert EE power into BB power. By looking for excess power in the BB power spectrum we can find the strength of PMFs or equate the effects of parity-violating physics to an equivalent PMF field strength.
+In addition to producing a non-zero EB and TB power spectrum, PMFs and other parity-violating physics are also known to convert EE power into BB power. By looking for excess power in the BB power spectrum we can find the strength of PMFs or equate the effects of parity-violating physics to an equivalent PMF field strength.\\\\
 
-\diff{CMB B-mode measurements can also be used to constrain more exotic models, such as the possible existence of cosmic birefringence (Carroll 1998; Lue et al. 1999) or primordial magnetic fields (PMFs) (Kosowsky & Loeb
-1996; Seshadri & Subramanian 2001).  
+\diff{CMB B-mode measurements can also be used to constrain more exotic models, such as the possible existence of cosmic birefringence (Carroll 1998; Lue et al. 1999) or primordial magnetic fields (PMFs) (Kosowsky \& Loeb
+1996; Seshadri \& Subramanian 2001).  
 Both effects lead to the rotation of E-modes into B-modes \textbf{which leads to an increase in power in the BB spectrum.}
 By equating the magnitude of the resulting B-modes, parity-violating processes can be translated into an equivalent PMF strength.}\\
-
-
-\reviewer{The work assumes a fixed PMF template based on a model with a fixed value of the PMF generation time: $a_{\nu}/a_{PMF}$. This parameter is entirely arbitrary, and directly determines the amplitude of the tensor mode, which is responsible for the tight bound the authors get from BICEP2/Keck. I think it is misleading to present bounds based on this assumption as bounds on PMF. The authors should, at the very least, add a discussion of how the bound changes if one allows the PMF generation time to be a free parameter that is marginalized over. In such a case, the bound will be dominated by the vector mode contribution, with SPTPol likely dominating the constraints.}
-
-In response, we have repeated the analysis, adding $\beta = ln(a_{\nu}/a_{PMF})$ as a free-parameter.
-
-We include a discussion on the significance of $\beta$ in section 2.2 as follows:
-
-\diff{
-\be
-C_\ell = C_\ell^{\rm{CAMB}} + \apmf \left[\cpmfvec + \left(\frac{\beta}{20}\right)^{1.9}  \cpmftens \right]
-\ee
-The calculation of the PMF templates,\added{ \cpmfvec{} and \cpmftens{}, and the motivation for the $\beta$ scaling} are described in \S 2.3. 
-\added{The parameter $\beta = {\rm ln}(a_{\nu}/a_{\rm{PMF}})$ relates the timing of neutrino decoupling and the generation of the PMF, where $a_x$ represents the scale factor at the respective events.} Note that no other effect of  PMFs is considered; this is one reason we only use CMB data.}
-
-\diff{For the real data, unless noted, we assume the six-parameter, spatially-flat \lcdm{} model with a single massive neutrino of 60\,meV and \added{2 parameters, \apmf{} and $\beta$, }describing the power due to PMFs.
-We adopt flat priors on all parameters. 
-\added{There are two points to note about the PMF priors. 
-First}, this is a flat prior on the observed PMF power, $\apmf$, not the rms magnetic field strength, \bpmf, that has often been used in the literature. 
-\added{In the current era of upper limits, this prior choice has some impact on the resulting PMF limits. 
-Second, the exact range of the uniform prior on $\beta$ matters. 
-Here we follow Planck Collaboration et al. (2016) and Zucca et al. (2016) and use $\beta \in [11.513, 41.447]$. (This corresponds to $log_{10} (a_{\nu}/a_{\rm{PMF}}) \in[4,17]$).
-However, the constraints, especially those from \planck{} alone, weaken substantially if the lower bound on $\beta$ is lowered further. 
-If we follow Ade et al. (2015) who used $\beta \in [0,39]$, the upper limits are relaxed by a factor of roughly eight for \planck-only and by a factor of two for the combined dataset.}}\\
-
-And section 2.3:
-
-\diff{Finally, the timing of when PMFs are generated relative to neutrino decoupling matters \added{for the tensor component} because the PMF-induced stress anisotropy can be compensated by decoupled or partially-decoupled neutrinos. 
-The timing is parametrized by \added{$\beta = ln(a_{\nu}/a_{\rm{PMF}})$, the natural logarithm of the ratio of the scale factors at neutrino decoupling and PMF generation.}}
-
-In addition we have added $\beta$ to our analysis:
-
-\diff{Given that we are still in the era of upper limits, we \added{fix the value of $n_B$ instead of exploring} the full 3-dimensional PMF parameter space. 
-\added{For the real data}, we focus on nearly-scale-invariant ($n_B = -2.9$) PMF template in this work due to its connection to inflation.}
-
-\diff{\added{We also consider $n_B\,=\,-1$ and $n_B\,=\,2$ for the forecasts in \S 4 
-For each value of $n_B$, we use publicly released modifications to CAMB from Zucca et al. (2016) to calculate a PMF template for the CMB TT, TE, EE and BB power spectra at fixed parameters: \bpmf = 2.5\,nG and $\beta=20.72$ ($a_{\nu}/a_{\rm{PMF}} = 10^9$).}}
-
-\diff{The PMF templates are plotted against other signals in the CMB B-mode power spectrum in Fig. 2 \added{and against each other in Fig. 3. }}
-
-\diff{The power in the tensor modes also depends on the timing of PMF generation relative to neutrino decoupling. 
-\added{We evaluate the tensor power predicted by the Zucca et al. (2016) code while stepping $\beta$ by two from 2 to 20, and find it scales as:
-\be \label{eqn:betascaling}
-\apmf^{tens} \propto \beta^{1.9},
-\ee
-to an excellent approximation. 
-We use this $\beta$ power law form to handle the PMF timing dependence.}}
-
-
-Further note that since we have added $\beta$ to the analysis, our fisher models have increased from 6 and 11 parameter models to 7 and 12 parameter models. (Due to the prevalence of this change we have not listed its occurances here).\\
-
-
-\reviewer{The authors report a factor of 2 difference in the normalization of the tensor mode between the public code provided by Zucca et al and a "CMBACT-derived code", saying that "the origin of the difference is unclear". The public version of CMBACT is a code for CMB anisotropies from cosmic strings and does not concern PMFs. Any code that the authors might have used would be a private modification. Either the authors should clarify what code they are referring to, or avoid mentioning it.}
-
-As per the advice of the reviewer we have removed any mention of the CMBACT code.\\
-
-
-\reviewer{In the results section, the authors claim that "The improvement [compared to Planck] is due to a difference in the calculated tensor PMF power (for the same parameters) between the CMBACT-derived and Zucca et al. (2016) codes". They also claim that Planck used "the CMBACT-derived" code. This is a false claim. Firstly, see the point 3 above. Secondly, as far as I know, Planck used a private code written primarily by Daniela Paoletti.}
-
-\reviewer{Instead, the "improvement" comes from the fact that the analysis by Planck collaboration (as well as Zucca et al) marginalized over the PMF generation time, which negated the contribution of the PMF tensor modes to the constraints.}
-
-\reviewer{In summary, I think the paper contains some claims that need revisiting. I suggest repeating the analysis with the PMF generation time set free and report the bounds in that case. Only then they can be seriously compared to previous results in the literature.}
-
-We have indeed mistakenly attributed CMBACT to Planck. After setting PMF generation time as a free parameter we find:
-
-\diff{The ground-based CMB polarization data  substantially reduce the allowed PMF power; we see a factor of two reduction over \plan+{} alone in the simple \added{8}-parameter model. 
-The 95\% confidence upper limit for \planck{} is $\apmf <  \upperAplk$ for \lcdm{}+\added{PMF}. }
-
-\diff{We test which datasets are important by adding single datasets to the \planck{} data, \added{and find that the source of the improvement is evenly split between \sptpol{} and \bicepkeck{}.
-	Adding either one to \planck{} yields the same 95\% CL upper limit: $\apmf^{\planck+\bicepkeck} <  \upperAbicep$ versus  $\apmf^{\planck+\sptpol}) < \upperAsptpol$. 
-	Extending the $\beta$ prior to lower values would shift the relative weight more towards \sptpol{} (and vice-versa). 
-	Similarly, increasing the value of $n_B$ would  increase the relative importance of the smaller angular scales measured by \sptpol.}
-In short, the \added{source of the} factor of two reduction in the upper limit on \apmf{} for a nearly-scale-invariant PMF spectrum ($n_B=-2.9$) is due to a more accurate measurement of the B-mode power spectrum at all scales.}
-
-\diff{Somewhat counterintuitively, the limits are somewhat better with \alens{} allowed to vary (this is due to a mild preference for \alens{} above unity which increases the lensed B-mode power). }
-
-\diff{The 95\% CL upper limit on \apmf{} drops again.}
-
-\diff{Given this scaling, the observed upper limits with a flat prior on \apmf{} would lead to an apparent ``detection" of \bpmf. 
-We therefore importance sample the chains to apply a flat prior on \bpmf. 
-We find a 95\% CL upper limit of $\bpmf < \upperBplk$\,nG for \planck{} alone,
-\added{similar to} the limit found by Planck Collaboration et al. (2016) of $\bpmf < 2.0$\,nG with $n_B=-2.9$ held fixed as we have done. 
-\added{Adding the ground-based polarization measurements significantly reduces the 95\% CL upper limit to $\bpmf < \upperBall$\,nG. }
-\added{Due to the inclusion of the \bicepkeck{} and POLARBEAR data, these results are slightly lower than the \planck{} + \sptpol{} upper limit of $<1.2\,$nG quoted by Zucca et al. (2016).}}
-
-\iffalse
-\changed{3.1 new} 
-
-The ground-based CMB polarization data  substantially reduce the allowed PMF power; we see a factor of two reduction over \plan+{} alone in the simple \added{8}-parameter model. 
-The 95\% confidence upper limit for \planck{} is $\apmf <  \upperAplk$ for \lcdm{}+\added{PMF}. 
-
-We test which datasets are important by adding single datasets to the \planck{} data, \added{and find that the source of the improvement is evenly split between \sptpol{} and \bicepkeck{}.
-Adding either one to \planck{} yields the same 95\% CL upper limit: $\apmf^{\planck+\bicepkeck} <  \upperAbicep$ versus  $\apmf^{\planck+\sptpol}) < \upperAsptpol$. 
-Extending the $\beta$ prior to lower values would shift the relative weight more towards \sptpol{} (and vice-versa). 
-Similarly, increasing the value of $n_B$ would  increase the relative importance of the smaller angular scales measured by \sptpol.}
-In short, the \added{source of the} factor of two reduction in the upper limit on \apmf{} for a nearly-scale-invariant PMF spectrum ($n_B=-2.9$) is due to a more accurate measurement of the B-mode power spectrum at all scales.
-
-Somewhat counterintuitively, the limits are somewhat better with \alens{} allowed to vary (this is due to a mild preference for \alens{} above unity which increases the lensed B-mode power). 
-
-The 95\% CL upper limit on \apmf{} drops again.
-
-Given this scaling, the observed upper limits with a flat prior on \apmf{} would lead to an apparent ``detection" of \bpmf. 
-We therefore importance sample the chains to apply a flat prior on \bpmf. 
-We find a 95\% CL upper limit of $\bpmf < \upperBplk$\,nG for \planck{} alone,
-\added{similar to} the limit found by \citet{planck15-19} of $\bpmf < 2.0$\,nG with $n_B=-2.9$ held fixed as we have done. 
-\added{Adding the ground-based polarization measurements significantly reduces the 95\% CL upper limit to $\bpmf < \upperBall$\,nG. }
-\added{Due to the inclusion of the \bicepkeck{} and POLARBEAR data, these results are slightly lower than the \planck{} + \sptpol{} upper limit of $<1.2\,$nG quoted by \citet{zucca16}.}
-
-\changed{4.1 old}
-
-We consider the constraints on PMFs in two cosmologies. 
-Our fiducial cosmology is a \removed{11}-parameter model that extends \lcdm{} with  four  commonly considered extensions as well as PMFs:  \lcdm{} +  $r$ + \nrun{} +  \neff{} + \mnu{} + \apmf. 
-Here, $r$ is the tensor-to-scalar ratio, \nrun{} is running of the scalar index, \neff{} is the effective number of relativistic species, and \mnu{} is the sum of the neutrino species. 
-
-This \removed{11-parameter} model is our default cosmological model when forecasting future PMF constraints as these extensions are all well-motivated theoretically. 
-We have examined the degree to which \apmf{} is degenerate with the other 10 parameters -- the only strong degeneracy is in the $n_B\,=\,-2.9$ case and is with the tensor-to-scalar ratio, $r$. 
-
-To test the degree to which parameter degeneracies limit the inferred constraints,  we also quote constraints from a `minimal' \removed{7-parameter} model in which the PMF power is the only extension to \lcdm{}:  \lcdm{} + \apmf.
-
-\changed{4.1 new}
-
-We consider the constraints on PMFs in two cosmologies. 
-\added{Our fiducial cosmology is a \added{12}-parameter model that extends \lcdm{} with  four  commonly considered extensions as well as PMFs:  \lcdm{} +  $r$ + \nrun{} +  \neff{} + \mnu{} + \apmf{} \changed{ + $\beta$}.}
-Here, $r$ is the tensor-to-scalar ratio, \nrun{} is running of the scalar index, \neff{} is the effective number of relativistic species, and \mnu{} is the sum of the neutrino species.
-
-This \added{12}-parameter model is our default cosmological model when forecasting future PMF constraints as these extensions are all well-motivated theoretically. 
-We have examined the degree to which \apmf{} is degenerate with the 10 parameters \added{unrelated to PMFs} -- the only strong degeneracy is in the $n_B\,=\,-2.9$ case and is with the tensor-to-scalar ratio, $r$. 
-
-To test the degree to which parameter degeneracies limit the inferred constraints,  we also quote constraints from a `minimal' \added{8}-parameter model in which the PMF power is the only extension to \lcdm{}:  \lcdm{} + \apmf{} \added{ + $\beta$}.
-
-\changed{4.2 old}
-
-Adding  EE and BB bandpowers from two stage-III experiments, \sptnew{} and \simons{}, reduces the uncertainty by an order of magnitude in the \st{7}-parameter model to $\sigma(\apmf)=0.015$. 
-The relative improvement is larger in the more realistic st{11}-parameter model, as parameter degeneracies substantially weaken (by a factor of five) the \planck+\ho{} constraints on \apmf{}, while weakening the stage III constraint by a  more modest 40\%. 
-Thus within the st{11}-parameter model,  the addition of stage III CMB experiments improves the \apmf{} uncertainty by a factor of $\sim$\,35 to  $\sigma(\apmf)=0.022$. 
-The parameter degeneracies largely disappear for steeper PMF spectra (i.e. $n_B=-1$ or 2) as the PMF B-mode spectra then peaks at very small scales and this small-scale power can not be mimicked by any of the other st{11}-parameters. 
-
-\changed{4.2 new}
-
-Adding  EE and BB bandpowers from two stage-III experiments, \sptnew{} and \simons{}, reduces the uncertainty by an order of magnitude in the \added{8}-parameter model to $\sigma(\apmf)=0.015$. 
-The relative improvement is larger in the more realistic \added{12}-parameter model, as parameter degeneracies substantially weaken (by a factor of five) the \planck+\ho{} constraints on \apmf{}, while weakening the stage III constraint by a  more modest 40\%. 
-Thus within the \added{12}-parameter model,  the addition of stage III CMB experiments improves the \apmf{} uncertainty by a factor of $\sim$\,35 to  $\sigma(\apmf)=0.022$. 
-The parameter degeneracies largely disappear for steeper PMF spectra (i.e. $n_B=-1$ or 2) as the PMF B-mode spectra then peaks at very small scales and this small-scale power can not be mimicked by any of the \added{other} parameters. 
-
-For the \added{12}-parameter model and $n_B=-1$, adding SPT-3G and Simons Array to \planck{} leads to a 17-fold reduction in $\sigma(\apmf)$ from \fisherAlooseNbOneplk{} to \fisherAlooseNbOneSThree{}.
-
-\changed{4.3 old}
-
-
-
-\changed{4.3 new}
-
-For this fiducial configuration and the \added{12}-parameter cosmological model, we find a 3-fold reduction over the stage III experiments for all three PMF template shapes. 
-
-\changed{4.4 old}
-
-\changed{4.4 new}
-
-Figure~\ref{fig:sensitivity} shows the uncertainty on \apmf{} as a function of the map noise level for the three PMF templates in either the \added{12} or \added{8}-parameter cosmological models.
-
-In the general, \added{12}-parameter cosmological model, the PMF uncertainty does not plateau in any of the three PMF templates considered until the map noise is at or below $0.3\,\ukarcmin$ (a factor of four lower then the fiducial CMB-S4 configuration). 
-
-  The black lines are for the fiducial \added{12}-parameter model, while the light blue lines are for the minimal \lcdm{}+\apmf{} model. 
-  The model only matters in the nearly-scale invariant PMF case, where the constraints degrade in the \added{12}-parameter model due a degeneracy with the tensor-to-scalar ratio. 
-
-\changed{4.5 old}
-\changed{4.5 new}
-
-  The black lines are for the fiducial \added{12}-parameter model, while the light blue lines are for the minimal \lcdm{}+\apmf{} model. 
-  
-\changed{4.6 old}
-\changed{4.6 new}
-   There is essentially no difference to the preferred areas between the \added{12}-parameter cosmological model (black) or the restricted \lcdm{}+\added{PMF 8}-parameter model (light blue).
-   
-\changed{4.7 old}
-\changed{4.7 new}
-11 -> 12
-7 -> 8 parameter
-\fi
 
 \end{document}
 
