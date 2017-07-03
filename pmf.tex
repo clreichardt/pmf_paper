@@ -74,7 +74,8 @@
 \begin{abstract}
 
 We present new limits on the amplitude of potential primordial magnetic fields (PMFs) using temperature and polarization measurements of the cosmic microwave background (CMB)  from \planck{}, \bicepkeck{}, \pb, and \sptpol. 
-We reduce twofold the 95\% CL upper limit on the CMB anisotropy power due to PMFs, from $\apmf < \upperAplk$ for \planck{} alone to $\apmf < \upperAall$ for the combined dataset. 
+We reduce twofold the 95\% CL upper limit on the CMB anisotropy power due to a nearly-scale-invariant PMF, with an allowed B-mode power at $\ell=1500$ of $D_{\ell=1500}^{BB} < 0.071 \mu K^2$ for \planck{} versus $D_{\ell=1500}^{BB} < 0.034 \mu K^2$ for the combined dataset. 
+%$\apmf < \upperAplk$ for \planck{} alone to $\apmf < \upperAall$ for the combined dataset. 
 %Most of the improvement is due to the addition of the \bicepkeck{} data; without these bandpowers, the combined limit weakens to $\apmf < 0.\tbd{XX}$. 
 %\changed{Most of the improvement is due to the addition of the \bicepkeck{} and \sptpol{} data.} 
 We also forecast the expected  limits from soon-to-deploy CMB experiments (like \sptnew{},  \advactpol, or the \simons) and the proposed CMB-S4 experiment. 
@@ -234,7 +235,7 @@ Quantum mechanical zero-point fluctuations during inflation can generate an appr
 In contrast, causal PMFs with bluer spectra require later phase transitions or other new physics after inflation \citep[e.g.,][]{durrer03, subramanian16}. 
 We also consider $n_B\,=\,-1$ and $n_B\,=\,2$ for the forecasts in \S\ref{sec:forecasts}. 
 For each value of $n_B$, we use publicly released modifications to CAMB from \citet{zucca16} to calculate a PMF template for the CMB TT, TE, EE and BB power spectra at fixed parameters: \bpmf = 2.5\,nG and $\beta=20.72$ ($a_{\nu}/a_{\rm{PMF}} = 10^9$).} 
-The calculated templates include tensor and vector PMF contributions; scalar contributions are not implemented in the code. 
+The calculated templates include tensor and vector PMF contributions; scalar contributions are not implemented. 
 The lack of scalar terms should not matter for CMB polarization data. 
 Temperature data is not the main focus of this work, and  and we find our \planck{} results  to be consistent with \citet{planck15-19}, suggesting the impact of the scalar terms is minor. 
 The PMF templates are plotted against other signals in the CMB B-mode power spectrum in Fig.~\ref{fig:pmf-bb} \changed{and against each other in Fig.~\ref{fig:pmf-nb}. }
@@ -276,6 +277,8 @@ For the real data, we focus on the most theoretically motivated scenario of an a
 The ground-based CMB polarization data  substantially reduce the allowed PMF power; we see a factor of two reduction over \planck{} alone in the simple \changed{8}-parameter model. 
 The 95\% confidence upper limit for \planck{} is $\apmf <  \upperAplk$ for \lcdm{}+PMF. 
 Adding the ground-based experiments brings this limit to $\apmf <  \upperAall$. 
+To facilitate a physical interpretation, we can restate these limits as an allowed B-mode power  at $\ell=1500$, which is near the peak of the PMF contribution. 
+The equivalent limits on the allowed B-mode power are $D_{\ell=1500}^{BB} < 0.071 \mu K^2$ for \planck{}-alone and $D_{\ell=1500}^{BB} < 0.034 \mu K^2$ when the ground-based experiments are added. 
 We test which datasets are important by adding single datasets to the \planck{} data, \changed{and find that the source of the improvement is evenly split between \sptpol{} and \bicepkeck{}. 
 Adding either one to \planck{} yields the same 95\% CL upper limit: $\apmf^{\planck+\bicepkeck} <  \upperAbicep$ versus  $\apmf^{\planck+\sptpol}) < \upperAsptpol$. 
 Extending the $\beta$ prior to lower values would shift the relative weight more towards \sptpol{} (and vice-versa). 

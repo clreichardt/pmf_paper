@@ -1,0 +1,88 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{soul}
+
+\usepackage[usenames, dvipsnames]{color}
+
+\usepackage[table,usenames,dvipsnames]{xcolor}
+%\usepackage{amsmath}
+%\usepackage{subfigure}
+\usepackage[backref,breaklinks,colorlinks,citecolor=blue]{hyperref}
+\usepackage{natbib}
+%\usepackage{natbib}
+\bibliographystyle{fapj}
+%\usepackage{graphicx}
+%\usepackage{multirow}
+\usepackage{soul}
+\setlength{\parindent}{0pt}
+\newcommand{\sqdeg}{deg$^2$ }
+\newcommand{\omb}{\ensuremath{\Omega_b h^2}}
+\newcommand{\omc}{\ensuremath{\Omega_c h^2}}
+\newcommand{\clpp}{\ensuremath{C_{L}^{\phi\phi}}}
+\newcommand{\cpmf}{\ensuremath{C_{\ell}^{\rm PMF}}}
+
+\newcommand{\cpmftens}{\ensuremath{C_{\ell}^{\rm PMF,\,tens}}}
+\newcommand{\cpmfvec}{\ensuremath{C_{\ell}^{\rm PMF,\,vec}}}
+\newcommand{\apmf}{\ensuremath{A_{\rm PMF}}}
+\newcommand{\bpmf}{\ensuremath{B_{\rm 1\,Mpc}}}
+\newcommand{\alens}{\ensuremath{A_{\rm lens}}}
+\newcommand{\lcdm}{\ensuremath{\Lambda}CDM}
+\newcommand{\nrun}{\ensuremath{n_{\rm run}}}
+\newcommand{\neff}{\ensuremath{N_{\rm eff}}}
+\newcommand{\ho}{H\ensuremath{_0}}
+\newcommand{\mnu}{\ensuremath{\sum m_\nu}}
+\newcommand{\ukarcmin}{\ensuremath{\mu}{\rm K-arcmin}}
+\newcommand{\lknee}{\ensuremath{\ell_{\rm knee}}}
+\newcommand{\fermilat}{\textit{Fermi}-LAT}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\planck}{{\sl Planck}}
+\newcommand{\wmap}{{\sl WMAP}}
+\newcommand{\bicepkeck}{BICEP2/Keck Array}
+\newcommand{\sptnew}{SPT-3G}
+\newcommand{\pb}{\textsc{Polarbear}}
+\newcommand{\simons}{Simons Array}
+\newcommand{\sptpol}{SPTpol}
+\newcommand{\advactpol}{Adv.~ACTpol}
+
+\newcommand{\tbd}[1]{\textcolor{Red}{{\bf TBD}: #1}}
+\newcommand{\gab}[1]{\textcolor{Orchid}{[{\bf GS}: #1]}}
+\newcommand{\changed}[1]{\textcolor{Red}{#1}}
+\newcommand{\removed}[1]{\st{#1}}
+\newcommand{\added}[1]{\textbf{#1}}
+\newcommand{\reviewer}[1]{\textcolor{Blue}{#1}}
+\newcommand{\diff}[1]{\textcolor{PineGreen}{#1}}
+\newcommand{\hide}[1]{\iffalse{#1}}
+
+\include{number_list}
+
+\begin{document}
+
+Dear Editor,\\
+
+We thank the reviewer for their  careful read of our paper, and their comments and suggestions. Below we address their feedback and list the changes we've made to the paper in response.\\
+
+
+The reviewer's comments are shown in \reviewer{blue,} our response is in black, and the revised text in the paper is in \diff{green}. \\
+
+\reviewer{1. The abstract does not mention that the constraints are derived specifically on the scale-invariant PMF, nor it mentions what $A_{PMF}$ is and how it is related to the PMF strength.}
+
+We have restated the abstract to be more clear:
+\diff{We reduce twofold the 95\% CL upper limit on the CMB anisotropy power due to a nearly-scale-invariant PMF, with an allowed B-mode power at $\ell=1500$ of $D_{\ell=1500}^{BB} < 0.071 \mu K^2$ for \planck{} versus $D_{\ell=1500}^{BB} < 0.034 \mu K^2$ for the combined dataset. }
+\\\\
+We have also added supporting text to the Results section:
+\diff{To facilitate a physical interpretation, we can restate these limits as an allowed B-mode power  at $\ell=1500$, which is near the peak of the PMF contribution. 
+The equivalent limits on the allowed B-mode power are $D_{\ell=1500}^{BB} < 0.071 \mu K^2$ for \planck{}-alone and $D_{\ell=1500}^{BB} < 0.034 \mu K^2$ when the ground-based experiments are added. }
+\\\\
+\reviewer{2. The drafts says "... scalar contributions are not implemented in the code", referring to the Zucca et el modification of CAMB. That is not true. Instead, it should say that the authors chose not to use the scalar contributions.}
+
+We have struck ``in the code" from the sentence.
+\\\\
+\reviewer{3. To a casual reader it would seem mysterious that the tensor mode amplitude depends on beta as a power of 1.9 that had to be found by fitting. The tensor mode spectrum is simply multiplied by a factor of $[const+ln(a_nu/a_PMF)]^2$. It would make more sense to simply define beta with the constant included. At least, the authors should explain that its 1.9 and not 2 because of the way beta was defined.}
+\\\\
+
+
+\end{document}
+
